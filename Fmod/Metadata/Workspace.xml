@@ -30,6 +30,7 @@
 		</relationship>
 		<relationship name="platforms">
 			<destination>{e8390a64-979c-4d2b-ab0b-1ee1add2c154}</destination>
+			<destination>{e6a5f0dd-7201-48a4-8fc0-45b1641d52d1}</destination>
 		</relationship>
 	</object>
 </objects>
