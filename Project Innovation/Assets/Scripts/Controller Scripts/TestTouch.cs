@@ -10,11 +10,12 @@ public class TestTouch : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
+
             Touch touch = Input.GetTouch(0);
-            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            Debug.Log(touchPosition);
-            touchPosition.x = 0;
-            transform.position = (touchPosition);
+            if (touch.phase == TouchPhase.Began)
+            {
+                transform.position = (touch.position);
+            }
         }
     }
 }
