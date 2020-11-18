@@ -521,6 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 1768462254}
+  rb: {fileID: 52684268}
   moveVelocity: 10
 --- !u!114 &52684266
 MonoBehaviour:
@@ -552,6 +553,7 @@ MonoBehaviour:
   rb: {fileID: 52684268}
   movementSpeed: 10
   rotationSpeed: 100
+  horizontalTreshold: 0.2
 --- !u!54 &52684268
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5915,7 +5917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1410991774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6380,7 +6382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2019791599
 RectTransform:
   m_ObjectHideFlags: 0
