@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 2363943671421929533}
   - component: {fileID: 2363943671421929472}
   - component: {fileID: 2363943671421929532}
-  - component: {fileID: 2363943671421929473}
   - component: {fileID: 2363943671421929474}
+  - component: {fileID: 2363943671421929473}
+  - component: {fileID: 7628727810809876384}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -132,6 +133,19 @@ MonoBehaviour:
   - {fileID: 2363943672258094335}
   - {fileID: 2363943671933306614}
   speed: 10
+--- !u!114 &2363943671421929474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363943671421929530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f1bde44e0cb5c4d850894106dae535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!114 &2363943671421929473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +163,7 @@ MonoBehaviour:
   moveTrail: {fileID: 2363943671421929532}
   chaseRadius: 5
   speedTreshold: 0.03
---- !u!114 &2363943671421929474
+--- !u!114 &7628727810809876384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,10 +172,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2363943671421929530}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7f1bde44e0cb5c4d850894106dae535, type: 3}
+  m_Script: {fileID: 11500000, guid: 3615724618527ed42adb60032254b390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 2
+  enemyHolder: {fileID: 2363943673047335499}
+  chasePlayer: {fileID: 2363943671421929474}
+  moveTrail: {fileID: 2363943671421929532}
+  detectRadius: 6
+  chaseRadius: 5
+  speedTreshold: 5
 --- !u!1 &2363943671666345180
 GameObject:
   m_ObjectHideFlags: 0
