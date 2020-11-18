@@ -25,7 +25,7 @@ public class MoveTrail : MonoBehaviour
     //=======================================================================================
     private void Start()
     {
-        goToNextWavePoint();
+        GoToNextWavePoint();
     }
     private void Update()
     {
@@ -37,7 +37,7 @@ public class MoveTrail : MonoBehaviour
         Debug.Log("Collision Detected: other tag is: " + other.gameObject.tag);
         if (other.gameObject.tag == "WaypointMarker")
         {
-            goToNextWavePoint();
+            GoToNextWavePoint();
         }
     }
     //=======================================================================================
@@ -64,7 +64,7 @@ public class MoveTrail : MonoBehaviour
 
     //----------------------------------goToNextWaypoint-------------------------------------
     //Rotate towards next waypoint
-    private void goToNextWavePoint()
+    public void GoToNextWavePoint()
     {
         //Get next waypoint
         if (_currentWaypoint + 1 < wayPoints.Length)
