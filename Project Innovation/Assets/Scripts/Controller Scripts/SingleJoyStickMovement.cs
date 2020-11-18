@@ -11,6 +11,7 @@ public class SingleJoyStickMovement : MonoBehaviour
     // public objects
     [Header("Components")]
     public Joystick joystick;
+    public Rigidbody rb;
 
     // public variables
     [Header("Variables")]
@@ -42,7 +43,8 @@ public class SingleJoyStickMovement : MonoBehaviour
     //Movement of a player
     private void movePlayer()
     {
-        transform.position += transform.forward * joystick.Vertical * Time.deltaTime;
+        //transform.position += transform.forward * joystick.Vertical * Time.deltaTime;
+        rb.AddForce(transform.forward * joystick.Vertical * Time.deltaTime * movementSpeed, ForceMode.Impulse);
     }
 
-    }
+}
