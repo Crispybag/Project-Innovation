@@ -12,12 +12,12 @@ public class SingleJoyStickMovement : MonoBehaviour
     [Header("Components")]
     public Joystick joystick;
     public Rigidbody rb;
-
+    
     // public variables
     [Header("Variables")]
     public float movementSpeed = 10;
     public float rotationSpeed = 100;
-
+    public float horizontalTreshold = 0.2f;
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
@@ -36,6 +36,7 @@ public class SingleJoyStickMovement : MonoBehaviour
 
     private void rotatePlayer()
     {
+        if (Mathf.Abs(joystick.Horizontal) > horizontalTreshold)
         transform.Rotate(0, joystick.Horizontal * rotationSpeed * Time.deltaTime, 0);
     }
 
