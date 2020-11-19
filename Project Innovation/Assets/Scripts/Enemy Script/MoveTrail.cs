@@ -35,7 +35,6 @@ public class MoveTrail : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision Detected: other tag is: " + other.gameObject.tag);
         if (other.gameObject.tag == "WaypointMarker")
         {
             GoToNextWavePoint();

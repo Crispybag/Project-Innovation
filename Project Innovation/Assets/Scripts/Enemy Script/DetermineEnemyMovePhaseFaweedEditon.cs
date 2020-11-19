@@ -13,6 +13,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     public GameObject enemyHolder;
     public ChasePlayer chasePlayer;
     public MoveTrail moveTrail;
+    public AudioSource aSource;
 
     // public variables
     [Header("Variables")]
@@ -53,12 +54,15 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
         {
             chasePlayer.enabled = false;
             moveTrail.enabled = false;
+            if (!aSource.isPlaying)
+            aSource.Play();
         }
 
         else if (_distanceToPlayer < chaseRadius)
         {
             chasePlayer.enabled = true;
             moveTrail.enabled = false;
+            //aSource.Stop();
         }
 
         else if (_distanceToPlayer > detectRadius && !moveTrail.enabled)
@@ -66,6 +70,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
             chasePlayer.enabled = false;
             moveTrail.enabled = true;
             moveTrail.GoToNextWavePoint();
+            aSource.Stop();
         }
     }
 

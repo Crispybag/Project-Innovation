@@ -36,6 +36,7 @@ public class MovePlayer : MonoBehaviour
     {
         rb.AddForce(transform.forward * joystick.Vertical * Time.deltaTime * moveVelocity, ForceMode.Impulse);
         rb.AddForce(transform.right * joystick.Horizontal * Time.deltaTime * moveVelocity, ForceMode.Impulse);
+       
 
     }
 }
