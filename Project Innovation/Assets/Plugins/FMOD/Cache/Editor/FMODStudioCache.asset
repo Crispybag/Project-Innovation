@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9205521797449077719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-8636789358895856692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +38,46 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8421185386927343715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Tiles
+  m_EditorClassIdentifier: 
+  Name: Tiles
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-8030078643748886439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Sand
+  m_EditorClassIdentifier: 
+  Name: Sand
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6855963000000261079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../Fmod/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637412373155835190
+  lastModified: 637413182375670598
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -102,6 +162,46 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4200
+--- !u!114 &-3610682097102457924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Leaves
+  m_EditorClassIdentifier: 
+  Name: Leaves
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1530958364769523531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Mud
+  m_EditorClassIdentifier: 
+  Name: Mud
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-855577888689884018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +221,13 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -8030078643748886439}
+  - {fileID: -9205521797449077719}
+  - {fileID: 5820492665247627032}
+  - {fileID: -3610682097102457924}
+  - {fileID: -8421185386927343715}
+  - {fileID: -1530958364769523531}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
@@ -149,8 +255,28 @@ MonoBehaviour:
   - {fileID: -6855963000000261079}
   StringsBanks:
   - {fileID: 9095055413173555386}
-  stringsBankWriteTime: 637412373155865109
+  stringsBankWriteTime: 637413182375700545
   cacheVersion: 5
+--- !u!114 &5820492665247627032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Wood
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &9095055413173555386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,11 +291,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637412373155865109
+  lastModified: 637413182375700545
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 868
+    Value: 1102
   - Name: Mobile
-    Value: 868
+    Value: 1102
   Exists: 1
