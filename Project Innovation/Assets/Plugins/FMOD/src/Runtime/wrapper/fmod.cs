@@ -19,7 +19,7 @@ namespace FMOD
     */
     public partial class VERSION
     {
-        public const int    number = 0x00020105;
+        public const int    number = 0x00020106;
 #if !UNITY_2017_4_OR_NEWER
         public const string dll    = "fmod";
 #endif
@@ -496,6 +496,7 @@ namespace FMOD
         PREUPDATE              = 0x00000400,
         POSTUPDATE             = 0x00000800,
         RECORDLISTCHANGED      = 0x00001000,
+        BUFFEREDNOMIX          = 0x00002000,
         ALL                    = 0xFFFFFFFF,
     }
 

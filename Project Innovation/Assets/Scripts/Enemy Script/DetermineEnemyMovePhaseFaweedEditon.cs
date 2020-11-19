@@ -16,7 +16,12 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
     // public variables
     [Header("Variables")]
+    [Tooltip("Radius at which the enemy stops and looks at the player")]
+    [Range(0f, 10f)]
     public float detectRadius = 6f;
+
+    [Tooltip("Radius at which the enemy starts chasing the player")]
+    [Range(0f, 10f)]
     public float chaseRadius = 5f;
 
     // private objects

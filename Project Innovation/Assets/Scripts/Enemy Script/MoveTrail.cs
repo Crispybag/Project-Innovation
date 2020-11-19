@@ -15,6 +15,7 @@ public class MoveTrail : MonoBehaviour
 
 
     [Header("Variables")]
+    [Tooltip("Speed at whwich the enemy moves")]
     public float speed;
 
     // private variables

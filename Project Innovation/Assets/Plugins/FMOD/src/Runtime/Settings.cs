@@ -453,6 +453,12 @@ namespace FMODUnity
                 PluginsProperty.Set(defaultPlatform, new List<string>());
             }
 
+            // Migrate LiveUpdatePort
+            if (!Platform.PropertyAccessors.LiveUpdatePort.HasValue(defaultPlatform))
+            {
+                Platform.PropertyAccessors.LiveUpdatePort.Set(defaultPlatform, LiveUpdatePort);
+            }
+
             // Create a map for migrating legacy settings
             var platformMap = new Dictionary<Legacy.Platform, Platform>();
 
@@ -813,17 +819,37 @@ namespace FMODUnity
             Platform[] assetPlatforms = Resources.LoadAll<Platform>(SettingsAssetName);
 #endif
 
-            foreach (Platform platform in assetPlatforms)
+            foreach (Platform newPlatform in assetPlatforms)
             {
-                if (FindPlatform(platform.Identifier) == null)
+                Platform existingPlatform = FindPlatform(newPlatform.Identifier);
+
+                if (existingPlatform != null)
                 {
-                    platform.EnsurePropertiesAreValid();
-                    Platforms.Add(platform.Identifier, platform);
+                    // Duplicate platform; clean one of them up
+                    Platform platformToDestroy;
+
+                    if (newPlatform.Active && !existingPlatform.Active)
+                    {
+                        Platforms.Remove(existingPlatform.Identifier);
+
+                        platformToDestroy = existingPlatform;
+                        existingPlatform = null;
+                    }
+                    else
+                    {
+                        platformToDestroy = newPlatform;
+                    }
+
+                    Debug.LogWarningFormat("FMOD: Cleaning up duplicate platform: ID  = {0}, name = '{1}', type = {2}",
+                        platformToDestroy.Identifier, platformToDestroy.DisplayName, platformToDestroy.GetType().Name);
+
+                    DestroyImmediate(platformToDestroy, true);
                 }
-                else
+
+                if (existingPlatform == null)
                 {
-                    Debug.LogWarningFormat("Duplicate platform found in {0}: ID  = {1}, name = '{2}', type = {3}",
-                        SettingsAssetName, platform.Identifier, platform.DisplayName, platform.GetType().Name);
+                    newPlatform.EnsurePropertiesAreValid();
+                    Platforms.Add(newPlatform.Identifier, newPlatform);
                 }
             }
 
@@ -856,7 +882,7 @@ namespace FMODUnity
             }
         }
 
-        private bool CanBuildTarget(BuildTarget target, Platform.BuildType buildType, out string error)
+        private bool CanBuildTarget(BuildTarget target, Platform.BinaryType binaryType, out string error)
         {
             const string DownloadURL = "https://www.fmod.com/download";
 
@@ -870,7 +896,7 @@ namespace FMODUnity
                 return false;
             }
 
-            IEnumerable<string> missingPathsQuery = platform.GetBinaryPaths(target, buildType)
+            IEnumerable<string> missingPathsQuery = platform.GetBinaryFilePaths(target, binaryType)
                 .Where(path => !File.Exists(path) && !Directory.Exists(path));
 
             if (missingPathsQuery.Any())
@@ -889,7 +915,7 @@ namespace FMODUnity
                         missingPaths.Length, target);
                 }
 
-                if (buildType == Platform.BuildType.Development)
+                if (binaryType == Platform.BinaryType.Logging)
                 {
                     summary += " (development build)";
                 }
@@ -920,10 +946,18 @@ namespace FMODUnity
         }
 
 
-        private void PreprocessBuild(BuildTarget target)
+        private void PreprocessBuild(BuildTarget target, Platform.BinaryType binaryType)
         {
             Platform platform = PlatformForBuildTarget[target];
 
+            PreprocessStaticPlugins(platform, target);
+#if UNITY_2018_1_OR_NEWER
+            SelectBinaries(platform, target, binaryType);
+#endif
+        }
+
+        private static void PreprocessStaticPlugins(Platform platform, BuildTarget target)
+        {
             BuildTargetGroup buildTargetGroup = BuildPipeline.GetBuildTargetGroup(target);
             ScriptingImplementation scriptingBackend = PlayerSettings.GetScriptingBackend(buildTargetGroup);
 
@@ -963,6 +997,47 @@ namespace FMODUnity
                     platform.DisplayName, platform.StaticPlugins.Count);
             }
         }
+
+#if UNITY_2018_1_OR_NEWER
+        private static void SelectBinaries(Platform platform, BuildTarget target, Platform.BinaryType binaryType)
+        {
+            string message = string.Format("FMOD: Selected binaries for platform {0}{1}:", target,
+                (binaryType == Platform.BinaryType.Logging) ? " (development build)" : string.Empty);
+
+            HashSet<string> enabledPaths = new HashSet<string>();
+
+            foreach (string path in platform.GetBinaryAssetPaths(target, binaryType | Platform.BinaryType.Optional))
+            {
+                AssetImporter importer = AssetImporter.GetAtPath(path);
+
+                if (importer != null)
+                {
+                    (importer as PluginImporter).SetCompatibleWithPlatform(target, true);
+
+                    enabledPaths.Add(path);
+
+                    message += string.Format("\n- Enabled {0}", path);
+                }
+            }
+
+            foreach (string path in platform.GetBinaryAssetPaths(target, Platform.BinaryType.All))
+            {
+                if (!enabledPaths.Contains(path))
+                {
+                    AssetImporter importer = AssetImporter.GetAtPath(path);
+
+                    if (importer != null)
+                    {
+                        (importer as PluginImporter).SetCompatibleWithPlatform(target, false);
+
+                        message += string.Format("\n- Disabled {0}", path);
+                    }
+                }
+            }
+
+            Debug.Log(message);
+        }
+#endif
 
         private const string Il2CppCommand_AdditionalCpp = "--additional-cpp";
 
@@ -1066,24 +1141,24 @@ namespace FMODUnity
 
             public void OnPreprocessBuild(BuildReport report)
             {
-                Platform.BuildType buildType;
+                Platform.BinaryType binaryType;
 
                 if ((report.summary.options & BuildOptions.Development) == BuildOptions.Development)
                 {
-                    buildType = Platform.BuildType.Development;
+                    binaryType = Platform.BinaryType.Logging;
                 }
                 else
                 {
-                    buildType = Platform.BuildType.Release;
+                    binaryType = Platform.BinaryType.Release;
                 }
 
                 string error;
-                if (!Settings.Instance.CanBuildTarget(report.summary.platform, buildType, out error))
+                if (!Settings.Instance.CanBuildTarget(report.summary.platform, binaryType, out error))
                 {
                     throw new BuildFailedException(error);
                 }
 
-                Settings.Instance.PreprocessBuild(report.summary.platform);
+                Settings.Instance.PreprocessBuild(report.summary.platform, binaryType);
             }
 
             public void OnPostprocessBuild(BuildReport report)
@@ -1098,13 +1173,15 @@ namespace FMODUnity
 
             public void OnPreprocessBuild(BuildTarget target, string path)
             {
+                Platform.BinaryType binaryType = Platform.BinaryType.Release | Platform.BinaryType.Logging;
+
                 string error;
-                if (!Settings.Instance.CanBuildTarget(target, Platform.BuildType.All, out error))
+                if (!Settings.Instance.CanBuildTarget(target, binaryType, out error))
                 {
                     throw new BuildFailedException(error);
                 }
 
-                Settings.Instance.PreprocessBuild(target);
+                Settings.Instance.PreprocessBuild(target, binaryType);
             }
 
             public void OnPostprocessBuild(BuildTarget target, string path)
@@ -1120,12 +1197,12 @@ namespace FMODUnity
 
             public void OnActiveBuildTargetChanged(BuildTarget previous, BuildTarget current)
             {
-                Platform.BuildType buildType = EditorUserBuildSettings.development
-                    ? Platform.BuildType.Development
-                    : Platform.BuildType.Release;
+                Platform.BinaryType binaryType = EditorUserBuildSettings.development
+                    ? Platform.BinaryType.Logging
+                    : Platform.BinaryType.Release;
 
                 string error;
-                if (!Settings.Instance.CanBuildTarget(current, buildType, out error))
+                if (!Settings.Instance.CanBuildTarget(current, binaryType, out error))
                 {
                     Debug.LogWarning(error);
 

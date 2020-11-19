@@ -10,10 +10,12 @@ public class RotatePlayer : MonoBehaviour
 
     // public objects
     [Header("Components")]
+    [Tooltip("Joystick that only controls rotation")]
     public Joystick joystick;
 
     // public variables
     [Header("Variables")]
+    [Tooltip("Value for rotating speed")]
     public float rotationSpeed = 5;
 
 

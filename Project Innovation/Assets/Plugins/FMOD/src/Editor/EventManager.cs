@@ -266,10 +266,13 @@ namespace FMODUnity
                     }
 
                     stringsBankRef.SetPath(stringBankPath, defaultBankFolder);
+                    string studioPath;
+                    stringBank.getPath(out studioPath);
+                    stringsBankRef.SetStudioPath(studioPath);
                     stringsBankRef.LastModified = stringBankFileInfo.LastWriteTime;
                     stringsBankRef.Exists = true;
                     stringsBankRef.FileSizes.Clear();
-
+                  
                     if (Settings.Instance.HasPlatforms)
                     {
                         for (int i = 0; i < bankPlatforms.Length; i++)
@@ -368,7 +371,7 @@ namespace FMODUnity
             // Clear out any cached events from this bank
             eventCache.EditorEvents.ForEach((x) => x.Banks.Remove(bankRef));
 
-            FMOD.Studio.Bank bank;
+            FMOD.Studio.Bank bank; 
             bankRef.LoadResult = EditorUtils.System.loadBankFile(bankRef.Path, FMOD.Studio.LOAD_BANK_FLAGS.NORMAL, out bank);
 
             if (bankRef.LoadResult == FMOD.RESULT.ERR_EVENT_ALREADY_LOADED)
@@ -380,6 +383,11 @@ namespace FMODUnity
 
             if (bankRef.LoadResult == FMOD.RESULT.OK)
             {
+                // Get studio path
+                string studioPath;
+                bank.getPath(out studioPath);
+                bankRef.SetStudioPath(studioPath);
+
                 // Iterate all events in the bank and cache them
                 FMOD.Studio.EventDescription[] eventList;
                 var result = bank.getEventList(out eventList);

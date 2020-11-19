@@ -16,7 +16,11 @@ public class DetermineEnemyMovePhase : MonoBehaviour
 
     // public variables
     [Header("Variables")]
+    [Tooltip("Radius before enemy starts chasing player")]
+    [Range(0f, 10f)]
     public float chaseRadius = 5f;
+
+    [Tooltip("Speed at which player needs to move to trigger the enemy chase")]
     public float speedTreshold = 5f;
 
     // private objects

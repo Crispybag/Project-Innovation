@@ -1,62 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6556334052533143295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9660e62d6232af242877f0cc2b90c63d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identifier: 2c5177b11d81d824dbb064f9ac8527da
-  parentIdentifier: default
-  displaySortOrder: 0
-  active: 0
-  Properties:
-    LiveUpdate:
-      Value: 0
-      HasValue: 0
-    Overlay:
-      Value: 0
-      HasValue: 0
-    Logging:
-      Value: 0
-      HasValue: 0
-    SampleRate:
-      Value: 0
-      HasValue: 0
-    BuildDirectory:
-      Value: 
-      HasValue: 0
-    SpeakerMode:
-      Value: 0
-      HasValue: 0
-    VirtualChannelCount:
-      Value: 0
-      HasValue: 0
-    RealChannelCount:
-      Value: 0
-      HasValue: 0
-    DSPBufferLength:
-      Value: 0
-      HasValue: 0
-    DSPBufferCount:
-      Value: 0
-      HasValue: 0
-    Plugins:
-      Value: []
-      HasValue: 0
-    StaticPlugins:
-      Value: []
-      HasValue: 0
-    CallbackHandler:
-      Value: {fileID: 0}
-      HasValue: 0
-  outputType: 
 --- !u!114 &-4517323282727771565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +20,9 @@ MonoBehaviour:
     LiveUpdate:
       Value: 0
       HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
     Overlay:
       Value: 0
       HasValue: 0
@@ -114,6 +60,72 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
+--- !u!114 &-3720041587562350865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9660e62d6232af242877f0cc2b90c63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 2c5177b11d81d824dbb064f9ac8527da
+  parentIdentifier: default
+  displaySortOrder: 0
+  active: 1
+  Properties:
+    LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
+    Overlay:
+      Value: 0
+      HasValue: 0
+    Logging:
+      Value: 0
+      HasValue: 0
+    SampleRate:
+      Value: 0
+      HasValue: 0
+    BuildDirectory:
+      Value: 
+      HasValue: 0
+    SpeakerMode:
+      Value: 0
+      HasValue: 0
+    VirtualChannelCount:
+      Value: 0
+      HasValue: 0
+    RealChannelCount:
+      Value: 0
+      HasValue: 0
+    DSPBufferLength:
+      Value: 0
+      HasValue: 0
+    DSPBufferCount:
+      Value: 0
+      HasValue: 0
+    Plugins:
+      Value: []
+      HasValue: 0
+    StaticPlugins:
+      Value: []
+      HasValue: 0
+    CallbackHandler:
+      Value: {fileID: 0}
+      HasValue: 0
+  outputType: AUTODETECT
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &-2904147005990432098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +146,9 @@ MonoBehaviour:
     LiveUpdate:
       Value: 0
       HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
     Overlay:
       Value: 0
       HasValue: 0
@@ -171,6 +186,9 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &-556400065871911558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +209,9 @@ MonoBehaviour:
     LiveUpdate:
       Value: 0
       HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
     Overlay:
       Value: 0
       HasValue: 0
@@ -228,6 +249,9 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &-150782876197901703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +272,9 @@ MonoBehaviour:
     LiveUpdate:
       Value: 0
       HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
     Overlay:
       Value: 0
       HasValue: 0
@@ -285,6 +312,9 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +379,9 @@ MonoBehaviour:
     LiveUpdate:
       Value: 1
       HasValue: 1
+    LiveUpdatePort:
+      Value: 9264
+      HasValue: 1
     Overlay:
       Value: 1
       HasValue: 1
@@ -386,6 +419,9 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &5845521319341454569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +440,9 @@ MonoBehaviour:
   active: 0
   Properties:
     LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
       Value: 0
       HasValue: 0
     Overlay:
@@ -443,6 +482,9 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &5974638416314666075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,6 +504,9 @@ MonoBehaviour:
   Properties:
     LiveUpdate:
       Value: 0
+      HasValue: 1
+    LiveUpdatePort:
+      Value: 9264
       HasValue: 1
     Overlay:
       Value: 0
@@ -500,6 +545,9 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 1
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &6251457689512693444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,9 +563,12 @@ MonoBehaviour:
   identifier: 52eb9df5db46521439908db3a29a1bbb
   parentIdentifier: default
   displaySortOrder: 0
-  active: 0
+  active: 1
   Properties:
     LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
       Value: 0
       HasValue: 0
     Overlay:
@@ -556,7 +607,10 @@ MonoBehaviour:
     CallbackHandler:
       Value: {fileID: 0}
       HasValue: 0
-  outputType: 
+  outputType: AUTODETECT
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &6681020946857144876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +631,9 @@ MonoBehaviour:
     LiveUpdate:
       Value: 0
       HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
     Overlay:
       Value: 0
       HasValue: 0
@@ -614,6 +671,9 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
 --- !u!114 &7108503393253318243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,9 +689,12 @@ MonoBehaviour:
   identifier: 2fea114e74ecf3c4f920e1d5cc1c4c40
   parentIdentifier: default
   displaySortOrder: 0
-  active: 0
+  active: 1
   Properties:
     LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
       Value: 0
       HasValue: 0
     Overlay:
@@ -671,3 +734,6 @@ MonoBehaviour:
       Value: {fileID: 0}
       HasValue: 0
   outputType: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
