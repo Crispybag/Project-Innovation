@@ -43,19 +43,22 @@ public class SwipeControls : MonoBehaviour
     //=======================================================================================
     private void FixedUpdate()
     {
+        //Reset Direction swipe
         direction = DIRECTION.NONE;
+
+        //If screen is touched
         if (Input.touchCount > 0)
         {
+            //Add frame for how long it is held
             _framesHeldDown++;
             Touch touch = Input.GetTouch(0);
 
-            //Reset Startposition
+
+            //Reset Startposition when screen is just touched, held for too long, or there is a direction input
             if (touch.phase == TouchPhase.Began || _framesHeldDown > frameTreshold || direction != DIRECTION.NONE)
             {
                 _startPosition = touch.position;
                 _framesHeldDown = 0;
-                
-                Debug.Log(direction);
             }
             
             //Detect a swipe
@@ -73,7 +76,6 @@ public class SwipeControls : MonoBehaviour
                     if (y > 0) { direction = DIRECTION.UP;    }
                     else       { direction = DIRECTION.DOWN;  }
                 }
-                Debug.Log(direction);
             }
         }
 
