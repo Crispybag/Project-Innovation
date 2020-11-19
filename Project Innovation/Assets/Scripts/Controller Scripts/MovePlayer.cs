@@ -10,11 +10,13 @@ public class MovePlayer : MonoBehaviour
 
     // public objects
     [Header("Components")]
+    [Tooltip("Joystick that only controls the movement of the player")]
     public Joystick joystick;
     public Rigidbody rb;
 
     // public variables
     [Header("Variables")]
+    [Tooltip("Velocity at which the player moves around")]
     public float moveVelocity = 1f;
 
     //=======================================================================================
