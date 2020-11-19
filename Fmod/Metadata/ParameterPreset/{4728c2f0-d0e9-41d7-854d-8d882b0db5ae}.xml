@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{4728c2f0-d0e9-41d7-854d-8d882b0db5ae}">
+		<property name="name">
+			<value>Tiles</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{bbbcc19e-dbe6-4eaa-9504-cf80928449af}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{bbbcc19e-dbe6-4eaa-9504-cf80928449af}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
