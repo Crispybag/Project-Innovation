@@ -926,20 +926,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059735936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1542cd4d1532bf946a67662b3ec2ee22, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EventPath: 
-  m_Wood: 0
-  m_Water: 0
-  m_Mud: 0
-  m_Dirt: 0
-  m_Sand: 0
-  m_Leaves: 0
-  m_Tiles: 0
-  m_Gravel: 0
-  m_StepDistance: 2
-  m_Debug: 0
+  CollisionTag: 
+  Event: event:/3D/Ambience/Growling
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 50
 --- !u!114 &1059735938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6557,6 +6557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 1024.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5314610833599730494, guid: c956f459f66a076448325550e44127cd,
         type: 3}
