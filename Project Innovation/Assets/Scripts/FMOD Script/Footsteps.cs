@@ -123,11 +123,10 @@ public class Footsteps : MonoBehaviour
 		m_Wood = 0.0f;
 		m_Water = 0.0f;
 		m_Mud = 0.0f;
-		m_Dirt = 1.0f;
+		m_Dirt = 0.0f;
 		m_Sand = 0.0f;
 		m_Leaves = 0.0f;
-		m_Tiles = 0.0f;
-		m_Gravel = 0.0f;
+		m_Tiles = 1.0f;
 		m_Gravel = 0.0f;
 
 		RaycastHit hit;

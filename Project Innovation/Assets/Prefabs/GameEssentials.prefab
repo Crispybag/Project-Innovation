@@ -284,12 +284,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5314610833598235844}
-  - component: {fileID: 5314610833598235847}
-  - component: {fileID: 5314610833598235846}
-  - component: {fileID: 5314610833598235865}
   - component: {fileID: 5314610833598235864}
   - component: {fileID: 5314610833598235867}
   - component: {fileID: 5314610833598235866}
+  - component: {fileID: 3740305854919668473}
+  - component: {fileID: 5314610833598235847}
+  - component: {fileID: 5314610833598235846}
+  - component: {fileID: 5314610833598235865}
   - component: {fileID: 5314610833598235869}
   m_Layer: 0
   m_Name: Player
@@ -313,6 +314,75 @@ Transform:
   m_Father: {fileID: 5314610833599730495}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5314610833598235864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314610833598235868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624a7b8d1f8454c47af36db99d87d3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 4118880402883268225}
+  rb: {fileID: 5314610833598235869}
+  moveVelocity: 80
+--- !u!114 &5314610833598235867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314610833598235868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d85d1c5b92de548b6a49a155e02ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 4118880402656333398}
+  rotationSpeed: 100
+--- !u!114 &5314610833598235866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314610833598235868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6068ea47864bd3c48b4e00f455ab57ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 4118880403048976023}
+  rb: {fileID: 5314610833598235869}
+  movementSpeed: 10
+  rotationSpeed: 100
+  horizontalTreshold: 0.2
+--- !u!114 &3740305854919668473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314610833598235868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1542cd4d1532bf946a67662b3ec2ee22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/2D/Ambience/Walking
+  m_Wood: 0
+  m_Water: 0
+  m_Mud: 0
+  m_Dirt: 0
+  m_Sand: 0
+  m_Leaves: 0
+  m_Tiles: 0
+  m_Gravel: 0
+  m_StepDistance: 2
+  m_Debug: 0
 --- !u!33 &5314610833598235847
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -374,52 +444,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5314610833598235864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5314610833598235868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 624a7b8d1f8454c47af36db99d87d3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 4118880402883268225}
-  rb: {fileID: 5314610833598235869}
-  moveVelocity: 80
---- !u!114 &5314610833598235867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5314610833598235868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d85d1c5b92de548b6a49a155e02ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 4118880402656333398}
-  rotationSpeed: 100
---- !u!114 &5314610833598235866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5314610833598235868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6068ea47864bd3c48b4e00f455ab57ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 4118880403048976023}
-  rb: {fileID: 5314610833598235869}
-  movementSpeed: 10
-  rotationSpeed: 100
-  horizontalTreshold: 0.2
 --- !u!54 &5314610833598235869
 Rigidbody:
   m_ObjectHideFlags: 0
