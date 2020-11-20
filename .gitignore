@@ -5,7 +5,6 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
@@ -60,23 +59,23 @@ crashlytics-build.properties
 
 ### FMOD Unity Integration ###
 # Never ignore DLLs in the FMOD subfolder, so make sure that the FMOD-folder is in the correct path.
-!/[Aa]ssets/Plugins/FMOD/**/*.dll
+!Fmod/[Aa]ssets/Plugins/FMOD/**/*.dll
 
 # Don't ignore images and gizmos used by FMOD in the Unity Editor
-!/[Aa}ssets/Gizmos/FMOD/*
-!/[Aa}ssets/Editor Default Resources/FMOD/*
+!Fmod/[Aa}ssets/Gizmos/FMOD/*
+!Fmod/[Aa}ssets/Editor Default Resources/FMOD/*
 
 # Ignore the Cache-file since it is updated locally either way
-/[Aa]ssets/**/FMODStudioCache.asset
-/[Aa]ssets/**/FMODStudioCache.asset.meta
-/[Aa]ssets/Plugins/FMOD/Cache.meta
-/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+Fmod/[Aa]ssets/**/FMODStudioCache.asset
+Fmod/[Aa]ssets/**/FMODStudioCache.asset.meta
+Fmod/[Aa]ssets/Plugins/FMOD/Cache.meta
+Fmod/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
 
 # Log-files
 fmod.log
 fmod_editor.log
 
 # FMOD 1.10.x (Legacy)
-/Assets/FMODAssets/*
-/Assets/FMODStudioCache.meta
+Fmod/Assets/FMODAssets/*
+Fmod/Assets/FMODStudioCache.meta
 
