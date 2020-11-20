@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{e035ef0d-797b-4251-b353-4775e5c44101}">
 		<property name="assetPath">
-			<value>The Weeknd - Blinding Lights.mp3</value>
+			<value>Music/The Weeknd - Blinding Lights.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

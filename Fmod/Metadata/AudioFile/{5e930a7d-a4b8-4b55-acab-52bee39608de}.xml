@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{5e930a7d-a4b8-4b55-acab-52bee39608de}">
 		<property name="assetPath">
-			<value>BootsInteriorTile [2020-11-17 121604]-8.wav</value>
+			<value>Player/Walking/Boots inside/BootsInteriorTile [2020-11-17 121604]-8.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

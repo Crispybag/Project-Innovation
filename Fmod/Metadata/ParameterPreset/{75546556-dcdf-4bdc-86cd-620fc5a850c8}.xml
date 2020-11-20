@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{75546556-dcdf-4bdc-86cd-620fc5a850c8}">
+		<property name="name">
+			<value>Walking types</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{136464e1-b60f-4f73-8b8e-0239e176a9e7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{136464e1-b60f-4f73-8b8e-0239e176a9e7}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>7</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Wood</value>
+			<value>Mud</value>
+			<value>Dirt</value>
+			<value>Sand</value>
+			<value>Leaves</value>
+			<value>Tiles</value>
+			<value>Gravel</value>
+		</property>
+		<property name="isHeld">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>5</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{67886778-40ab-4ecb-90fe-f289f174d124}">
+		<property name="name">
+			<value>Footstep speed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9f98afad-e270-41c5-b447-830656eee956}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9f98afad-e270-41c5-b447-830656eee956}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Walking</value>
+			<value>Running</value>
+		</property>
+		<property name="isHeld">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.019999999552965164</value>
+		</property>
+	</object>
+</objects>
