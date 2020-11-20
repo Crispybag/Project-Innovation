@@ -56,8 +56,12 @@ public class Footsteps : MonoBehaviour
 	//They are exposed to the UI (public) only to make it easy to see the values as the player moves through the scene.
 	public float m_Wood;
 	public float m_Water;
+	public float m_Mud;
 	public float m_Dirt;
 	public float m_Sand;
+	public float m_Leaves;
+	public float m_Tiles;
+	public float m_Gravel;
 
 	//Step variables
 	//These variables are used to control when the player executes a footstep.
@@ -116,10 +120,15 @@ public class Footsteps : MonoBehaviour
 	void PlayFootstepSound()
 	{
 		//Defaults
+		m_Wood = 0.0f;
 		m_Water = 0.0f;
+		m_Mud = 0.0f;
 		m_Dirt = 1.0f;
 		m_Sand = 0.0f;
-		m_Wood = 0.0f;
+		m_Leaves = 0.0f;
+		m_Tiles = 0.0f;
+		m_Gravel = 0.0f;
+		m_Gravel = 0.0f;
 
 		RaycastHit hit;
 		if(Physics.Raycast(transform.position, Vector3.down, out hit, 1000.0f))
@@ -172,15 +181,19 @@ public class Footsteps : MonoBehaviour
 			}
 			else//If the ray hits somethign other than the ground, we assume it hit a wooden prop (This is specific to the Viking Village scene) - and set the parameter values for wood.
 			{
+				m_Wood = 0.0f;
 				m_Water = 0.0f;
+				m_Mud = 0.0f;
 				m_Dirt = 0.0f;
 				m_Sand = 0.0f;
-				m_Wood = 1.0f;
+				m_Leaves = 0.0f;
+				m_Tiles = 1.0f;
+				m_Gravel = 0.0f;
 			}
 		}
 
 		if(m_Debug)
-			Debug.Log("Wood: " + m_Wood + " Dirt: " + m_Dirt + " Sand: " + m_Sand + " Water: " + m_Water);
+			Debug.Log("Wood: " + m_Wood + " Water: " + m_Water + " Mud: " + m_Mud + " Dirt: " + m_Dirt + " Sand: " + m_Sand + " Leaves: " + m_Leaves + " Tiles: " + m_Tiles + " Gravel: " + m_Gravel);
 
 		if(m_EventPath != null)
 		{
@@ -188,9 +201,14 @@ public class Footsteps : MonoBehaviour
 			e.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
 
 			e.setParameterByName("Wood", m_Wood);
+			e.setParameterByName("Water", m_Water);
+			e.setParameterByName("Mud", m_Mud);
 			e.setParameterByName("Dirt", m_Dirt);
 			e.setParameterByName("Sand", m_Sand);
-			e.setParameterByName("Water", m_Water);
+			e.setParameterByName("Leaves", m_Leaves);
+			e.setParameterByName("Tiles", m_Tiles);
+			e.setParameterByName("Gravel", m_Gravel);
+
 
 			e.start();
 			e.release();//Release each event instance immediately, there are fire and forget, one-shot instances.
