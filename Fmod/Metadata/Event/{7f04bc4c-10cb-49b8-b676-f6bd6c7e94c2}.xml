@@ -182,6 +182,9 @@
 		<property name="quantizationInterval">
 			<value>12</value>
 		</property>
+		<property name="pitch">
+			<value>-2</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{a760bf78-1de9-49fa-a9fb-ef6745ae363f}</destination>
 			<destination>{cd9101d4-8b90-4610-8b90-8d0433c0116c}</destination>
