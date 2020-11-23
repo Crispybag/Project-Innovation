@@ -1484,6 +1484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1773018749}
   playerSpeed: 5
+  mouseSensitivity: 100
 --- !u!1001 &1870388153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,7 +1495,7 @@ PrefabInstance:
     - target: {fileID: 1429356590874924107, guid: 120591dfc209a8d4ab559d17652221f9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1429356592382504263, guid: 120591dfc209a8d4ab559d17652221f9,
         type: 3}
