@@ -9827,7 +9827,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &408341504
 GameObject:
@@ -9840,11 +9840,10 @@ GameObject:
   - component: {fileID: 408341505}
   - component: {fileID: 408341510}
   - component: {fileID: 408341509}
-  - component: {fileID: 408341508}
   - component: {fileID: 408341507}
   - component: {fileID: 408341506}
   m_Layer: 0
-  m_Name: Floor 2 (10)
+  m_Name: Splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9858,11 +9857,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408341504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.19, y: 16.575989, z: -26.493172}
-  m_LocalScale: {x: 1.16427, y: 1, z: 10}
+  m_LocalPosition: {x: -32.9, y: 98.6, z: -128.61823}
+  m_LocalScale: {x: 5.1528263, y: 4.4258, z: 44.258}
   m_Children: []
-  m_Father: {fileID: 1583138835}
-  m_RootOrder: 11
+  m_Father: {fileID: 547650611}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &408341506
 MonoBehaviour:
@@ -9880,9 +9879,13 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 1217810276}
     Params:
+    - Name: BoatHitLand
+      Value: 0
+    - Name: LayDownOars
+      Value: 0
     - Name: BigSplash
       Value: 1
-  TriggerEvent: 3
+  TriggerEvent: 7
 --- !u!65 &408341507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9896,19 +9899,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!65 &408341508
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408341504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &408341509
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9989,7 +9979,7 @@ Transform:
   - {fileID: 1043477213}
   - {fileID: 1764501027}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &505739117
 GameObject:
@@ -10002,11 +9992,10 @@ GameObject:
   - component: {fileID: 505739118}
   - component: {fileID: 505739123}
   - component: {fileID: 505739122}
-  - component: {fileID: 505739121}
   - component: {fileID: 505739120}
   - component: {fileID: 505739119}
   m_Layer: 0
-  m_Name: Floor 2 (7)
+  m_Name: Thunder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10020,11 +10009,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505739117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69, y: 16.575989, z: -26.493172}
-  m_LocalScale: {x: 7.0350003, y: 1, z: 10}
+  m_LocalPosition: {x: 4.8, y: 98.6, z: -128.61823}
+  m_LocalScale: {x: 31.135504, y: 4.4258, z: 44.258}
   m_Children: []
-  m_Father: {fileID: 1583138835}
-  m_RootOrder: 8
+  m_Father: {fileID: 547650611}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &505739119
 MonoBehaviour:
@@ -10042,9 +10031,13 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 1764501028}
     Params:
+    - Name: Wind
+      Value: 0
+    - Name: Rain
+      Value: 0
     - Name: Thunder
       Value: 1
-  TriggerEvent: 3
+  TriggerEvent: 7
 --- !u!65 &505739120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10058,19 +10051,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!65 &505739121
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505739117}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &505739122
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10118,6 +10098,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505739117}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &526887013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526887015}
+  - component: {fileID: 526887014}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &526887014
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526887013}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &526887015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526887013}
+  m_LocalRotation: {x: 0.828031, y: -0.04651012, z: -0.04721594, w: 0.55675143}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 66.581, y: 199.08899, z: 199.03099}
+--- !u!1 &547650610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547650611}
+  m_Layer: 0
+  m_Name: '[TRIGGERS]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &547650611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547650610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 172.28065, y: -85.07498, z: 103.16476}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1491798302}
+  - {fileID: 1105737530}
+  - {fileID: 505739118}
+  - {fileID: 1060636309}
+  - {fileID: 2027066380}
+  - {fileID: 408341505}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627245240
 GameObject:
   m_ObjectHideFlags: 0
@@ -10133,7 +10241,7 @@ GameObject:
   - component: {fileID: 627245243}
   - component: {fileID: 627245242}
   m_Layer: 0
-  m_Name: Floor 2 (3)
+  m_Name: WallFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10256,7 +10364,7 @@ GameObject:
   - component: {fileID: 755741892}
   - component: {fileID: 755741891}
   m_Layer: 0
-  m_Name: Floor 2 (1)
+  m_Name: WallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10371,6 +10479,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3740305854919668473, guid: c956f459f66a076448325550e44127cd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5314610833426511989, guid: c956f459f66a076448325550e44127cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10449,7 +10567,7 @@ PrefabInstance:
     - target: {fileID: 5314610833599730495, guid: c956f459f66a076448325550e44127cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5314610833599730495, guid: c956f459f66a076448325550e44127cd,
         type: 3}
@@ -10464,6 +10582,11 @@ PrefabInstance:
     - target: {fileID: 5314610833599730495, guid: c956f459f66a076448325550e44127cd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5314610834353865427, guid: c956f459f66a076448325550e44127cd,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -20010,7 +20133,7 @@ Transform:
   - {fileID: 826949545}
   - {fileID: 47186776}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038902931
 GameObject:
@@ -20027,7 +20150,7 @@ GameObject:
   - component: {fileID: 1038902934}
   - component: {fileID: 1038902933}
   m_Layer: 0
-  m_Name: Floor 2
+  m_Name: Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20063,6 +20186,8 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 176300585}
     Params:
+    - Name: Forest
+      Value: 0
     - Name: Ocean
       Value: 1
   TriggerEvent: 3
@@ -20110,7 +20235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d217eb5b7e26b904b896bd8449ef3814, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20204,11 +20329,10 @@ GameObject:
   - component: {fileID: 1060636309}
   - component: {fileID: 1060636314}
   - component: {fileID: 1060636313}
-  - component: {fileID: 1060636312}
   - component: {fileID: 1060636311}
   - component: {fileID: 1060636310}
   m_Layer: 0
-  m_Name: Floor 2 (8)
+  m_Name: Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20222,11 +20346,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060636308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.21, y: 16.575989, z: -26.493172}
-  m_LocalScale: {x: 1.16427, y: 1, z: 10}
+  m_LocalPosition: {x: -20.3, y: 98.6, z: -128.61823}
+  m_LocalScale: {x: 5.1528263, y: 4.4258, z: 44.258}
   m_Children: []
-  m_Father: {fileID: 1583138835}
-  m_RootOrder: 9
+  m_Father: {fileID: 547650611}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1060636310
 MonoBehaviour:
@@ -20244,9 +20368,13 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 1217810276}
     Params:
+    - Name: BigSplash
+      Value: 0
+    - Name: LayDownOars
+      Value: 0
     - Name: BoatHitLand
       Value: 1
-  TriggerEvent: 3
+  TriggerEvent: 7
 --- !u!65 &1060636311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20260,19 +20388,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!65 &1060636312
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060636308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1060636313
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20335,7 +20450,7 @@ GameObject:
   - component: {fileID: 1079819254}
   - component: {fileID: 1079819253}
   m_Layer: 0
-  m_Name: Floor 2 (4)
+  m_Name: WallBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20454,11 +20569,10 @@ GameObject:
   - component: {fileID: 1105737530}
   - component: {fileID: 1105737535}
   - component: {fileID: 1105737534}
-  - component: {fileID: 1105737533}
   - component: {fileID: 1105737532}
   - component: {fileID: 1105737531}
   m_Layer: 0
-  m_Name: Floor 2 (6)
+  m_Name: Rain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20472,11 +20586,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105737529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60.85, y: 16.575989, z: -26.493172}
-  m_LocalScale: {x: 7.0350003, y: 1, z: 10}
+  m_LocalPosition: {x: 37.500008, y: 98.6, z: -128.61823}
+  m_LocalScale: {x: 31.135504, y: 4.4258, z: 44.258}
   m_Children: []
-  m_Father: {fileID: 1583138835}
-  m_RootOrder: 7
+  m_Father: {fileID: 547650611}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1105737531
 MonoBehaviour:
@@ -20494,9 +20608,13 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 1764501028}
     Params:
+    - Name: Wind
+      Value: 0
+    - Name: Thunder
+      Value: 0
     - Name: Rain
       Value: 1
-  TriggerEvent: 3
+  TriggerEvent: 7
 --- !u!65 &1105737532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20510,19 +20628,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!65 &1105737533
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105737529}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1105737534
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20729,11 +20834,10 @@ GameObject:
   - component: {fileID: 1491798302}
   - component: {fileID: 1491798307}
   - component: {fileID: 1491798306}
-  - component: {fileID: 1491798305}
   - component: {fileID: 1491798304}
   - component: {fileID: 1491798303}
   m_Layer: 0
-  m_Name: Floor 2 (5)
+  m_Name: Wind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20747,11 +20851,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491798301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.61, y: 16.575989, z: -26.493172}
-  m_LocalScale: {x: 7.0350003, y: 1, z: 10}
+  m_LocalPosition: {x: 70, y: 98.6, z: -128.61823}
+  m_LocalScale: {x: 31.135504, y: 4.4258, z: 44.258}
   m_Children: []
-  m_Father: {fileID: 1583138835}
-  m_RootOrder: 6
+  m_Father: {fileID: 547650611}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1491798303
 MonoBehaviour:
@@ -20769,9 +20873,13 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 1764501028}
     Params:
+    - Name: Rain
+      Value: 0
+    - Name: Thunder
+      Value: 0
     - Name: Wind
       Value: 1
-  TriggerEvent: 3
+  TriggerEvent: 7
 --- !u!65 &1491798304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20785,19 +20893,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!65 &1491798305
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491798301}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1491798306
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20860,7 +20955,7 @@ GameObject:
   - component: {fileID: 1576319056}
   - component: {fileID: 1576319055}
   m_Layer: 0
-  m_Name: Floor 1
+  m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20896,6 +20991,8 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 176300585}
     Params:
+    - Name: Ocean
+      Value: 0
     - Name: Forest
       Value: 1
   TriggerEvent: 3
@@ -20943,7 +21040,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a8c85eabfcc194743bede36042d19fc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21005,14 +21102,8 @@ Transform:
   - {fileID: 1923321246}
   - {fileID: 627245241}
   - {fileID: 1079819252}
-  - {fileID: 1491798302}
-  - {fileID: 1105737530}
-  - {fileID: 505739118}
-  - {fileID: 1060636309}
-  - {fileID: 2027066380}
-  - {fileID: 408341505}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625787562
 GameObject:
@@ -21166,7 +21257,7 @@ GameObject:
   - component: {fileID: 1923321248}
   - component: {fileID: 1923321247}
   m_Layer: 0
-  m_Name: Floor 2 (2)
+  m_Name: WallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21285,11 +21376,10 @@ GameObject:
   - component: {fileID: 2027066380}
   - component: {fileID: 2027066385}
   - component: {fileID: 2027066384}
-  - component: {fileID: 2027066383}
   - component: {fileID: 2027066382}
   - component: {fileID: 2027066381}
   m_Layer: 0
-  m_Name: Floor 2 (9)
+  m_Name: Oars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21303,11 +21393,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027066379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.27, y: 16.575989, z: -26.493172}
-  m_LocalScale: {x: 1.16427, y: 1, z: 10}
+  m_LocalPosition: {x: -26.5, y: 98.6, z: -128.61823}
+  m_LocalScale: {x: 5.1528263, y: 4.4258, z: 44.258}
   m_Children: []
-  m_Father: {fileID: 1583138835}
-  m_RootOrder: 10
+  m_Father: {fileID: 547650611}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2027066381
 MonoBehaviour:
@@ -21325,9 +21415,13 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 1217810276}
     Params:
+    - Name: BoatHitLand
+      Value: 0
+    - Name: BigSplash
+      Value: 0
     - Name: LayDownOars
       Value: 1
-  TriggerEvent: 3
+  TriggerEvent: 7
 --- !u!65 &2027066382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21341,19 +21435,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!65 &2027066383
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027066379}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2027066384
 MeshRenderer:
   m_ObjectHideFlags: 0
