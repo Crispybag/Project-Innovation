@@ -52,7 +52,7 @@ public class AdaptiveFootSteps : MonoBehaviour
         _distanceTravelled += (transform.position - _prevPos).magnitude;
         if (_distanceTravelled >= stepDistance + _stepRandom)
         {
-            //MaterialCheck();
+            MaterialCheck();
             PlayFootStep();
             _stepRandom = Random.Range(0f, 0.5f);
             _distanceTravelled = 0f;
@@ -66,9 +66,14 @@ public class AdaptiveFootSteps : MonoBehaviour
     //Description of function 
     public void MaterialCheck()
     {
-        if (hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>())
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, rayDistance))
         {
-            _materialValue = hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>().materialValue;
+            if (hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>())
+            {
+                Debug.Log(hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>().materialValue);
+                _materialValue = hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>().materialValue;
+            }
+            else _materialValue = defaultMaterial;
         }
         else _materialValue = defaultMaterial;
 
