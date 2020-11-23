@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{77098762-f95a-498e-aa58-b46c074ac3a2}">
+		<property name="assetPath">
+			<value>Crickets2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>222.580375</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0107a68a-a665-42a7-a80a-dfc97087ab10}</destination>
+		</relationship>
+	</object>
+</objects>
