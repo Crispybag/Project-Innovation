@@ -153,9 +153,6 @@
 		<property name="pitch">
 			<value>3</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 		<relationship name="modulators">
 			<destination>{b92bbb44-be50-4218-a1f5-e9f177d37b21}</destination>
 			<destination>{f8b074a8-ee86-40ae-a0b1-daa604595ea6}</destination>
@@ -177,9 +174,6 @@
 		<property name="pitch">
 			<value>-0.800000012</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 	</object>
 	<object class="MultiSound" id="{c3007090-89a5-430c-b51b-8ae2be65ad12}">
 		<property name="start">
@@ -187,9 +181,6 @@
 		</property>
 		<property name="quantizationInterval">
 			<value>12</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{a760bf78-1de9-49fa-a9fb-ef6745ae363f}</destination>
@@ -218,9 +209,6 @@
 		<property name="pitch">
 			<value>-0.800000012</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 		<relationship name="modulators">
 			<destination>{faccbe1f-4663-4c26-8c90-2f9fc0acaba5}</destination>
 			<destination>{b57bf047-6c6f-423a-a0cd-19de1483b348}</destination>
@@ -239,9 +227,6 @@
 		<property name="pitch">
 			<value>-0.800000012</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 	</object>
 	<object class="MultiSound" id="{108216c4-b539-4f5e-b957-1a24a43086f8}">
 		<property name="start">
@@ -250,9 +235,6 @@
 		<property name="pitch">
 			<value>-0.800000012</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 	</object>
 	<object class="MultiSound" id="{9da6c90a-95e0-41da-8a1e-1166018b771b}">
 		<property name="start">
@@ -260,9 +242,6 @@
 		</property>
 		<property name="pitch">
 			<value>-0.800000012</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 	</object>
 	<object class="EventMixerGroup" id="{3bc5c732-7f83-43d7-a012-f6169ddba296}">
@@ -294,9 +273,6 @@
 		<property name="pitch">
 			<value>2</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 	</object>
 	<object class="MultiSound" id="{151ed04f-2d57-4343-9a22-22a4b952d247}">
 		<property name="start">
@@ -304,9 +280,6 @@
 		</property>
 		<property name="pitch">
 			<value>3.60000014</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<property name="playlistMode">
 			<value>1</value>
@@ -329,9 +302,6 @@
 		<property name="pitch">
 			<value>2</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 		<relationship name="triggerConditions">
 			<destination>{7d41d277-fe2c-49a1-8411-1cb6f061d1ef}</destination>
 		</relationship>
@@ -342,9 +312,6 @@
 		</property>
 		<property name="pitch">
 			<value>9.5</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<property name="playlistMode">
 			<value>1</value>
@@ -360,20 +327,13 @@
 			<destination>{c8f63717-5327-40ea-8507-b1cdc4318800}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{fefbb7ba-cb63-49da-9b11-b519c1e2aaaa}">
-		<property name="looping">
-			<value>true</value>
-		</property>
-	</object>
+	<object class="MultiSound" id="{fefbb7ba-cb63-49da-9b11-b519c1e2aaaa}" />
 	<object class="MultiSound" id="{23ef4cdc-4751-4a14-aafa-d2699cd48954}">
 		<property name="start">
 			<value>5</value>
 		</property>
 		<property name="pitch">
 			<value>15.5</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{c3ec02a2-7af9-4166-bc04-97f99a373dcc}</destination>
@@ -395,9 +355,6 @@
 	<object class="MultiSound" id="{dc4646f9-aa48-4e4d-bd6b-682a41b78fd7}">
 		<property name="start">
 			<value>4</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 	</object>
 	<object class="EventMixerGroup" id="{a614c822-d668-46b0-83f2-e80270cae117}">
