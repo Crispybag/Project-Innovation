@@ -41,7 +41,7 @@ public class AdaptiveFootSteps : MonoBehaviour
     {
         _stepRandom = Random.Range(0f, 0.5f);
         _prevPos = transform.position;
-        _materialValue = 0;
+        _materialValue = defaultMaterial;
     }
 
     private void Update()
