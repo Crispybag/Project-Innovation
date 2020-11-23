@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{3501a361-bf23-46dc-8a60-6dc066e63219}">
+	<object class="AudioFile" id="{cc5ca02f-cf8e-49a1-b8db-9ff903242653}">
 		<property name="assetPath">
-			<value>Player/Walking/Boots inside/BootsInteriorTile [2020-11-17 121604]-3.wav</value>
+			<value>Player/Walking/Boots inside/Tiles 10.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.84031250000000002</value>
+			<value>0.73968253968253972</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{0107a68a-a665-42a7-a80a-dfc97087ab10}</destination>

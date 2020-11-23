@@ -44,7 +44,7 @@ MonoBehaviour:
   Path: ../Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637414883722030970
+  lastModified: 637414917580543910
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 729834060088687277}
+  - {fileID: 3688941363321984153}
   MinDistance: 1
   MaxDistance: 20
   Length: 8400
@@ -212,7 +212,7 @@ MonoBehaviour:
   Path: ../Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637414883722071141
+  lastModified: 637414917580584059
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -242,6 +242,26 @@ MonoBehaviour:
     Value: 1102
   - Name: Mobile
     Value: 1102
+  Exists: 1
+--- !u!114 &-4134071042597216961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Footstep speed
+  m_EditorClassIdentifier: 
+  Name: Footstep speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-4096442531746093347
 MonoBehaviour:
@@ -442,7 +462,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1674307898894461917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,7 +573,7 @@ MonoBehaviour:
   - {fileID: -8834930006518005172}
   StringsBanks:
   - {fileID: -4993986796073285991}
-  stringsBankWriteTime: 637414883722071141
+  stringsBankWriteTime: 637414917580584059
   cacheVersion: 6
 --- !u!114 &30862988505423706
 MonoBehaviour:
@@ -591,6 +611,26 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &285069957190301634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Walking types
+  m_EditorClassIdentifier: 
+  Name: Walking types
+  Min: 0
+  Max: 6
+  Default: 5
   ID:
     data1: 0
     data2: 0
@@ -677,7 +717,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &1030651820315615539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,6 +737,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1110879736203182251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Growling/Monster sad
+  m_EditorClassIdentifier: 
+  Name: Monster sad
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &1583296256363810156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,7 +924,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2517592209582349740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,6 +1001,26 @@ MonoBehaviour:
   m_Name: parameter:/Walking/Dirt
   m_EditorClassIdentifier: 
   Name: Dirt
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3688941363321984153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Growling/Monster sad
+  m_EditorClassIdentifier: 
+  Name: Monster sad
   Min: 0
   Max: 1
   Default: 0
@@ -1051,8 +1131,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2436579515179634966}
-  - {fileID: -1957253852251654251}
+  - {fileID: 285069957190301634}
+  - {fileID: -4134071042597216961}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1079,6 +1159,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 201024
+--- !u!114 &5578172171518697029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Footstep speed
+  m_EditorClassIdentifier: 
+  Name: Footstep speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &6350635343777598172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1242,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7807644382012601097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Walking types
+  m_EditorClassIdentifier: 
+  Name: Walking types
+  Min: 0
+  Max: 6
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &8129727026826863760
 MonoBehaviour:
   m_ObjectHideFlags: 0
