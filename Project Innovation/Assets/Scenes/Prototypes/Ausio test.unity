@@ -546,51 +546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4833154807786292249, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833420174491, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 825
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5314610833598235868, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5314610833599730494, guid: c956f459f66a076448325550e44127cd,
         type: 3}
       propertyPath: m_Name
@@ -651,13 +606,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5314610834353865426, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3740305854919668473, guid: c956f459f66a076448325550e44127cd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c956f459f66a076448325550e44127cd, type: 3}
 --- !u!1 &1076701561
 GameObject:
