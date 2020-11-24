@@ -5274,6 +5274,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialValue: 3
+--- !u!1 &1466709163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4758584420009122918, guid: dad804224a64d3f4ea78f22a42192d40,
+    type: 3}
+  m_PrefabInstance: {fileID: 4758584420137496849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1466709174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466709163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113e4aa2cd3db44d1ac0cb7e9794964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGainDb: 0
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stereoSpeakerModeEnabled: 0
+  recorderSeamless: 0
+  recorderSourceTag: Untagged
+  recorderFoldout: 0
 --- !u!1 &1503578999
 GameObject:
   m_ObjectHideFlags: 0
