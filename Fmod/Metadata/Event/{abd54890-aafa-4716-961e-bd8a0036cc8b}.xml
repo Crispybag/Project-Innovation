@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{abd54890-aafa-4716-961e-bd8a0036cc8b}">
 		<property name="name">
-			<value>Growling</value>
+			<value>Monster</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -623,7 +623,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -659,7 +658,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
