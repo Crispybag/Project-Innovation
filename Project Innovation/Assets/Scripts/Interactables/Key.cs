@@ -1,21 +1,16 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
-public class PlaySound : MonoBehaviour
+public class Key : MonoBehaviour
 {
     //=======================================================================================
     //                            >  Components & Variables  <
     //=======================================================================================
 
     // public objects
-    [Header("Components")]
-    public AudioSource audioSource;
-    public Transform soundSource;
+    //[Header("Components")]
 
     // public variables
-    [Header("Variables")]
-    [Min(0)]
-    public float soundLength = 4f;
+    //[Header("Variables")]
 
     // private objects
 
@@ -37,11 +32,7 @@ public class PlaySound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // after colliding with the player it plays the audiosource
-        if (collision.gameObject.tag == "Player")
-        {
-            audioSource.Play();
-        }
+        PickUpKey(collision);
     }
 
     //=======================================================================================
@@ -50,15 +41,29 @@ public class PlaySound : MonoBehaviour
 
     //-----------------------------------privateFunctionName-----------------------------------------
     //Description of function 
-    private void verbNoun(int pVarName) { }
+    private void verbNoun() { }
 
     //-----------------------------------PublicFunctionName-----------------------------------------
     //Description of function 
-    private void VerbNoun(int pVarName) { }
+    private void VerbNoun() { }
 
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================
+
+    //-----------------------------------PickUpKey-----------------------------------------
+    //increases the keys count and destroys the key object after playing the pickup sound
+    private void PickUpKey(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            float _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
+            Player.keys++;
+            Destroy(GetComponent<AudioSource>());   // destroys the looping sound
+            Destroy(GetComponent<BoxCollider>());   // destroys the box collider
+            Destroy(this, _soundLength);            // destroys the object after the sound is done playing
+        }
+    }
 
     //=======================================================================================
     //                              >  Tool Functions  <

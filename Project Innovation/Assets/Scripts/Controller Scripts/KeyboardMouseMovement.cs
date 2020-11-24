@@ -37,8 +37,11 @@ public class KeyboardMouseMovement : MonoBehaviour
 
     private void Update()
     {
-        keyboardMovement();
-        mouseMovement();
+        if (Player.canMove)
+        {
+            keyboardMovement();
+            mouseMovement();
+        }
     }
 
     //=======================================================================================

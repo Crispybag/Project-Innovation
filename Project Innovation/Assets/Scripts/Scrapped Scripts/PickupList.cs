@@ -1,21 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
+using System;
 
-public class PlaySound : MonoBehaviour
+public class PickupList : MonoBehaviour
 {
     //=======================================================================================
     //                            >  Components & Variables  <
     //=======================================================================================
 
     // public objects
-    [Header("Components")]
-    public AudioSource audioSource;
-    public Transform soundSource;
+    //[Header("Components")]
 
     // public variables
-    [Header("Variables")]
-    [Min(0)]
-    public float soundLength = 4f;
+    //[Header("Variables")]
 
     // private objects
 
@@ -37,24 +33,13 @@ public class PlaySound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // after colliding with the player it plays the audiosource
-        if (collision.gameObject.tag == "Player")
-        {
-            audioSource.Play();
-        }
+        //PickUpKey(collision);
+        //OpenDoor(collision);
     }
 
     //=======================================================================================
     //                              >  Start Functions  <
     //=======================================================================================
-
-    //-----------------------------------privateFunctionName-----------------------------------------
-    //Description of function 
-    private void verbNoun(int pVarName) { }
-
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun(int pVarName) { }
 
     //=======================================================================================
     //                              >  Update Functions <
