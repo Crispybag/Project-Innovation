@@ -559,12 +559,12 @@ PrefabInstance:
     - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 77
+      value: 75.3
       objectReference: {fileID: 0}
     - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 874.1
+      value: 824.3
       objectReference: {fileID: 0}
     - target: {fileID: 5314610833598235844, guid: c956f459f66a076448325550e44127cd,
         type: 3}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 1392410998}
   - component: {fileID: 1392410997}
   m_Layer: 0
-  m_Name: Resonance roomr (1)
+  m_Name: Resonance room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
