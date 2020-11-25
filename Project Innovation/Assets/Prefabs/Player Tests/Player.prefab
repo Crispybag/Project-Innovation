@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4758584419635608621}
   - component: {fileID: 4758584419635608620}
   m_Layer: 0
-  m_Name: Keyboard & Mouse Movement
+  m_Name: Movement Keyboard + Mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4758584420009122962}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4758584419635608620
 MonoBehaviour:
@@ -56,10 +56,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4758584420009122962}
   - component: {fileID: 4758584420009122963}
-  - component: {fileID: 4758584420009122960}
-  - component: {fileID: 4758584420009122961}
-  - component: {fileID: 4758584420009122926}
-  - component: {fileID: 4758584420009122927}
   - component: {fileID: 4758584420009122924}
   - component: {fileID: 4758584420009122925}
   - component: {fileID: 4758584420009122922}
@@ -83,8 +79,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4758584420417798971}
-  - {fileID: 4758584419635608621}
   - {fileID: 4758584420226100253}
+  - {fileID: 356787791463257188}
+  - {fileID: 4758584419635608621}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -131,60 +128,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4758584420009122960
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758584420009122918}
-  m_Enabled: 1
---- !u!114 &4758584420009122961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758584420009122918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 624a7b8d1f8454c47af36db99d87d3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
-  rb: {fileID: 4758584420009122925}
-  moveVelocity: 10
---- !u!114 &4758584420009122926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758584420009122918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d85d1c5b92de548b6a49a155e02ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
-  rotationSpeed: 100
---- !u!114 &4758584420009122927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758584420009122918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6068ea47864bd3c48b4e00f455ab57ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
-  rb: {fileID: 4758584420009122925}
-  movementSpeed: 10
-  rotationSpeed: 100
-  horizontalTreshold: 0.2
 --- !u!136 &4758584420009122924
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -252,8 +195,9 @@ GameObject:
   - component: {fileID: 4758584420226100253}
   - component: {fileID: 4758584420226100255}
   - component: {fileID: 4758584420226100254}
+  - component: {fileID: 7087082551854310752}
   m_Layer: 0
-  m_Name: SoundScripts
+  m_Name: Sound Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,7 +215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4758584420009122962}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4758584420226100255
 MonoBehaviour:
@@ -313,6 +257,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 4758584420009122918}
   ListenerNumber: -1
+--- !u!81 &7087082551854310752
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758584420226100250}
+  m_Enabled: 1
 --- !u!1 &4758584420417798968
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +276,7 @@ GameObject:
   - component: {fileID: 4758584420417798971}
   - component: {fileID: 4758584420417798970}
   m_Layer: 0
-  m_Name: soundsource
+  m_Name: Directional Sound source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,3 +393,84 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &6967761620965421153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356787791463257188}
+  - component: {fileID: 2643260690352796173}
+  - component: {fileID: 595335694899658304}
+  - component: {fileID: 8453686956277404307}
+  m_Layer: 0
+  m_Name: Movement Joystick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &356787791463257188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967761620965421153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4758584420009122962}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2643260690352796173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967761620965421153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624a7b8d1f8454c47af36db99d87d3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+  rb: {fileID: 4758584420009122925}
+  moveVelocity: 10
+--- !u!114 &595335694899658304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967761620965421153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d85d1c5b92de548b6a49a155e02ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+  player: {fileID: 4758584420009122918}
+  rotationSpeed: 100
+--- !u!114 &8453686956277404307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967761620965421153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6068ea47864bd3c48b4e00f455ab57ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+  player: {fileID: 4758584420009122918}
+  rb: {fileID: 4758584420009122925}
+  movementSpeed: 10
+  rotationSpeed: 100
+  horizontalTreshold: 0.2

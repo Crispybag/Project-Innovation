@@ -12,6 +12,7 @@ public class MovePlayer : MonoBehaviour
     [Header("Components")]
     [Tooltip("Joystick that only controls the movement of the player")]
     public Joystick joystick;
+
     public Rigidbody rb;
 
     // public variables
