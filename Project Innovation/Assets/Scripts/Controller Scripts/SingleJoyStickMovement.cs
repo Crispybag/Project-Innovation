@@ -12,6 +12,8 @@ public class SingleJoyStickMovement : MonoBehaviour
     [Header("Components")]
     [Tooltip("Joystick that moves vertically and rotates horizontally")]
     public Joystick joystick;
+
+    public GameObject player;
     public Rigidbody rb;
     
     // public variables
@@ -44,7 +46,7 @@ public class SingleJoyStickMovement : MonoBehaviour
     private void rotatePlayer()
     {
         if (Mathf.Abs(joystick.Horizontal) > horizontalTreshold)
-        transform.Rotate(0, joystick.Horizontal * rotationSpeed * Time.deltaTime, 0);
+        player.transform.Rotate(0, joystick.Horizontal * rotationSpeed * Time.deltaTime, 0);
     }
 
     //------------------------------------movePlayer-----------------------------------------
