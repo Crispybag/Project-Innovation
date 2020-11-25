@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{7f04bc4c-10cb-49b8-b676-f6bd6c7e94c2}">
 		<property name="name">
-			<value>Walking</value>
+			<value>Player Walking</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{62b9229e-6a5b-45ea-9292-2f720f318feb}</destination>
+			<destination>{2c39649e-55ec-4efc-8e31-37f3e36d1860}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{ce0860f4-c556-4c83-b10b-309c6a470c9c}</destination>
@@ -184,9 +184,6 @@
 		</property>
 		<property name="volume">
 			<value>10</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{a760bf78-1de9-49fa-a9fb-ef6745ae363f}</destination>
@@ -373,9 +370,6 @@
 		</property>
 		<property name="volume">
 			<value>10</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{37040c73-9a17-4f52-b04a-6fa82497b2ce}</destination>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{75546556-dcdf-4bdc-86cd-620fc5a850c8}">
 		<property name="name">
-			<value>Walking types</value>
+			<value>Walking types - Player</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>

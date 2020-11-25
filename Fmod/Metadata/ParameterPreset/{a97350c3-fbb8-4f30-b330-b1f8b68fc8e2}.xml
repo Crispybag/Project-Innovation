@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{a97350c3-fbb8-4f30-b330-b1f8b68fc8e2}">
+		<property name="name">
+			<value>Crickets</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2e2ee328-88bd-40c1-979d-0bd72315ff0e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2e2ee328-88bd-40c1-979d-0bd72315ff0e}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>No Crickets</value>
+			<value>Crickets</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

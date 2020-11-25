@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{abd54890-aafa-4716-961e-bd8a0036cc8b}">
 		<property name="name">
-			<value>Monster</value>
+			<value>Monster Gowling</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{5b959d76-966a-49d1-a1e9-ee9e82af0e1d}</destination>
+			<destination>{8395a590-75c2-43f0-818c-91fe6634d279}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{94fb5116-328e-45b5-87df-b4df2373202b}</destination>

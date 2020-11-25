@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
+  player: {fileID: 0}
   rotationSpeed: 100
 --- !u!114 &1337806687270592679
 MonoBehaviour:
@@ -373,6 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
+  player: {fileID: 0}
   rb: {fileID: 7157851227185938259}
   movementSpeed: 80
   rotationSpeed: 100
@@ -421,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footStepsEventPath: event:/2D/Ambience/Walking
-  materialParameter: Walking Types
+  materialParameter: Walking Types - Player
   stepDistance: 4
   rayDistance: 1.2
   startRunningTime: 0.3
