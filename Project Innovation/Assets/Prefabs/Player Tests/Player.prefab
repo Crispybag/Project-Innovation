@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1191021268052056568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766719222460361082}
+  - component: {fileID: 3403827351538671113}
+  m_Layer: 0
+  m_Name: Combat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766719222460361082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191021268052056568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4758584420009122962}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3403827351538671113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191021268052056568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d9de406fcd121499180898bcd87dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 6730833782257938954}
 --- !u!1 &4758584419635608618
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,6 +104,7 @@ GameObject:
   - component: {fileID: 4758584420009122925}
   - component: {fileID: 4758584420009122922}
   - component: {fileID: 1085546516}
+  - component: {fileID: 6730833782257938954}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -82,6 +127,7 @@ Transform:
   - {fileID: 4758584420226100253}
   - {fileID: 356787791463257188}
   - {fileID: 4758584419635608621}
+  - {fileID: 1766719222460361082}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,6 +230,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb7202741c01c14aa1303edd39464e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6730833782257938954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758584420009122918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eee1e7bb709b7148aaacfb08c6bffd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canCombat: 0
+  isEnteringCombat: 0
 --- !u!1 &4758584420226100250
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +465,7 @@ GameObject:
   - component: {fileID: 2643260690352796173}
   - component: {fileID: 595335694899658304}
   - component: {fileID: 8453686956277404307}
+  - component: {fileID: 6974254492808016325}
   m_Layer: 0
   m_Name: Movement Joystick
   m_TagString: Untagged
@@ -474,3 +535,18 @@ MonoBehaviour:
   movementSpeed: 10
   rotationSpeed: 100
   horizontalTreshold: 0.2
+--- !u!114 &6974254492808016325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967761620965421153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8a5965070702841b30e4fa17e984e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameTreshold: 20
+  direction: 0
+  minimalDistance: 100
