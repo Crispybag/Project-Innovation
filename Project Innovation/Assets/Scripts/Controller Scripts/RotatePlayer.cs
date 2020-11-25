@@ -12,6 +12,7 @@ public class RotatePlayer : MonoBehaviour
     [Header("Components")]
     [Tooltip("Joystick that only controls rotation")]
     public Joystick joystick;
+    public GameObject player;
 
     // public variables
     [Header("Variables")]
@@ -35,7 +36,7 @@ public class RotatePlayer : MonoBehaviour
     //Rotates the player
     private void rotatePlayer()
     {
-        transform.Rotate(0, joystick.Horizontal * rotationSpeed * Time.deltaTime, 0);
+        player.transform.Rotate(0, joystick.Horizontal * rotationSpeed * Time.deltaTime, 0);
     }
 
 }

@@ -14,7 +14,6 @@ public class PlaySound : MonoBehaviour
 
     // public variables
     [Header("Variables")]
-    public string triggerObjectName;
     [Min(0)]
     public float soundLength = 4f;
 
@@ -38,7 +37,8 @@ public class PlaySound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == triggerObjectName)
+        // after colliding with the player it plays the audiosource
+        if (collision.gameObject.tag == "Player")
         {
             audioSource.Play();
         }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Platform" id="{cd222081-1f39-4d09-a6d2-a331e4ebc5d9}">
+		<property name="hardwareType">
+			<value>9</value>
+		</property>
+		<property name="name">
+			<value>Custom</value>
+		</property>
+		<property name="subDirectory">
+			<value>WebGl</value>
+		</property>
+		<property name="speakerFormat">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

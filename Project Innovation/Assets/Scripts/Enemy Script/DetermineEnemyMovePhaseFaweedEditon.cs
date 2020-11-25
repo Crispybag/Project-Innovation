@@ -13,8 +13,8 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     public GameObject enemyHolder;
     public ChasePlayer chasePlayer;
     public MoveTrail moveTrail;
-    public AudioSource aSource;
-    public AudioSource aSourcefs;
+    //public AudioSource aSource;
+    //public AudioSource aSourcefs;
 
     // public variables
     [Header("Variables")]
@@ -25,6 +25,10 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     [Tooltip("Radius at which the enemy starts chasing the player")]
     [Range(0f, 10f)]
     public float chaseRadius = 5f;
+
+    [Tooltip("Radius at which the enemy starts chasing the player")]
+    [Range(0f, 10f)]
+    public float combatRadius = 2f;
 
     // private objects
     private GameObject _player;
@@ -55,18 +59,25 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
         {
             chasePlayer.enabled = false;
             moveTrail.enabled = false;
-            if (!aSource.isPlaying)
-            aSource.Play();
-            aSourcefs.Stop();
+        }
+
+        //Initiate combat
+        else if (_distanceToPlayer < combatRadius && chasePlayer.enabled)
+        {
+            //Necessary value switches
+            MergeWPlayer playerStats = _player.GetComponent<MergeWPlayer>();
+            playerStats.SetEnemy(gameObject);
+            playerStats.isEnteringCombat = true;
+
+            chasePlayer.enabled = false;
+            moveTrail.enabled = false;
+         
         }
 
         else if (_distanceToPlayer < chaseRadius)
         {
             chasePlayer.enabled = true;
             moveTrail.enabled = false;
-
-        if (!aSourcefs.isPlaying)
-                aSourcefs.Play();
         }
 
         else if (_distanceToPlayer > detectRadius && !moveTrail.enabled)
@@ -74,10 +85,6 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
             chasePlayer.enabled = false;
             moveTrail.enabled = true;
             moveTrail.GoToNextWavePoint();
-            aSource.Stop();
-
-            if (!aSourcefs.isPlaying)
-                aSourcefs.Play();
         }
     }
 

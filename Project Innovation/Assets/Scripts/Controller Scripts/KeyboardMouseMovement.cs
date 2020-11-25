@@ -13,13 +13,18 @@ public class KeyboardMouseMovement : MonoBehaviour
     // public variables
     [Header("Variables")]
     [Min(0)]
+    [Tooltip("How fast the player moves")]
     public float playerSpeed = 5f;
+    [Min(0)]
+    [Tooltip("How fast the player rotates")]
+    public float mouseSensitivity = 100f;
 
     // private objects
 
     // private variables
     private float _horizontal;
     private float _vertical;
+    private float _mouseX;
 
     //=======================================================================================
     //                              >  Start And Update  <
@@ -27,12 +32,16 @@ public class KeyboardMouseMovement : MonoBehaviour
 
     private void Start()
     {
-
+        CursorSettings(CursorLockMode.Locked, false);
     }
 
     private void Update()
     {
-        movement();
+        if (Player.canMove)
+        {
+            keyboardMovement();
+            mouseMovement();
+        }
     }
 
     //=======================================================================================
@@ -47,13 +56,21 @@ public class KeyboardMouseMovement : MonoBehaviour
     //Description of function 
     private void VerbNoun() { }
 
+    //-----------------------------------CursorSettings-----------------------------------------
+    //Sets various settings of the cursor 
+    private void CursorSettings(CursorLockMode lockState, bool visible)
+    {
+        Cursor.lockState = lockState;
+        Cursor.visible = visible;
+    }
+
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================
 
-    //-----------------------------------movement-----------------------------------------
-    //Movement of player in World Space
-    private void movement()
+    //-----------------------------------keyboardMovement-----------------------------------------
+    //Movement of player in Local Space using keyboard inputs
+    private void keyboardMovement()
     {
         // get input
         _horizontal = Input.GetAxis("Horizontal");
@@ -62,11 +79,25 @@ public class KeyboardMouseMovement : MonoBehaviour
         // move
         if (_horizontal != 0)
         {
-            player.transform.Translate(Vector3.right * _horizontal * playerSpeed * Time.deltaTime, Space.World);
+            player.transform.Translate(Vector3.right * _horizontal * playerSpeed * Time.deltaTime, Space.Self);
         }
         if (_vertical != 0)
         {
-            player.transform.Translate(Vector3.forward * _vertical * playerSpeed * Time.deltaTime, Space.World);
+            player.transform.Translate(Vector3.forward * _vertical * playerSpeed * Time.deltaTime, Space.Self);
+        }
+    }
+
+    //-----------------------------------mouseMovement-----------------------------------------
+    //Rotation of the player using mouse movement
+    private void mouseMovement()
+    {
+        // get input
+        _mouseX = Input.GetAxis("Mouse X");
+
+        // move
+        if (_mouseX != 0)
+        {
+            player.Rotate(Vector3.up * _mouseX * mouseSensitivity * Time.deltaTime);
         }
     }
 

@@ -70,7 +70,6 @@ public class AdaptiveFootSteps : MonoBehaviour
         {
             if (hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>())
             {
-                Debug.Log(hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>().materialValue);
                 _materialValue = hit.collider.gameObject.GetComponent<FMODStudioMaterialSetter>().materialValue;
             }
             else _materialValue = defaultMaterial;
