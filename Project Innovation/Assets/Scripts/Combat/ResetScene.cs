@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ResetScene : MonoBehaviour
 {
-    public MergeWPlayer playerStats;
+    public Player playerStats;
     public float respawnTimer = 1f;
 
     private float timePassed;

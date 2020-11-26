@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d9de406fcd121499180898bcd87dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 6730833782257938954}
+  playerStats: {fileID: 1085546516}
   swipeControls: {fileID: 6974254492808016325}
+  maxTapTime: 0.2
 --- !u!1 &4758584419635608618
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +106,6 @@ GameObject:
   - component: {fileID: 4758584420009122925}
   - component: {fileID: 4758584420009122922}
   - component: {fileID: 1085546516}
-  - component: {fileID: 6730833782257938954}
   - component: {fileID: 7453101509297136728}
   m_Layer: 0
   m_Name: Player
@@ -232,21 +232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb7202741c01c14aa1303edd39464e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6730833782257938954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758584420009122918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eee1e7bb709b7148aaacfb08c6bffd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   canCombat: 0
   isEnteringCombat: 0
-  hp: 3
+  hp: 30
 --- !u!114 &7453101509297136728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95c1425bba7ff04885302b37e886cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 6730833782257938954}
+  playerStats: {fileID: 1085546516}
   respawnTimer: 1
 --- !u!1 &4758584420226100250
 GameObject:

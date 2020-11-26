@@ -36,14 +36,14 @@ public class EnemyCombat : MonoBehaviour
     private float _timer = 0;
     // private variables
     private GameObject _player;
-    private MergeWPlayer _playerStats;
+    private Player _playerStats;
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        _playerStats = _player.GetComponent<MergeWPlayer>();
+        _playerStats = _player.GetComponent<Player>();
     }
 
 

@@ -66,7 +66,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
         else if (_distanceToPlayer < combatRadius)
         {
             //Necessary value switches
-            MergeWPlayer playerStats = _player.GetComponent<MergeWPlayer>();
+            Player playerStats = _player.GetComponent<Player>();
             enemy.inCombat = true;
             playerStats.SetEnemy(gameObject);
             playerStats.isEnteringCombat = true;

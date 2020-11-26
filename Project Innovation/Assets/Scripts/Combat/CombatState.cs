@@ -16,7 +16,7 @@ public class CombatState : MonoBehaviour
 
     // public objects
     //[Header("Components")]
-    public MergeWPlayer playerStats;
+    public Player playerStats;
     public SwipeControls swipeControls;
     // public variables
     //[Header("Variables")]
