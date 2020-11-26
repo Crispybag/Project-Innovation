@@ -710,16 +710,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5323979450567954233, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: footStepsEventPath
-      value: event:/2D/Ambience/Player/Player Walking
-      objectReference: {fileID: 0}
-    - target: {fileID: 5323979450567954233, guid: c956f459f66a076448325550e44127cd,
-        type: 3}
-      propertyPath: materialParameter
-      value: Walking Types - Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c956f459f66a076448325550e44127cd, type: 3}
 --- !u!1 &1076701561

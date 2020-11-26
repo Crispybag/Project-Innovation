@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{23e302b3-78ac-45e3-8421-a0f880f6af40}">
 		<property name="assetPath">
-			<value>LayDownOars.wav</value>
+			<value>Environment/Ocean/LayDownOars.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
