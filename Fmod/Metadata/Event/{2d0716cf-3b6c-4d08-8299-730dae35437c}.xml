@@ -127,6 +127,7 @@
 			<destination>{0ce969b0-792f-426c-a321-71930d188be8}</destination>
 			<destination>{ec444024-88d2-4c5c-b54d-e84a7575545f}</destination>
 			<destination>{73f34140-8303-4090-a3b2-1dc6388b1fd3}</destination>
+			<destination>{f4e2a42b-e861-43ad-93e9-ab3a1cd9a469}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{2e05a128-d9c2-4ac2-8957-d71dfdcb0dc8}">
@@ -330,13 +331,16 @@
 			<value>10</value>
 		</property>
 		<property name="totalSounds">
-			<value>5</value>
+			<value>8</value>
 		</property>
 		<property name="minimumTimeBetweenSounds">
-			<value>8600</value>
+			<value>2500</value>
 		</property>
 		<property name="maximumTimeBetweenSounds">
-			<value>26000</value>
+			<value>25000</value>
+		</property>
+		<property name="maximumScatterDistance">
+			<value>10</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{b2fb1596-b105-4150-aa9c-dbf68cc5d37f}</destination>
@@ -349,6 +353,9 @@
 		<property name="length">
 			<value>97.408435374149661</value>
 		</property>
+		<property name="totalSounds">
+			<value>5</value>
+		</property>
 		<property name="minimumTimeBetweenSounds">
 			<value>6500</value>
 		</property>
@@ -356,7 +363,7 @@
 			<value>120000</value>
 		</property>
 		<property name="maximumScatterDistance">
-			<value>6</value>
+			<value>10</value>
 		</property>
 		<relationship name="sound">
 			<destination>{0df3c421-2927-4e28-b83b-6d060ba7eb29}</destination>
@@ -538,6 +545,26 @@
 			<destination>{97adbd34-2753-4e95-bbd1-3e0cd1d788d8}</destination>
 		</relationship>
 	</object>
+	<object class="LoopRegion" id="{f4e2a42b-e861-43ad-93e9-ab3a1cd9a469}">
+		<property name="position">
+			<value>194.81687074829932</value>
+		</property>
+		<property name="length">
+			<value>75.183129251700677</value>
+		</property>
+		<property name="name">
+			<value>Building</value>
+		</property>
+		<property name="looping">
+			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{dfafa0d1-759b-4ff3-8e95-611f37fa9db5}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{f39bc526-9de9-4dda-ac62-3a9ca03cf899}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{ece05638-a14f-4074-972e-b0e8b10224de}">
 		<relationship name="effects">
 			<destination>{bf2fbb75-81bc-4258-ab72-029737018dab}</destination>
@@ -597,26 +624,14 @@
 		<property name="initialValue">
 			<value>-80</value>
 		</property>
-		<property name="attackTime">
-			<value>7865.38232</value>
-		</property>
 		<property name="attackShape">
-			<value>-0.272949696</value>
+			<value>-0.240996495</value>
 		</property>
-		<property name="peakValue">
-			<value>-19.6444454</value>
-		</property>
-		<property name="decayTime">
-			<value>44615.375</value>
-		</property>
-		<property name="sustainValue">
-			<value>-4.6222229</value>
-		</property>
-		<property name="releaseTime">
-			<value>60000</value>
+		<property name="decayShape">
+			<value>0.412843406</value>
 		</property>
 		<property name="releaseShape">
-			<value>-0.215306789</value>
+			<value>0.207600683</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
