@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{d5359851-cb12-452a-ad17-90f0614bd921}">
+		<property name="name">
+			<value>Player collision</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{24f04536-850d-4713-aa33-8c59c3a5a99a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{24f04536-850d-4713-aa33-8c59c3a5a99a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>General</value>
+			<value>Wood</value>
+			<value>Stone</value>
+			<value>Metal</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

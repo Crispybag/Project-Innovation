@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{6cfeb6fc-f109-4828-80a6-3fe182661854}">
+		<property name="name">
+			<value>Monster combat</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6a88d973-89c2-4e4b-8cb9-6fe575706d40}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6a88d973-89c2-4e4b-8cb9-6fe575706d40}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Hurt</value>
+			<value>Death</value>
+			<value>Victory</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -5,7 +5,7 @@
 			<value>Monster background fighting</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{043d2123-cd30-4730-a53e-db75b81d3f6b}</destination>
@@ -32,7 +32,7 @@
 			<destination>{ece97dc4-e313-443d-81af-186b20fd5147}</destination>
 		</relationship>
 		<relationship name="parameters">
-			<destination>{bf937793-5743-4d50-8a56-941dad125505}</destination>
+			<destination>{70d14ec9-e494-422d-8fe8-84464e8ed0c7}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{4a668bfd-393a-455a-89bf-2972b8ae4fcf}</destination>
@@ -62,14 +62,24 @@
 	<object class="EventAutomatableProperties" id="{dadf8e6e-f162-4123-9252-d752b7376aa9}" />
 	<object class="MarkerTrack" id="{2560e906-c234-4883-bcbe-0c4b7aec59dc}" />
 	<object class="GroupTrack" id="{e5945a76-ac7b-4c98-a73b-deef4a6f8106}">
+		<relationship name="modules">
+			<destination>{042828fc-6b8b-4307-a2c1-7e7a463c6b7a}</destination>
+			<destination>{2033ebfd-b0b9-4814-adc8-2fdd14f211f0}</destination>
+			<destination>{be98ca41-c1c6-4d5e-8640-9dfa4cc098b9}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2b5b1f5a-b701-4d3a-86b4-14e1f1c1f13b}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{ece97dc4-e313-443d-81af-186b20fd5147}" />
-	<object class="ParameterProxy" id="{bf937793-5743-4d50-8a56-941dad125505}">
+	<object class="ParameterProxy" id="{70d14ec9-e494-422d-8fe8-84464e8ed0c7}">
+		<relationship name="modules">
+			<destination>{042828fc-6b8b-4307-a2c1-7e7a463c6b7a}</destination>
+			<destination>{2033ebfd-b0b9-4814-adc8-2fdd14f211f0}</destination>
+			<destination>{be98ca41-c1c6-4d5e-8640-9dfa4cc098b9}</destination>
+		</relationship>
 		<relationship name="preset">
-			<destination>{7a977340-12db-4a9c-a4e5-6ee81e6adb7b}</destination>
+			<destination>{cef5d99e-653b-405d-8be6-cab2b4f7f879}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{653cd726-0c16-417e-a2ba-a9b323fe2116}">
@@ -89,6 +99,24 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3ff12083-1a92-4894-b3e9-c9c0d6c1646a}" />
+	<object class="SingleSound" id="{042828fc-6b8b-4307-a2c1-7e7a463c6b7a}">
+		<relationship name="audioFile">
+			<destination>{15eab088-a58c-4926-9f0b-593e0108ba1a}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{2033ebfd-b0b9-4814-adc8-2fdd14f211f0}">
+		<property name="start">
+			<value>1</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{162bf69c-6c7b-49df-8af1-edd53365709d}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{be98ca41-c1c6-4d5e-8640-9dfa4cc098b9}">
+		<property name="start">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="EventMixerGroup" id="{2b5b1f5a-b701-4d3a-86b4-14e1f1c1f13b}">
 		<property name="name">
 			<value>Audio 1</value>

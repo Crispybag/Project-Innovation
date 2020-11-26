@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{cb3700d6-de46-431f-8db2-046971ac74fb}">
 		<property name="assetPath">
-			<value>Growl 3.wav</value>
+			<value>Monster/Growls/Growl 3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{166e1409-240e-43ca-9518-d29e2ebc1b74}">
+		<property name="name">
+			<value>Player actions</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{699b302b-36e7-4cd9-9b5e-f0ad4ea2b4de}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{699b302b-36e7-4cd9-9b5e-f0ad4ea2b4de}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Use lever</value>
+			<value>Pick up key</value>
+			<value>Use door</value>
+			<value>Use key and open door</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

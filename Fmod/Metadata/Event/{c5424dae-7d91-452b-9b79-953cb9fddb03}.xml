@@ -375,7 +375,8 @@
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{7e2a285a-5f89-4b86-923f-c401b2dc392b}</destination>
-			<destination>{189d48fd-58e8-48a5-9d7d-7a90afd5f52d}</destination>
+			<destination>{edb61244-ce33-46eb-944f-1a4cb4abc019}</destination>
+			<destination>{314e2fe4-72b9-4413-b98a-55571a463d71}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{a7bcd910-2216-47b4-b0bf-093b3e0a3dcf}" />
@@ -440,12 +441,20 @@
 			<value>-80</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{189d48fd-58e8-48a5-9d7d-7a90afd5f52d}">
+	<object class="AutomationPoint" id="{edb61244-ce33-46eb-944f-1a4cb4abc019}">
 		<property name="position">
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-32</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{314e2fe4-72b9-4413-b98a-55571a463d71}">
+		<property name="position">
+			<value>2</value>
+		</property>
+		<property name="value">
+			<value>-14</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{7ce4d6fa-ce39-489d-ad05-0f0e492ef933}">
@@ -543,7 +552,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -579,7 +587,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
