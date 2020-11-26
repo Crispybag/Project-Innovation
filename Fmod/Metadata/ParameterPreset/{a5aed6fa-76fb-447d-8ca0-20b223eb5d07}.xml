@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{a5aed6fa-76fb-447d-8ca0-20b223eb5d07}">
+		<property name="name">
+			<value>Tutorial voice</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a8ee81e2-2774-4ce5-92cd-5d136ca5f8cf}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a8ee81e2-2774-4ce5-92cd-5d136ca5f8cf}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>8</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Welcome</value>
+			<value>Start game</value>
+			<value>Navigation</value>
+			<value>Monster alert</value>
+			<value>Monster encounter</value>
+			<value>Defend</value>
+			<value>Attack</value>
+			<value>Thanks for playing</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

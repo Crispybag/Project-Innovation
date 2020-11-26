@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{587d6bbd-613d-4a8a-9f0a-de4b6c80dc5e}">
 		<property name="name">
-			<value>Player voice script</value>
+			<value>Voice script player and guide</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
@@ -19,7 +19,7 @@
 			<value>3</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Ocean scene introduction 1</value>
+			<value>Ocean opening scene</value>
 			<value>Value B</value>
 			<value>Value C</value>
 		</property>

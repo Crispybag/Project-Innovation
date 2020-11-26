@@ -151,7 +151,7 @@
 			<value>5</value>
 		</property>
 		<property name="pitch">
-			<value>3</value>
+			<value>1</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{b92bbb44-be50-4218-a1f5-e9f177d37b21}</destination>
@@ -229,9 +229,6 @@
 		</property>
 		<property name="pitch">
 			<value>-0.800000012</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{cd383b88-96db-4b19-b245-8a557b0a58cd}</destination>
