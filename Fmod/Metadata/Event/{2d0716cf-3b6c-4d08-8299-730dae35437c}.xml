@@ -691,7 +691,10 @@
 			<value>2000</value>
 		</property>
 		<property name="maximumTimeBetweenSounds">
-			<value>20000</value>
+			<value>10000</value>
+		</property>
+		<property name="spawnRate">
+			<value>500</value>
 		</property>
 		<property name="minimumScatterDistance">
 			<value>0</value>
@@ -724,10 +727,10 @@
 			<value>2000</value>
 		</property>
 		<property name="maximumTimeBetweenSounds">
-			<value>2500</value>
+			<value>10000</value>
 		</property>
 		<property name="spawnRate">
-			<value>300</value>
+			<value>500</value>
 		</property>
 		<property name="minimumScatterDistance">
 			<value>0</value>
@@ -1495,9 +1498,6 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{7e093ef0-ec89-489f-b91b-af38bb18f9d5}">
-		<property name="playlistMode">
-			<value>1</value>
-		</property>
 		<relationship name="sounds">
 			<destination>{9e7d1a26-cfb0-4a08-af85-1d39b1d56e8b}</destination>
 			<destination>{96cc4b14-e88a-4945-936e-b06e37f9f6eb}</destination>
@@ -1522,9 +1522,6 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{1a73c48a-c21f-4664-aeb8-e49a8671567a}">
-		<property name="playlistMode">
-			<value>1</value>
-		</property>
 		<relationship name="sounds">
 			<destination>{210ee01a-2834-45be-bd7f-9ac4394f0ca6}</destination>
 			<destination>{5adc37ac-44ad-480b-83c7-5a257daf1df8}</destination>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{b9e90ede-0175-4b7c-bcf8-21b94b4f0750}">
+		<property name="name">
+			<value>Player voice in-game</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e65c8ac6-3c24-4f5d-9826-1601a6265acf}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e65c8ac6-3c24-4f5d-9826-1601a6265acf}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Lost</value>
+			<value>Thoughts</value>
+			<value>Collision</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
