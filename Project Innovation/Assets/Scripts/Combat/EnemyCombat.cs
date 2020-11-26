@@ -139,7 +139,16 @@ public class EnemyCombat : MonoBehaviour
                 if (!attackFailed)
                 {
                     _playerStats.hp--;
-                   
+                    CombatSounds playerSounds = _player.GetComponent<CombatSounds>();
+
+                    if (_playerStats.hp <= 0)
+                    {
+                        playerSounds.playSound(4);
+                    }
+                    else
+                    {
+                        playerSounds.playSound(3);
+                    }
                 }
             }
             goToNextAction();

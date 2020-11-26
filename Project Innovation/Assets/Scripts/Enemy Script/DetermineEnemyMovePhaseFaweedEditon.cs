@@ -107,44 +107,6 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
             }
         }
-
-        /*
-        if (_distanceToPlayer < detectRadius && _distanceToPlayer > chaseRadius)
-        {
-            sound.playSound(1);
-            chasePlayer.enabled = false;
-            moveTrail.enabled = false;
-        }
-
-        //Initiate combat
-        else if (_distanceToPlayer < combatRadius)
-        {
-            //Necessary value switches
-            Player playerStats = _player.GetComponent<Player>();
-            enemy.inCombat = true;
-            playerStats.SetEnemy(gameObject);
-            playerStats.isEnteringCombat = true;
-
-            chasePlayer.enabled = false;
-            moveTrail.enabled = false;
-         
-        }
-
-        //Chase Conditions
-        else if (_distanceToPlayer < chaseRadius)
-        {
-            sound.playSound(2);
-            chasePlayer.enabled = true;
-            moveTrail.enabled = false;
-        }
-
-        else if (_distanceToPlayer > detectRadius && !moveTrail.enabled)
-        {
-            chasePlayer.enabled = false;
-            moveTrail.enabled = true;
-            moveTrail.GoToNextWavePoint();
-        }
-        */
     }
 
     //=======================================================================================
