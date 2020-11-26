@@ -11,16 +11,18 @@ public class Breadcrumbs : MonoBehaviour
     public static int breadcrumbsCollected;
     public float collectRadius = 1f;
     public float soundTimer = 0.2f;
+    
     private List<Vector3> positions;
     private List<GameObject> children;
     private GameObject player;
     private FMOD.Studio.EventInstance sound;
     private float _timer;
+    private bool hasStarted = false;
 
     private void Start()
     {
         sound = FMODUnity.RuntimeManager.CreateInstance(eventPath);
-        
+       
         player = GameObject.FindGameObjectWithTag("Player");
         
         children = new List<GameObject>();
@@ -37,10 +39,12 @@ public class Breadcrumbs : MonoBehaviour
     private void Update()
     {
         _timer += Time.deltaTime;
-        if (_timer > soundTimer)
+        if (_timer > soundTimer && !hasStarted)
         {
-            sound.start();
-            _timer = 0;
+           sound.start();
+           // _timer = 0;
+
+           hasStarted = true;
         }
         //Do this to attach the sound to a gameobject for 3D effect
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, children[breadcrumbsCollected].transform, children[breadcrumbsCollected].GetComponent<Rigidbody>());
