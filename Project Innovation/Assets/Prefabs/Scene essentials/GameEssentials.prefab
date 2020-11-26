@@ -186,6 +186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7166936451526374583, guid: 5cd975588b016494596e9ff66572d356,
+        type: 3}
+      propertyPath: footStepsEventPath
+      value: event:/2D/Player/Player Walking
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd975588b016494596e9ff66572d356, type: 3}
 --- !u!4 &5314610833598235844 stripped

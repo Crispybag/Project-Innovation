@@ -5,7 +5,7 @@
 			<value>Monster attack</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8395a590-75c2-43f0-818c-91fe6634d279}</destination>
@@ -151,7 +151,7 @@
 	<object class="MixerBusEffectChain" id="{fffcb6a9-76d2-46d3-8107-2e779ce4d332}">
 		<relationship name="effects">
 			<destination>{2a7c6271-e609-4aa0-bcd7-6bf64cb83efc}</destination>
-			<destination>{d756cdac-34ff-4ca4-a7ce-c55978b61cdc}</destination>
+			<destination>{52cbe2e5-43ce-4022-a92c-98e2c7e66895}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4acfd8b5-9bdd-4213-bdc1-d8db275596b5}" />
@@ -198,12 +198,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{0e1ce533-b357-4f5e-9d5d-a284bd80fde7}" />
 	<object class="MixerBusFader" id="{2a7c6271-e609-4aa0-bcd7-6bf64cb83efc}" />
-	<object class="PluginEffect" id="{d756cdac-34ff-4ca4-a7ce-c55978b61cdc}">
-		<relationship name="plugin">
-			<destination>{1295ac0d-792a-4732-824b-eaea2ba0bd4c}</destination>
-		</relationship>
-	</object>
+	<object class="SpatialiserEffect" id="{52cbe2e5-43ce-4022-a92c-98e2c7e66895}" />
 	<object class="MixerBusFader" id="{6f45b750-ddcf-48a5-91d4-dfb0342a11c7}" />
+<<<<<<< HEAD
 	<object class="Plugin" id="{1295ac0d-792a-4732-824b-eaea2ba0bd4c}">
 		<property name="identifier">
 			<value>Resonance Audio Source</value>
@@ -360,4 +357,6 @@
 			<value>-1</value>
 		</property>
 	</object>
+=======
+>>>>>>> parent of 59a3811... Fmod
 </objects>

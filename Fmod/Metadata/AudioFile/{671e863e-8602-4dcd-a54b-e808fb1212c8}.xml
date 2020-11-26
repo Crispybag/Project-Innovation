@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{671e863e-8602-4dcd-a54b-e808fb1212c8}">
+		<property name="assetPath">
+			<value>Monster/Walking/MonsterWalkingRocks 4.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5151020408163265</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0107a68a-a665-42a7-a80a-dfc97087ab10}</destination>
+		</relationship>
+	</object>
+</objects>
