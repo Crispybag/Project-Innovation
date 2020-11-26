@@ -10,6 +10,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
     // public objects
     [Header("Components")]
+    public Enemy enemy;
     public GameObject enemyHolder;
     public ChasePlayer chasePlayer;
     public MoveTrail moveTrail;
@@ -62,10 +63,11 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
         }
 
         //Initiate combat
-        else if (_distanceToPlayer < combatRadius && chasePlayer.enabled)
+        else if (_distanceToPlayer < combatRadius)
         {
             //Necessary value switches
             MergeWPlayer playerStats = _player.GetComponent<MergeWPlayer>();
+            enemy.inCombat = true;
             playerStats.SetEnemy(gameObject);
             playerStats.isEnteringCombat = true;
 

@@ -24,6 +24,7 @@ public class CombatState : MonoBehaviour
     // private objects
     private GameObject _enemy;
     private Enemy _enemyStats;
+    private EnemyCombat _enemyCombat;
     // private variables
 
     //=======================================================================================
@@ -31,7 +32,7 @@ public class CombatState : MonoBehaviour
     //=======================================================================================
     private void FixedUpdate()
     {
-        if (playerStats.isEnteringCombat)
+        if (playerStats.isEnteringCombat && !playerStats.canCombat)
         {
             Debug.Log("it reached combat state");
             playerStats.isEnteringCombat = false;
@@ -47,11 +48,28 @@ public class CombatState : MonoBehaviour
                 Destroy(_enemy);
             }
 
-            if (Input.GetKeyDown(KeyCode.G))
+            //Quick garbage code
+            if (Input.GetKeyDown(KeyCode.T))
             {
                 _enemyStats.hp--;
                 Debug.Log("Enemy took 1 damage");
             }
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                dodge();
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                defendLeft();
+            }
+
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                defendRight();
+            }
+
 
             switch(swipeControls.direction)
             {
@@ -60,15 +78,15 @@ public class CombatState : MonoBehaviour
                     break;
 
                 case SwipeControls.DIRECTION.DOWN:
-                    defend();
+                    dodge();
                     break;
 
                 case SwipeControls.DIRECTION.LEFT:
-                    dodge();
+                    defendLeft();
                     break;
 
                 case SwipeControls.DIRECTION.RIGHT:
-                    dodge();
+                    defendRight();
                     break;
 
                 default:
@@ -82,17 +100,62 @@ public class CombatState : MonoBehaviour
     //=======================================================================================
     private void attack()
     {
+        if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.NOTHING)
+        {
+            _enemyStats.hp--;
+        }
         Debug.Log("Player Attacks!");
     }
 
-    private void defend()
+    private void defendLeft()
     {
-        Debug.Log("Player Defends!");
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        {
+            if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHLEFT)
+            {
+                _enemyCombat.goToNextAction();
+            }
+            
+            else
+            {
+                playerStats.hp--;
+            }
+            Debug.Log("Player Defends Left!");
+        }
+    }
+
+    private void defendRight()
+    {
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        {
+            if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHRIGHT)
+            {
+                _enemyCombat.goToNextAction();
+            }
+            
+            else
+            {
+                playerStats.hp--;
+
+            }
+            Debug.Log("Player Defends Right!");
+        }
     }
 
     private void dodge()
     {
-        Debug.Log("Player Dodges!");
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        {
+            if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.BASH)
+            {
+                _enemyCombat.goToNextAction();
+            }
+            else
+            {
+                playerStats.hp--;
+            }
+            Debug.Log("Player Dodges!");
+        }
     }
     //=======================================================================================
     //                              >  Tool Functions  <
@@ -103,6 +166,7 @@ public class CombatState : MonoBehaviour
     {
         _enemy = playerStats.getEnemy();
         _enemyStats = _enemy.GetComponent<Enemy>();
+        _enemyCombat = _enemy.GetComponent<EnemyCombat>();
 
     }
 
@@ -118,6 +182,7 @@ public class CombatState : MonoBehaviour
     {
         Player.canMove = true;
         playerStats.canCombat = false;
+        playerStats.isEnteringCombat = false;
     }
 
 

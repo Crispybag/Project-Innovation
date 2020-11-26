@@ -519,6 +519,7 @@ GameObject:
   - component: {fileID: 1578289666301206410}
   - component: {fileID: 6699090899518478379}
   - component: {fileID: 673516146407770022}
+  - component: {fileID: 4534899766247141115}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -677,6 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3615724618527ed42adb60032254b390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 673516146407770022}
   enemyHolder: {fileID: 1578289664709252544}
   chasePlayer: {fileID: 1578289666301206409}
   moveTrail: {fileID: 1578289666301206455}
@@ -696,3 +698,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  inCombat: 0
+--- !u!114 &4534899766247141115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578289666301206449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440cdd27c06087d4a92f6d30050a0e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 673516146407770022}
+  fightActions: 0000000001000000030000000300000003000000
+  timeBetweenActions: 1
+  currentAction: 0
