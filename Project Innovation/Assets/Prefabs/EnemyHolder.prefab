@@ -711,11 +711,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440cdd27c06087d4a92f6d30050a0e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttackEvent: event:/3D/Monster/Monster attack
+  enemyAttackEvent: event:/2D/Monster/Monster attack Mono
   attackParameter: Attack - Monster
   enemy: {fileID: 673516146407770022}
-  fightActions: 0000000001000000000000000000000000000000
-  timeBetweenActions: 1
+  fightActions: 0000000001000000020000000300000000000000
+  timeBetweenActions: 5
   currentAction: 0
   attackFailed: 0
 --- !u!114 &2012953399326801344
