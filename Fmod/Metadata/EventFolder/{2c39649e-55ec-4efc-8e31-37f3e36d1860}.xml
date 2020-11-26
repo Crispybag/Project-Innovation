@@ -5,7 +5,7 @@
 			<value>Player</value>
 		</property>
 		<relationship name="folder">
-			<destination>{62b9229e-6a5b-45ea-9292-2f720f318feb}</destination>
+			<destination>{cee88fe6-d941-482c-b352-126db08aa7c9}</destination>
 		</relationship>
 	</object>
 </objects>
