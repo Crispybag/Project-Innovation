@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{8d1c6f95-83aa-47e2-83d1-ec0bb93191cf}">
 		<property name="assetPath">
-			<value>Monster alert.wav</value>
+			<value>Tutorial/Monster alert.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
