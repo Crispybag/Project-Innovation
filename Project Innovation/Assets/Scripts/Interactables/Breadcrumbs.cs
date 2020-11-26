@@ -8,7 +8,7 @@ public class Breadcrumbs : MonoBehaviour
     //Get path to the event
     public string eventPath;
 
-    public static int breadcrumbsCollected;
+    public int breadcrumbsCollected;
     public float collectRadius = 1f;
     public float soundTimer = 0.2f;
     
