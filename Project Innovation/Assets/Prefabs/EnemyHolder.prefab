@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 6699090899518478379}
   - component: {fileID: 673516146407770022}
   - component: {fileID: 4534899766247141115}
+  - component: {fileID: 2012953399326801344}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -634,8 +635,7 @@ MonoBehaviour:
   - {fileID: 1578289666128609332}
   - {fileID: 1578289665543147030}
   - {fileID: 1578289665509127028}
-  - {fileID: 1578289665858900349}
-  speed: 10
+  speed: 2
 --- !u!114 &1578289666301206409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +711,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440cdd27c06087d4a92f6d30050a0e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAttackEvent: event:/3D/Monster/Monster attack
+  attackParameter: Attack - Monster
   enemy: {fileID: 673516146407770022}
-  fightActions: 0000000001000000030000000300000003000000
+  fightActions: 0000000001000000000000000000000000000000
   timeBetweenActions: 1
   currentAction: 0
+  attackFailed: 0
+--- !u!114 &2012953399326801344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578289666301206449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833ea56dc1ea3a94ab3c0ede8a22abed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footStepsEventPath: event:/3D/Monster/Monster Walking
+  materialParameter: Walking types
+  stepDistance: 8
+  rayDistance: 4
+  startRunningTime: 0.3
+  materialTypes:
+  - Wood
+  - Mud
+  - Dirt
+  - Sand
+  - Leaves
+  - Tiles
+  - Gravel
+  defaultMaterial: 0

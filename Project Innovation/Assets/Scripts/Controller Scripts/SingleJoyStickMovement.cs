@@ -33,8 +33,11 @@ public class SingleJoyStickMovement : MonoBehaviour
 
     private void Update()
     {
-        rotatePlayer();
-        movePlayer();
+        if (Player.canMove)
+        {
+            rotatePlayer();
+            movePlayer();
+        }
     }
 
     //=======================================================================================

@@ -24,8 +24,8 @@ public class RotatePlayer : MonoBehaviour
     //                              >  Start And Update  <
     //=======================================================================================
     private void Update()
-    {
-        rotatePlayer();
+    { 
+        if (Player.canMove)rotatePlayer();
     }
 
     //=======================================================================================

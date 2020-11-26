@@ -20,6 +20,9 @@ public class CombatState : MonoBehaviour
     public SwipeControls swipeControls;
     // public variables
     //[Header("Variables")]
+    private float timeHoldingDown;
+    public float maxTapTime = 0.2f;
+    private bool isTapping = false;
 
     // private objects
     private GameObject _enemy;
@@ -32,9 +35,9 @@ public class CombatState : MonoBehaviour
     //=======================================================================================
     private void FixedUpdate()
     {
+        
         if (playerStats.isEnteringCombat && !playerStats.canCombat)
         {
-            Debug.Log("it reached combat state");
             playerStats.isEnteringCombat = false;
             StartCombat();
         }
@@ -42,6 +45,7 @@ public class CombatState : MonoBehaviour
 
         if (playerStats.canCombat)
         {
+            registerTap();
             if (_enemyStats.hp <= 0)
             {
                 LeaveCombat();
@@ -52,7 +56,6 @@ public class CombatState : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.T))
             {
                 _enemyStats.hp--;
-                Debug.Log("Enemy took 1 damage");
             }
 
             if (Input.GetKeyDown(KeyCode.G))
@@ -92,6 +95,10 @@ public class CombatState : MonoBehaviour
                 default:
                     break;
             }
+            if (isTapping)
+            {
+                attack();
+            }
         }
     }
 
@@ -104,33 +111,35 @@ public class CombatState : MonoBehaviour
         {
             _enemyStats.hp--;
         }
-        Debug.Log("Player Attacks!");
     }
 
     private void defendLeft()
     {
+        
         if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHLEFT)
             {
-                _enemyCombat.goToNextAction();
+                Debug.Log("Defending Left");
+                _enemyCombat.attackFailed = true;
             }
             
             else
             {
                 playerStats.hp--;
             }
-            Debug.Log("Player Defends Left!");
         }
     }
 
     private void defendRight()
     {
+        
         if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHRIGHT)
             {
-                _enemyCombat.goToNextAction();
+                Debug.Log("Defending Right");
+                _enemyCombat.attackFailed = true;
             }
             
             else
@@ -138,23 +147,23 @@ public class CombatState : MonoBehaviour
                 playerStats.hp--;
 
             }
-            Debug.Log("Player Defends Right!");
         }
     }
 
     private void dodge()
     {
+        
         if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.BASH)
             {
-                _enemyCombat.goToNextAction();
+                Debug.Log("Dodge");
+                _enemyCombat.attackFailed = true;
             }
             else
             {
                 playerStats.hp--;
             }
-            Debug.Log("Player Dodges!");
         }
     }
     //=======================================================================================
@@ -186,5 +195,32 @@ public class CombatState : MonoBehaviour
     }
 
 
+
+
+    private void registerTap()
+    {
+        
+        isTapping = false;
+        if (Input.touchCount == 0)
+        {
+            timeHoldingDown = 0;
+        }
+
+        else
+        {
+            timeHoldingDown += Time.deltaTime;
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Ended && timeHoldingDown < maxTapTime)
+            {
+                isTapping = true;
+                Debug.Log("Tap Registered");
+                timeHoldingDown = 0;
+            }
+        }
+
+
+
+
+    }
 }
 

@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833ea56dc1ea3a94ab3c0ede8a22abed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footStepsEventPath: event:/2D/Ambience/Walking
+  footStepsEventPath: event:/2D/Ambience/Player/Player Walking
   materialParameter: Walking Types
   stepDistance: 2
   rayDistance: 1.2

@@ -19,6 +19,10 @@ public class EnemyCombat : MonoBehaviour
     };
 
     [Header("Components")]
+    [FMODUnity.EventRef]
+    public string enemyAttackEvent;
+    public string attackParameter;
+
     public Enemy enemy;
     public FIGHTACTION[] fightActions;
     // public variables
@@ -27,6 +31,7 @@ public class EnemyCombat : MonoBehaviour
 
     // private objects
     [HideInInspector] public FIGHTACTION currentAction;
+    [HideInInspector] public bool attackFailed = false;
     private int _actionIndex = 0;
     private float _timer = 0;
     // private variables
@@ -51,7 +56,10 @@ public class EnemyCombat : MonoBehaviour
             {
                 if (currentAction == FIGHTACTION.BASH || currentAction == FIGHTACTION.SLASHLEFT || currentAction == FIGHTACTION.SLASHRIGHT)
                 {
-                    _playerStats.hp--;
+                    if (!attackFailed)
+                    {
+                        _playerStats.hp--;
+                    }
                 }
                 goToNextAction();
             }
@@ -67,11 +75,58 @@ public class EnemyCombat : MonoBehaviour
     //GoToNextAction
     public void goToNextAction()
     {
+        attackFailed = false;
         _actionIndex++;
         currentAction = fightActions[(_actionIndex % fightActions.Length)];
         _timer = 0;
+
+        switch (currentAction)
+        {
+            case FIGHTACTION.SLASHLEFT:
+                setPosition(0);
+                playAttackSound(0);
+                break;
+
+            case FIGHTACTION.BASH:
+                setPosition(1);
+                playAttackSound(1);
+                break;
+
+            case FIGHTACTION.SLASHRIGHT:
+                setPosition(2);
+                playAttackSound(2);
+                break;
+        }
     }
 
+
+
+    public void playAttackSound(int pAttackIndex)
+    {
+        FMOD.Studio.EventInstance attack = FMODUnity.RuntimeManager.CreateInstance(enemyAttackEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(attack, transform, GetComponent<Rigidbody>());
+        attack.setParameterByName(attackParameter, pAttackIndex);
+        attack.start();
+        attack.release();
+    }
+
+    public void setPosition(int index)
+    {
+        if (index == 0)
+        {
+            transform.position = _player.transform.position + -1 * _player.transform.right;
+        }
+
+        else if (index == 1)
+        {
+            transform.position = _player.transform.position + _player.transform.forward;
+        }
+
+        else if (index == 2)
+        {
+            transform.position = _player.transform.position + _player.transform.right;
+        }
+    }
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================

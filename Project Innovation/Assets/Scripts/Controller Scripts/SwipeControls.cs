@@ -34,7 +34,7 @@ public class SwipeControls : MonoBehaviour
     // private objects
     private int _framesHeldDown;
     private Vector2 _startPosition;
-    
+    private bool hasSwiped;
 
     // private variables
 
@@ -57,25 +57,27 @@ public class SwipeControls : MonoBehaviour
             //Reset Startposition when screen is just touched, held for too long, or there is a direction input
             if (touch.phase == TouchPhase.Began || _framesHeldDown > frameTreshold || direction != DIRECTION.NONE)
             {
+                hasSwiped = false;
                 _startPosition = touch.position;
                 _framesHeldDown = 0;
             }
             
             //Detect a swipe
-            if ((touch.position - _startPosition).magnitude > minimalDistance)
+            if ((touch.position - _startPosition).magnitude > minimalDistance && !hasSwiped)
             {
                 float x = touch.position.x - _startPosition.x;
                 float y = touch.position.y - _startPosition.y;
                 if (Mathf.Abs(x) > Mathf.Abs(y))
                 {
-                    if (x > 0) { direction = DIRECTION.RIGHT; }
-                    else       { direction = DIRECTION.LEFT;  }
+                    if (x > 0) { direction = DIRECTION.RIGHT; hasSwiped = true; }
+                    else       { direction = DIRECTION.LEFT; hasSwiped = true; }
                 }
                 else
                 {
-                    if (y > 0) { direction = DIRECTION.UP;    }
-                    else       { direction = DIRECTION.DOWN;  }
+                    if (y > 0) { direction = DIRECTION.UP; hasSwiped = true; }
+                    else       { direction = DIRECTION.DOWN; hasSwiped = true; }
                 }
+                Debug.Log(direction);
             }
         }
 
