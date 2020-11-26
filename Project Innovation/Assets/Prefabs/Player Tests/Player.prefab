@@ -218,7 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3db0fb2bd015dd449827643be8bbeaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 4758584420417798970}
   bonkSound: {fileID: 4758584420417798968}
 --- !u!114 &1085546516
 MonoBehaviour:
@@ -234,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCombat: 0
   isEnteringCombat: 0
-  hp: 30
+  hp: 3
 --- !u!114 &7453101509297136728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,8 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833ea56dc1ea3a94ab3c0ede8a22abed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footStepsEventPath: event:/2D/Ambience/Player/Player Walking
-  materialParameter: Walking Types
+  footStepsEventPath: event:/2D/Player/Player Walking
+  materialParameter: Walking types
   stepDistance: 2
   rayDistance: 1.2
   startRunningTime: 0.3

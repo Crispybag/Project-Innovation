@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,12 +29,15 @@ public class EnemyCombat : MonoBehaviour
     // public variables
     [Header("Variables")]
     public float timeBetweenActions = 1f;
+    public float bufferTime = 0.2f;
+
 
     // private objects
     [HideInInspector] public FIGHTACTION currentAction;
     [HideInInspector] public bool attackFailed = false;
     private int _actionIndex = 0;
-    private float _timer = 0;
+    private float _timer = 0f;
+    private float _currentBuffer = 0f;
     // private variables
     private GameObject _player;
     private Player _playerStats;
@@ -49,19 +53,13 @@ public class EnemyCombat : MonoBehaviour
 
     private void Update()
     {
-        if (enemy.inCombat)
+        if (enemy.inCombat && _playerStats.hp > 0)
         {
             _timer += Time.deltaTime;
+
             if (_timer > timeBetweenActions)
             {
-                if (currentAction == FIGHTACTION.BASH || currentAction == FIGHTACTION.SLASHLEFT || currentAction == FIGHTACTION.SLASHRIGHT)
-                {
-                    if (!attackFailed)
-                    {
-                        _playerStats.hp--;
-                    }
-                }
-                goToNextAction();
+                concludeAction();
             }
         }
     }
@@ -127,6 +125,26 @@ public class EnemyCombat : MonoBehaviour
             transform.position = _player.transform.position + _player.transform.right;
         }
     }
+
+    public void concludeAction()
+    {
+        _currentBuffer += Time.deltaTime;
+
+        if (_currentBuffer > bufferTime)
+        {
+            _currentBuffer = 0f;
+
+            if (currentAction != FIGHTACTION.NOTHING)
+            {
+                if (!attackFailed)
+                {
+                    _playerStats.hp--;
+                }
+            }
+            goToNextAction();
+        }
+    }
+
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================

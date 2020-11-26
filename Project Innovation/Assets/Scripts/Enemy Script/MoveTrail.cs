@@ -11,7 +11,7 @@ public class MoveTrail : MonoBehaviour
     // public objects
     [Header("Components")]
     public GameObject[] wayPoints;
-    
+    public PatrolGroanSound patrolGroanSound;
 
 
     [Header("Variables")]
@@ -66,6 +66,7 @@ public class MoveTrail : MonoBehaviour
     //Rotate towards next waypoint
     public void GoToNextWavePoint()
     {
+        patrolGroanSound.playSound(0);
         //Get next waypoint
         if (_currentWaypoint + 1 < wayPoints.Length)
         {

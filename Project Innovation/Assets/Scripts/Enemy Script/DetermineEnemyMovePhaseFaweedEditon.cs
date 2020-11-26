@@ -9,11 +9,21 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     //=======================================================================================
 
     // public objects
+    public enum ENEMYPHASE
+    {
+        PATROL = 0,
+        ALERT = 1,
+        CHASE = 2,
+        COMBAT = 3
+    }
+
+
     [Header("Components")]
     public Enemy enemy;
     public GameObject enemyHolder;
     public ChasePlayer chasePlayer;
     public MoveTrail moveTrail;
+    public PatrolGroanSound sound;
     //public AudioSource aSource;
     //public AudioSource aSourcefs;
 
@@ -40,6 +50,10 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     private Vector3 _previousLocation;
 
 
+    private ENEMYPHASE enemyPhaseCurrent;
+    private ENEMYPHASE enemyPhasePrevious;
+
+
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
@@ -54,10 +68,50 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
         determineDistanceToPlayer();
         determinePlayerSpeed();
 
+        enemyPhasePrevious = enemyPhaseCurrent;
+        determinePhase();
 
 
+        if (enemyPhasePrevious != enemyPhaseCurrent)
+        {
+            switch (enemyPhaseCurrent)
+            {
+                case ENEMYPHASE.ALERT:
+                    sound.playSound(1);
+                    chasePlayer.enabled = false;
+                    moveTrail.enabled = false;
+                    break;
+
+                case ENEMYPHASE.COMBAT:
+                    //Necessary value switches
+                    Player playerStats = _player.GetComponent<Player>();
+                    enemy.inCombat = true;
+                    playerStats.SetEnemy(gameObject);
+                    playerStats.isEnteringCombat = true;
+
+                    chasePlayer.enabled = false;
+                    moveTrail.enabled = false;
+                    break;
+
+                case ENEMYPHASE.CHASE:
+                    sound.playSound(2);
+                    chasePlayer.enabled = true;
+                    moveTrail.enabled = false;
+                    break;
+
+                case ENEMYPHASE.PATROL:
+                    chasePlayer.enabled = false;
+                    moveTrail.enabled = true;
+                    moveTrail.GoToNextWavePoint();
+                    break;
+
+            }
+        }
+
+        /*
         if (_distanceToPlayer < detectRadius && _distanceToPlayer > chaseRadius)
         {
+            sound.playSound(1);
             chasePlayer.enabled = false;
             moveTrail.enabled = false;
         }
@@ -76,8 +130,10 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
          
         }
 
+        //Chase Conditions
         else if (_distanceToPlayer < chaseRadius)
         {
+            sound.playSound(2);
             chasePlayer.enabled = true;
             moveTrail.enabled = false;
         }
@@ -88,6 +144,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
             moveTrail.enabled = true;
             moveTrail.GoToNextWavePoint();
         }
+        */
     }
 
     //=======================================================================================
@@ -111,6 +168,28 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     private void determineDistanceToPlayer()
     {
         _distanceToPlayer = (_player.transform.position - transform.position).magnitude;
+
+    }
+
+    private void determinePhase()
+    {
+        if (_distanceToPlayer < detectRadius && _distanceToPlayer > chaseRadius)
+        {
+            enemyPhaseCurrent = ENEMYPHASE.ALERT;
+        }
+        else if (_distanceToPlayer < combatRadius)
+        {
+            enemyPhaseCurrent = ENEMYPHASE.COMBAT;
+        }
+        else if (_distanceToPlayer < chaseRadius)
+        {
+            enemyPhaseCurrent = ENEMYPHASE.CHASE;
+        }
+        else
+        {
+            enemyPhaseCurrent = ENEMYPHASE.PATROL;
+        }
+
 
     }
 }

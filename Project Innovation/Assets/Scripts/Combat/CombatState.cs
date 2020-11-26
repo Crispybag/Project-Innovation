@@ -29,10 +29,14 @@ public class CombatState : MonoBehaviour
     private Enemy _enemyStats;
     private EnemyCombat _enemyCombat;
     // private variables
-
+    CombatSounds combatSounds;
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
+    private void Start()
+    {
+        combatSounds = GetComponent<CombatSounds>();   
+    }
     private void FixedUpdate()
     {
         
@@ -51,6 +55,7 @@ public class CombatState : MonoBehaviour
                 LeaveCombat();
                 Destroy(_enemy);
             }
+
 
             //Quick garbage code
             if (Input.GetKeyDown(KeyCode.T))
@@ -107,10 +112,8 @@ public class CombatState : MonoBehaviour
     //=======================================================================================
     private void attack()
     {
-        if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.NOTHING)
-        {
             _enemyStats.hp--;
-        }
+            combatSounds.playSound(0);
     }
 
     private void defendLeft()
@@ -121,6 +124,7 @@ public class CombatState : MonoBehaviour
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHLEFT)
             {
                 Debug.Log("Defending Left");
+                combatSounds.playSound(1);
                 _enemyCombat.attackFailed = true;
             }
             
@@ -138,6 +142,7 @@ public class CombatState : MonoBehaviour
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHRIGHT)
             {
+                combatSounds.playSound(1);
                 Debug.Log("Defending Right");
                 _enemyCombat.attackFailed = true;
             }
@@ -158,6 +163,7 @@ public class CombatState : MonoBehaviour
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.BASH)
             {
                 Debug.Log("Dodge");
+                combatSounds.playSound(2);
                 _enemyCombat.attackFailed = true;
             }
             else

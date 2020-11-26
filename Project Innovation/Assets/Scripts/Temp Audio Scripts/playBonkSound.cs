@@ -9,15 +9,29 @@ public class playBonkSound : MonoBehaviour
     // public objects
     [Header("Components")]
     public GameObject bonkSound;
+    public HitWallSound sound;
 
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("owie");
         if (collision.gameObject.tag == "Wall")
         {
-            bonkSound.transform.position = collision.contacts[0].point;
+            Debug.Log("I ran into a wall");
+            if (collision.gameObject.GetComponent<WallMaterialSetter>())
+            {
+                bonkSound.transform.position = collision.contacts[0].point;
+
+
+                WallMaterialSetter setter = collision.gameObject.GetComponent<WallMaterialSetter>();
+                sound.playSound((int)setter.wallMaterial);
+            }
+            else
+            {
+                sound.playSound(0);
+            }
         }
     }
 }

@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 673516146407770022}
   - component: {fileID: 4534899766247141115}
   - component: {fileID: 2012953399326801344}
+  - component: {fileID: 1195558575007519671}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -635,6 +636,7 @@ MonoBehaviour:
   - {fileID: 1578289666128609332}
   - {fileID: 1578289665543147030}
   - {fileID: 1578289665509127028}
+  patrolGroanSound: {fileID: 1195558575007519671}
   speed: 2
 --- !u!114 &1578289666301206409
 MonoBehaviour:
@@ -682,6 +684,7 @@ MonoBehaviour:
   enemyHolder: {fileID: 1578289664709252544}
   chasePlayer: {fileID: 1578289666301206409}
   moveTrail: {fileID: 1578289666301206455}
+  sound: {fileID: 1195558575007519671}
   detectRadius: 6
   chaseRadius: 5
   combatRadius: 2
@@ -714,8 +717,9 @@ MonoBehaviour:
   enemyAttackEvent: event:/2D/Monster/Monster attack Mono
   attackParameter: Attack - Monster
   enemy: {fileID: 673516146407770022}
-  fightActions: 0000000001000000020000000300000000000000
-  timeBetweenActions: 5
+  fightActions: 0200000001000000030000000300000000000000
+  timeBetweenActions: 3
+  bufferTime: 0.2
   currentAction: 0
   attackFailed: 0
 --- !u!114 &2012953399326801344
@@ -732,7 +736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStepsEventPath: event:/3D/Monster/Monster Walking
   materialParameter: Walking types
-  stepDistance: 8
+  stepDistance: 2
   rayDistance: 4
   startRunningTime: 0.3
   materialTypes:
@@ -744,3 +748,17 @@ MonoBehaviour:
   - Tiles
   - Gravel
   defaultMaterial: 0
+--- !u!114 &1195558575007519671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578289666301206449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f93a6df4e771142a524eb928c88869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPath: event:/3D/Monster/Monster Movement
+  parameterName: Monster movement
