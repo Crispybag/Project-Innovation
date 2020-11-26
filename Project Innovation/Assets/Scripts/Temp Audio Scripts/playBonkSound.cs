@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
+
 public class playBonkSound : MonoBehaviour
 {
     //=======================================================================================
@@ -9,7 +8,6 @@ public class playBonkSound : MonoBehaviour
     //=======================================================================================
     // public objects
     [Header("Components")]
-    public AudioSource audioSource;
     public GameObject bonkSound;
 
     //=======================================================================================
@@ -20,7 +18,6 @@ public class playBonkSound : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             bonkSound.transform.position = collision.contacts[0].point;
-            audioSource.Play();
         }
     }
 }
