@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{0de92126-3e24-4abd-a85b-9242c27dad14}">
+		<property name="assetPath">
+			<value>Player/Combat/Block 3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1406575963718821</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0107a68a-a665-42a7-a80a-dfc97087ab10}</destination>
+		</relationship>
+	</object>
+</objects>
