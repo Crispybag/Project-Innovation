@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 1085546516}
   swipeControls: {fileID: 6974254492808016325}
+  tapScreen: {fileID: 0}
   maxTapTime: 0.2
 --- !u!1 &4758584419635608618
 GameObject:
@@ -219,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonkSound: {fileID: 4758584420417798968}
+  sound: {fileID: 0}
 --- !u!114 &1085546516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +472,7 @@ GameObject:
   - component: {fileID: 595335694899658304}
   - component: {fileID: 8453686956277404307}
   - component: {fileID: 6974254492808016325}
+  - component: {fileID: 1203602494482763231}
   m_Layer: 0
   m_Name: Movement Joystick
   m_TagString: Untagged
@@ -554,3 +557,17 @@ MonoBehaviour:
   frameTreshold: 20
   direction: 0
   minimalDistance: 100
+--- !u!114 &1203602494482763231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967761620965421153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7318a02a3ede5f4496a1d639eea4c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTapTime: 0.1
+  isTapping: 0

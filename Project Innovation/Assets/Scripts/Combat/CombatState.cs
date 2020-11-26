@@ -18,11 +18,10 @@ public class CombatState : MonoBehaviour
     //[Header("Components")]
     public Player playerStats;
     public SwipeControls swipeControls;
+    public TapScreen tapScreen;
     // public variables
     //[Header("Variables")]
     private float timeHoldingDown;
-    public float maxTapTime = 0.2f;
-    private bool isTapping = false;
 
     // private objects
     private GameObject _enemy;
@@ -49,7 +48,7 @@ public class CombatState : MonoBehaviour
 
         if (playerStats.canCombat)
         {
-            registerTap();
+            //registerTap();
             if (_enemyStats.hp <= 0)
             {
                 LeaveCombat();
@@ -100,7 +99,7 @@ public class CombatState : MonoBehaviour
                 default:
                     break;
             }
-            if (isTapping)
+            if (tapScreen.isTapping)
             {
                 attack();
             }
@@ -131,6 +130,7 @@ public class CombatState : MonoBehaviour
             else
             {
                 playerStats.hp--;
+                combatSounds.playSound(4);
             }
         }
     }
@@ -150,6 +150,7 @@ public class CombatState : MonoBehaviour
             else
             {
                 playerStats.hp--;
+                combatSounds.playSound(4);
 
             }
         }
@@ -169,6 +170,7 @@ public class CombatState : MonoBehaviour
             else
             {
                 playerStats.hp--;
+                combatSounds.playSound(4);
             }
         }
     }
@@ -202,7 +204,7 @@ public class CombatState : MonoBehaviour
 
 
 
-
+    /*
     private void registerTap()
     {
         
@@ -223,10 +225,7 @@ public class CombatState : MonoBehaviour
                 timeHoldingDown = 0;
             }
         }
-
-
-
-
     }
+    */
 }
 

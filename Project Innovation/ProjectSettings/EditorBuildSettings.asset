@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prototypes/Ausio test.unity
     guid: 06ef86dd65263f84dbacb77b95bc319f
+  - enabled: 1
+    path: Assets/Scenes/Prototypes/Tests (NOTOUCH!)/Title.unity
+    guid: 6343512040680624f930d9d3cb34ed52
   - enabled: 1
     path: Assets/Scenes/Prototypes/Tests (NOTOUCH!)/Test #1.unity
     guid: d472b669d5bc47b4d92f54d520046c96

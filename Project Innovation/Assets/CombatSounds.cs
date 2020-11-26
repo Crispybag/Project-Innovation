@@ -7,7 +7,7 @@ public class CombatSounds : MonoBehaviour
     [FMODUnity.EventRef]
     //Get path to the event
     public string eventPath;
-
+    public string parameterName;
 
     public void playSound(int pIndex)
     {
@@ -18,7 +18,7 @@ public class CombatSounds : MonoBehaviour
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, transform, GetComponent<Rigidbody>());
 
         //Do this to set a certain parameter
-        sound.setParameterByName("Attack - Player", pIndex);
+        sound.setParameterByName(parameterName, pIndex);
 
         //Start thing
         sound.start();

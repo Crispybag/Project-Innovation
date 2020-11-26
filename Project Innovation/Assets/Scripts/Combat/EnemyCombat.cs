@@ -139,6 +139,7 @@ public class EnemyCombat : MonoBehaviour
                 if (!attackFailed)
                 {
                     _playerStats.hp--;
+                   
                 }
             }
             goToNextAction();

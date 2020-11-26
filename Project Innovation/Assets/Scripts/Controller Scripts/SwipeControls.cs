@@ -77,7 +77,6 @@ public class SwipeControls : MonoBehaviour
                     if (y > 0) { direction = DIRECTION.UP; hasSwiped = true; }
                     else       { direction = DIRECTION.DOWN; hasSwiped = true; }
                 }
-                Debug.Log(direction);
             }
         }
 

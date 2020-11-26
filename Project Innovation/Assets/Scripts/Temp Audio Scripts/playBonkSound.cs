@@ -19,7 +19,6 @@ public class playBonkSound : MonoBehaviour
         Debug.Log("owie");
         if (collision.gameObject.tag == "Wall")
         {
-            Debug.Log("I ran into a wall");
             if (collision.gameObject.GetComponent<WallMaterialSetter>())
             {
                 bonkSound.transform.position = collision.contacts[0].point;

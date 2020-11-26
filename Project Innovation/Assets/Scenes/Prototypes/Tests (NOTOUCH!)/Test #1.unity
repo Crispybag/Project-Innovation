@@ -4660,6 +4660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventPath: event:/2D/Player/Player Combat
+  parameterName: 
 --- !u!1 &1682513773
 GameObject:
   m_ObjectHideFlags: 0
@@ -5820,6 +5821,11 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1540168228}
+    - target: {fileID: 1203602494482763231, guid: dad804224a64d3f4ea78f22a42192d40,
+        type: 3}
+      propertyPath: maxTapTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2643260690352796173, guid: dad804224a64d3f4ea78f22a42192d40,
         type: 3}
       propertyPath: joystick
