@@ -13,6 +13,7 @@ public class MergeWPlayer : MonoBehaviour
 
     private GameObject _enemy;
     [HideInInspector] public bool isEnteringCombat = false;
+    [HideInInspector] public int hp = 3;
    
 
     //=======================================================================================

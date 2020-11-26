@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototypes/Ausio test.unity
     guid: 06ef86dd65263f84dbacb77b95bc319f
+  - enabled: 1
+    path: Assets/Scenes/Prototypes/Tests (NOTOUCH!)/Test #1.unity
+    guid: d472b669d5bc47b4d92f54d520046c96
   m_configObjects: {}
