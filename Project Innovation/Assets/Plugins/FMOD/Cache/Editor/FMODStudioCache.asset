@@ -288,6 +288,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-8446738325393095765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player Walking/Footstep speed
+  m_EditorClassIdentifier: 
+  Name: Footstep speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-8446458328654446621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +327,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8444560168764703584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +368,30 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8201753442345241858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D/Ambience/Environment/Monster background fighting
+  m_EditorClassIdentifier: 
+  Path: event:/3D/Ambience/Environment/Monster background fighting
+  guid: 19683248a3d2f84ebc27710da3ced85b
+  Banks:
+  - {fileID: -1600860751464513067}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5150493302362240168}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8101877311172674060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +594,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-7311045176884614519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Walking/Footstep speed
+  m_EditorClassIdentifier: 
+  Name: Footstep speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7274013628658363563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +695,26 @@ MonoBehaviour:
   - Name: 
     Value: 2098
   Exists: 0
+--- !u!114 &-6944056919804338368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Weather/Rain
+  m_EditorClassIdentifier: 
+  Name: Rain
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6938532132038400491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,8 +755,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &-6846149738517851543
 MonoBehaviour:
@@ -714,8 +798,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &-6811026208111361507
 MonoBehaviour:
@@ -981,6 +1065,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-5546051412362026812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player Walking/Walking types
+  m_EditorClassIdentifier: 
+  Name: Walking types
+  Min: 0
+  Max: 6
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5494303380788217677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,6 +1190,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-4718887656059536488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Forest
+  m_EditorClassIdentifier: 
+  Name: Forest
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4666033529359865357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,11 +1250,31 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2427920947638849017}
-  - {fileID: 69191425058946607}
+  - {fileID: 4410726818061540659}
+  - {fileID: 2171076539412997439}
   MinDistance: 0
   MaxDistance: 0
   Length: 135053
+--- !u!114 &-4558529733521116478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player Combat/Attack - Player
+  m_EditorClassIdentifier: 
+  Name: Attack - Player
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4493932488054324913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,7 +1294,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4482121367079423709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,7 +1355,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 4434629961853752674}
+  - {fileID: 2418428574905216530}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1254,7 +1398,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4218430860961456003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,7 +1438,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4094432594187972030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,7 +1458,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4064437357300845608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,15 +1574,15 @@ MonoBehaviour:
   Path: ../Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637419958919639338
+  lastModified: 637419979246650750
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1960
+    Value: 2076
   - Name: Mobile
-    Value: 1960
+    Value: 2076
   - Name: WebGl
-    Value: 1960
+    Value: 2076
   Exists: 1
 --- !u!114 &-3748407219225949992
 MonoBehaviour:
@@ -1499,7 +1643,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3612396014579989132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1579,7 +1723,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3334516189367549631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1835,9 +1979,29 @@ MonoBehaviour:
   Path: ../Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637419958919599441
+  lastModified: 637419979246600890
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-1411064248062857728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Walking/Walking types
+  m_EditorClassIdentifier: 
+  Name: Walking types
+  Min: 0
+  Max: 6
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-1402373568288206998
 MonoBehaviour:
@@ -1899,8 +2063,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 7191873184514297550}
-  - {fileID: 5749318777432844527}
+  - {fileID: -5546051412362026812}
+  - {fileID: -8446738325393095765}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1989,8 +2153,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &-690913763463817611
 MonoBehaviour:
@@ -2012,6 +2176,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-562519638410487002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Building
+  m_EditorClassIdentifier: 
+  Name: Building
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-473796762433185118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2131,7 +2315,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,17 +2339,18 @@ MonoBehaviour:
   - {fileID: -6889148336011691822}
   - {fileID: -793595286366269223}
   - {fileID: 4471921180234203898}
-  - {fileID: 4118904294494199140}
   - {fileID: -6818834726216917505}
   - {fileID: -4393854468794318205}
   - {fileID: 6650099179676943532}
   - {fileID: 1580264839927731909}
+  - {fileID: -8201753442345241858}
+  - {fileID: 7289953317534883979}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1600860751464513067}
   StringsBanks:
   - {fileID: -3788656141755444805}
-  stringsBankWriteTime: 637419958919639338
+  stringsBankWriteTime: 637419979246650750
   cacheVersion: 6
 --- !u!114 &35330707574932845
 MonoBehaviour:
@@ -2206,7 +2391,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &102285731555096459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,10 +2767,10 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8762239983168730419}
-  - {fileID: -4094432594187972030}
-  - {fileID: 1979872966204800870}
-  - {fileID: 8333321555842732490}
+  - {fileID: 7971979099010155420}
+  - {fileID: -4718887656059536488}
+  - {fileID: -562519638410487002}
+  - {fileID: 3190982151501351549}
   MinDistance: 0
   MaxDistance: 0
   Length: 292225
@@ -2668,7 +2853,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2002616759166676993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2709,6 +2894,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2171076539412997439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Ocean
+  m_EditorClassIdentifier: 
+  Name: Ocean
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2279902847302629311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,6 +2994,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2418428574905216530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster attack Mono/Attack - Monster
+  m_EditorClassIdentifier: 
+  Name: Attack - Monster
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2427920947638849017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2808,7 +3033,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2564091471656970818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2909,6 +3134,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3190982151501351549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Crickets
+  m_EditorClassIdentifier: 
+  Name: Crickets
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3271076336847142713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,6 +3234,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &3521771422576263751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Weather/Wind
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3567691553208872842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3138,7 +3403,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4118904294494199140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3153,8 +3418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/3D/Monster/Monster Gowling
   guid: 9048d5abfaaa1647961ebd8a0036cc8b
-  Banks:
-  - {fileID: -1600860751464513067}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3163,6 +3427,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 8400
+--- !u!114 &4410726818061540659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Forest
+  m_EditorClassIdentifier: 
+  Name: Forest
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4434629961853752674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3178,6 +3462,26 @@ MonoBehaviour:
   Name: Attack - Monster
   Min: 0
   Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &4468721085369554268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Actions/BoatHitLand
+  m_EditorClassIdentifier: 
+  Name: BoatHitLand
+  Min: 0
+  Max: 1
   Default: 0
   ID:
     data1: 0
@@ -3203,7 +3507,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -4219534343437303499}
+  - {fileID: -4558529733521116478}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -3247,6 +3551,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &4692805656910277226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Actions/LayDownOars
+  m_EditorClassIdentifier: 
+  Name: LayDownOars
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4742512456516642558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,6 +3611,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4992749022880933730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Growling/Monster movement
+  m_EditorClassIdentifier: 
+  Name: Monster movement
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5019682336290301230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3307,6 +3651,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5150493302362240168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster background fighting/Walking types - Monster
+  m_EditorClassIdentifier: 
+  Name: Walking types - Monster
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5165197047356138732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3387,6 +3751,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5589381845950634266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Actions/BigSplash
+  m_EditorClassIdentifier: 
+  Name: BigSplash
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5621393008742681769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3465,7 +3849,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &5870703146016401606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3511,9 +3895,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8446458328654446621}
-  - {fileID: -3698763414013730833}
-  - {fileID: 6756693064160363770}
+  - {fileID: 4468721085369554268}
+  - {fileID: 4692805656910277226}
+  - {fileID: 5589381845950634266}
   MinDistance: 0
   MaxDistance: 0
   Length: 6500
@@ -3577,6 +3961,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &6159825864502800016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Weather/Thunder
+  m_EditorClassIdentifier: 
+  Name: Thunder
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6205322333523051672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3777,9 +4181,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 4018640860591740554}
-  - {fileID: -3372805082397175749}
-  - {fileID: -4132736332138339521}
+  - {fileID: 3521771422576263751}
+  - {fileID: 6159825864502800016}
+  - {fileID: -6944056919804338368}
   MinDistance: 0
   MaxDistance: 0
   Length: 48087
@@ -3803,8 +4207,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -4493932488054324913}
-  - {fileID: -10162803634817877}
+  - {fileID: -7311045176884614519}
+  - {fileID: -1411064248062857728}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -3847,7 +4251,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6970169970364445018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3932,7 +4336,31 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &7289953317534883979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D/Monster/Monster Growling
+  m_EditorClassIdentifier: 
+  Path: event:/3D/Monster/Monster Growling
+  guid: 9048d5abfaaa1647961ebd8a0036cc8b
+  Banks:
+  - {fileID: -1600860751464513067}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4992749022880933730}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7362312788076959865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4158,6 +4586,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &7971979099010155420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Ocean
+  m_EditorClassIdentifier: 
+  Name: Ocean
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7990089702681617975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4283,7 +4731,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8554365679224127439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4423,7 +4871,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8797439544023779509
 MonoBehaviour:
   m_ObjectHideFlags: 0

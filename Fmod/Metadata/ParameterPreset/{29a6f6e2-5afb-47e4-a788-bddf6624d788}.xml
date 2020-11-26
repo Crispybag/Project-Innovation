@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{29a6f6e2-5afb-47e4-a788-bddf6624d788}">
+		<property name="name">
+			<value>Monster movement</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c766f92d-cbbf-4990-ab3b-49f8fb70532c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c766f92d-cbbf-4990-ab3b-49f8fb70532c}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Patroling</value>
+			<value>Alert</value>
+			<value>Chase</value>
+			<value>Combat start</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
