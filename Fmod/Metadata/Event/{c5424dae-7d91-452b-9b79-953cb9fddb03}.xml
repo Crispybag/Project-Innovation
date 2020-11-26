@@ -497,7 +497,7 @@
 			<value>Dist Rolloff</value>
 		</property>
 		<property name="value">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -543,7 +543,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -579,7 +578,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
