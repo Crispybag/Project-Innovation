@@ -15,11 +15,9 @@ public class Door : MonoBehaviour
     // public variables
     [Header("Variables")]
     public int keysNeededToOpen = 1;
+    public int leversNeededToOpen = 0;
     [Min(0)]
     public float soundLength = 4.5f;
-
-    // private statics
-    private static bool created = false;
 
     // private objects
     private Vector3 _targetPos;         // the red bean child (red capsule child object)
@@ -35,11 +33,6 @@ public class Door : MonoBehaviour
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
-
-    private void Awake()
-    {
-        DontDestroyOnLoadDoor();
-    }
 
     private void Start()
     {
@@ -61,27 +54,11 @@ public class Door : MonoBehaviour
     //=======================================================================================
 
     //-----------------------------------initialize-----------------------------------------
-    /// <summary>
-    ///  Initializes objects and variables.
-    /// </summary>
+    /// <summary> Initializes objects and variables. </summary>
     private void initialize()
     {
         _targetPos = transform.Find("Back").position;                               // sets the target position
         _soundLengthInFrames = (int)(soundLength * Application.targetFrameRate);    // calculates the sound length in frames
-    }
-
-    //-----------------------------------DontDestroyOnLoadDoor-----------------------------------------
-    /// <summary>
-    ///  Makes sure the doors don't reset after you reload the level.
-    /// </summary>
-    private void DontDestroyOnLoadDoor()
-    {
-        if (!created)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            created = true;
-            Debug.Log("Awake: " + this.gameObject);
-        }
     }
 
     //=======================================================================================
@@ -95,20 +72,33 @@ public class Door : MonoBehaviour
     /// </summary>
     private void OpenDoor(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (Player.keys >= keysNeededToOpen) // enough keys
+            if (Player.keys >= keysNeededToOpen && Player.levers >= leversNeededToOpen) // enough keys and levers
             {
                 Player.keys -= keysNeededToOpen;
+                Player.keys -= leversNeededToOpen;
                 ChangeRoom(collision);
             }
-            else if (Player.keys < keysNeededToOpen && Player.keys > 0) // not enough keys
+            else if (Player.keys < keysNeededToOpen && Player.keys > 0 && Player.levers < leversNeededToOpen && Player.levers > 0) // NOT enough keys and levers
+            {
+                Debug.Log("You need at least " + keysNeededToOpen + " key(s) and " + leversNeededToOpen + " lever(s) pulled to open the door"); // can be changed into dialogue sound WIP
+            }
+            else if (Player.keys < keysNeededToOpen && Player.keys >= 0) // NOT enough keys
             {
                 Debug.Log("You need at least " + keysNeededToOpen + " key(s) to open the door"); // can be changed into dialogue sound WIP
             }
-            else if (Player.keys < 0) // minus keys... somehow
+            else if (Player.levers < leversNeededToOpen && Player.levers >= 0) // NOT enough levers
+            {
+                Debug.Log("You need at least " + leversNeededToOpen + " lever(s) to open the door"); // can be changed into dialogue sound WIP
+            }
+            else if (Player.keys < 0 && Player.levers < 0) // minus keys and levers... somehow
             {
                 Debug.LogError("You somehow have less than 0 keys, check the code dummy");
+            }
+            else
+            {
+                Debug.LogError("I have no idea how you got to this line, check the code...");
             }
         }
     }
@@ -118,9 +108,7 @@ public class Door : MonoBehaviour
     //=======================================================================================
 
     //-----------------------------------ChangeRoom-----------------------------------------
-    /// <summary>
-    ///  Changes the game to the new room.
-    /// </summary>
+    /// <summary> Changes the game to the new room. </summary>
     private void ChangeRoom(Collision collision)
     {
         //Instantiate(victoryCanvasPrefab); // WIP, uncomment for simple testing
@@ -132,9 +120,7 @@ public class Door : MonoBehaviour
     }
 
     //-----------------------------------Transition-----------------------------------------
-    /// <summary>
-    ///  Smoothly transitions the player through a door.
-    /// </summary>
+    /// <summary> Smoothly transitions the player through a door. </summary>
     private IEnumerator Transition(Collision collision)
     {
         Destroy(GetComponent<BoxCollider>());   // destroys the collider so that you can move through the door
@@ -152,9 +138,7 @@ public class Door : MonoBehaviour
     }
 
     //-----------------------------------CalculateDistances-----------------------------------------
-    /// <summary>
-    ///  Calculates the distances needed to travel and the direction.
-    /// </summary>
+    /// <summary> Calculates the distances needed to travel and the direction. </summary>
     private void CalculateDistances(Collision collision)
     {
         _targetVector = _targetPos - collision.transform.position;  // the vector from the player to the target
@@ -164,9 +148,7 @@ public class Door : MonoBehaviour
     }
 
     //-----------------------------------PostTransition-----------------------------------------
-    /// <summary>
-    ///  Everything that needs to happen after the transition is completed.
-    /// </summary>
+    /// <summary> Everything that needs to happen after the transition is completed. </summary>
     private void PostTransition()
     {
         Destroy(GetComponentInChildren<AudioSource>());         // destroys the looping audio clip WIP (might mess up stuff later)

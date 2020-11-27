@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
-public class PlaySound : MonoBehaviour
+public class Lever : MonoBehaviour
 {
     //=======================================================================================
     //                            >  Components & Variables  <
     //=======================================================================================
 
     // public objects
-    [Header("Components")]
-    public AudioSource audioSource;
-    public Transform soundSource;
+    //[Header("Components")]
 
     // public variables
     //[Header("Variables")]
-    [HideInInspector]
-    [Min(0)]
-    public float soundLength = 4f;
 
     // private objects
 
     // private variables
+    private float _soundLength;
 
     //=======================================================================================
     //                              >  Start And Update  <
@@ -28,14 +23,7 @@ public class PlaySound : MonoBehaviour
 
     private void Start()
     {
-        if (audioSource.clip != null)
-        {
-            soundLength = audioSource.clip.length;
-        }
-        else
-        {
-            Debug.Log("You're missing an audioclip.");
-        }
+        _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
     }
 
     private void Update()
@@ -43,28 +31,34 @@ public class PlaySound : MonoBehaviour
 
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        UseLever(collision);
+    }
+
     //=======================================================================================
     //                              >  Start Functions  <
     //=======================================================================================
-
-    //-----------------------------------privateFunctionName-----------------------------------------
-    //Description of function 
-    private void verbNoun(int pVarName) { }
-
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun(int pVarName) { }
 
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================
 
+    //-----------------------------------UseLever-----------------------------------------
+    /// <summary> Increases the levers count and destroys the lever object after playing the use lever sound. </summary>
+    private void UseLever(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        {
+            GetComponent<PlaySound>().Play();       // plays the use sound
+            Player.levers++;                        // increases the levers count
+            Destroy(GetComponent<AudioSource>());   // destroys the looping sound
+            Destroy(GetComponent<BoxCollider>());   // destroys the box collider
+            Destroy(this, _soundLength);            // destroys the object after the sound is done playing
+        }
+    }
+
     //=======================================================================================
     //                              >  Tool Functions  <
     //=======================================================================================
-
-    public void Play()
-    {
-        audioSource.Play();
-    }
 }

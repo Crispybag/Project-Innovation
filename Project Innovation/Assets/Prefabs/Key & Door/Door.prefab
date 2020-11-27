@@ -417,7 +417,8 @@ MonoBehaviour:
   victoryCanvasPrefab: {fileID: 3695401059601922244, guid: 6405cd65a18a03941926bc1df16a02ae,
     type: 3}
   doorMiddle: {fileID: 4690502861683751817}
-  keysNeededToOpen: 2
+  keysNeededToOpen: 1
+  leversNeededToOpen: 0
   soundLength: 4.5
 --- !u!1 &7715649831098918897
 GameObject:

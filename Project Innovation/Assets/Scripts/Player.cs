@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     // public statics
     public static bool canMove = true;
     public static int keys = 0;
+    public static int levers = 0;
 
     // public objects
     //[Header("Components")]

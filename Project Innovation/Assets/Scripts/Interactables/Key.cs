@@ -15,6 +15,7 @@ public class Key : MonoBehaviour
     // private objects
 
     // private variables
+    private float _soundLength;
 
     //=======================================================================================
     //                              >  Start And Update  <
@@ -22,7 +23,7 @@ public class Key : MonoBehaviour
 
     private void Start()
     {
-
+        _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
     }
 
     private void Update()
@@ -39,26 +40,18 @@ public class Key : MonoBehaviour
     //                              >  Start Functions  <
     //=======================================================================================
 
-    //-----------------------------------privateFunctionName-----------------------------------------
-    //Description of function 
-    private void verbNoun() { }
-
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun() { }
-
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================
 
     //-----------------------------------PickUpKey-----------------------------------------
-    //increases the keys count and destroys the key object after playing the pickup sound
+    /// <summary> Increases the keys count and destroys the key object after playing the pickup sound. </summary>
     private void PickUpKey(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            float _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
-            Player.keys++;
+            GetComponent<PlaySound>().Play();       // plays the key pickup sound
+            Player.keys++;                          // increases the keys count
             Destroy(GetComponent<AudioSource>());   // destroys the looping sound
             Destroy(GetComponent<BoxCollider>());   // destroys the box collider
             Destroy(this, _soundLength);            // destroys the object after the sound is done playing
