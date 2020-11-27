@@ -16,12 +16,15 @@ public class Door : MonoBehaviour
     [Header("Variables")]
     public int keysNeededToOpen = 1;
     [Min(0)]
-    public float soundLength = 4.5f; // TODO: get this from the audio source itself (google audioClip.length)
+    public float soundLength = 4.5f;
+
+    // private statics
+    private static bool created = false;
 
     // private objects
-    private Vector3 _targetPos;
-    private Vector3 _targetVector;
-    private Vector3 _targetDirection;
+    private Vector3 _targetPos;         // the red bean child (red capsule child object)
+    private Vector3 _targetVector;      // to be calculated
+    private Vector3 _targetDirection;   // to be calculated
 
     // private variables
     private int _soundLengthInFrames;
@@ -33,10 +36,14 @@ public class Door : MonoBehaviour
     //                              >  Start And Update  <
     //=======================================================================================
 
+    private void Awake()
+    {
+        DontDestroyOnLoadDoor();
+    }
+
     private void Start()
     {
-        _targetPos = transform.Find("Back").position;   // sets the target position
-        _soundLengthInFrames = (int)(soundLength * Application.targetFrameRate);    // calculates the sound length in frames
+        initialize();
     }
 
     private void Update()
@@ -53,21 +60,39 @@ public class Door : MonoBehaviour
     //                              >  Start Functions  <
     //=======================================================================================
 
-    //-----------------------------------privateFunctionName-----------------------------------------
-    //Description of function 
-    private void verbNoun(int pVarName) { }
+    //-----------------------------------initialize-----------------------------------------
+    /// <summary>
+    ///  Initializes objects and variables.
+    /// </summary>
+    private void initialize()
+    {
+        _targetPos = transform.Find("Back").position;                               // sets the target position
+        _soundLengthInFrames = (int)(soundLength * Application.targetFrameRate);    // calculates the sound length in frames
+    }
 
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun(int pVarName) { }
+    //-----------------------------------DontDestroyOnLoadDoor-----------------------------------------
+    /// <summary>
+    ///  Makes sure the doors don't reset after you reload the level.
+    /// </summary>
+    private void DontDestroyOnLoadDoor()
+    {
+        if (!created)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            created = true;
+            Debug.Log("Awake: " + this.gameObject);
+        }
+    }
 
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================
 
     //-----------------------------------OpenDoor-----------------------------------------
-    //opens the door if you have enough keys, removes the keys from the counter
-    //plays sound effect of door opening and closing while transitioning through the door
+    /// <summary>
+    ///  Opens the door if you have enough keys, removes the keys from the counter.
+    ///  Plays sound effect of door opening and closing while transitioning through the door.
+    /// </summary>
     private void OpenDoor(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -93,7 +118,9 @@ public class Door : MonoBehaviour
     //=======================================================================================
 
     //-----------------------------------ChangeRoom-----------------------------------------
-    //changes the game to the new room
+    /// <summary>
+    ///  Changes the game to the new room.
+    /// </summary>
     private void ChangeRoom(Collision collision)
     {
         //Instantiate(victoryCanvasPrefab); // WIP, uncomment for simple testing
@@ -105,7 +132,9 @@ public class Door : MonoBehaviour
     }
 
     //-----------------------------------Transition-----------------------------------------
-    //Smoothly transitions the player through a door
+    /// <summary>
+    ///  Smoothly transitions the player through a door.
+    /// </summary>
     private IEnumerator Transition(Collision collision)
     {
         Destroy(GetComponent<BoxCollider>());   // destroys the collider so that you can move through the door
@@ -114,22 +143,36 @@ public class Door : MonoBehaviour
         // moves the player towards the target
         for (int i = 0; i < _soundLengthInFrames; i++)
         {
-            collision.transform.position += _targetDirection * _travelDistance; // direction unit vector * speed (travel distance)
+            //      player.position      += direction (unit vector) * speed (travel distance)
+            collision.transform.position += _targetDirection        * _travelDistance;
             yield return null;
         }
 
-        Destroy(GetComponentInChildren<AudioSource>()); // destroys the looping audio clip WIP (might mess up stuff later)
-        doorMiddle.GetComponent<BoxCollider>().enabled = true; // turns on the box Collider for the middle of the door (which is tagged as Wall)
-        Player.canMove = true;  // the player can move again after the transition
+        PostTransition();
     }
 
     //-----------------------------------CalculateDistances-----------------------------------------
-    //Calculates the distances needed to travel and the direction
+    /// <summary>
+    ///  Calculates the distances needed to travel and the direction.
+    /// </summary>
     private void CalculateDistances(Collision collision)
     {
         _targetVector = _targetPos - collision.transform.position;  // the vector from the player to the target
         _distanceToTarget = _targetVector.magnitude;                // the total distance from the player to the target (at the beginning of the transition)
         _targetDirection = _targetVector.normalized;                // the direction from the player to the target (normalized)
         _travelDistance = _distanceToTarget / _soundLengthInFrames; // the distance the player needs to travel each frame (to line up with the soundclip)
+    }
+
+    //-----------------------------------PostTransition-----------------------------------------
+    /// <summary>
+    ///  Everything that needs to happen after the transition is completed.
+    /// </summary>
+    private void PostTransition()
+    {
+        Destroy(GetComponentInChildren<AudioSource>());         // destroys the looping audio clip WIP (might mess up stuff later)
+        doorMiddle.GetComponent<BoxCollider>().enabled = true;  // turns the middle of the door into a wall
+        Player.canMove = true;                                  // the player can move again after the transition
+        Checkpoint.Move(_targetPos);                            // moves the checkpoint to the target
+        Debug.Log("Checkpoint moved to targetPos: " + _targetPos);
     }
 }

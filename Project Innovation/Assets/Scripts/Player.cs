@@ -1,24 +1,38 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static bool canMove = true;
-    public static int keys = 0;
-
     //=======================================================================================
     //                            >  Components & Variables  <
     //=======================================================================================
-    // private objects
 
-    [HideInInspector] public bool canCombat = false;
+    // public statics
+    public static bool canMove = true;
+    public static int keys = 0;
 
-    private GameObject _enemy;
-    [HideInInspector] public bool isEnteringCombat = false;
+    // public objects
+    //[Header("Components")]
+
+    // public variables
+    [Header("Variables")]
     public int hp = 30;
 
+    [HideInInspector] public bool canCombat = false;
+    [HideInInspector] public bool isEnteringCombat = false;
+
+    // private objects
+    private GameObject _enemy;
+
+    // private variables
+
+    //=======================================================================================
+    //                              >  Start And Update  <
+    //=======================================================================================
+
+    private void Start()
+    {
+        transform.position = Checkpoint.GetPosition();  // initialize the player are the checkpoint
+    }
 
     //=======================================================================================
     //                              >  Tool Functions  <
