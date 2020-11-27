@@ -14,7 +14,8 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
         PATROL = 0,
         ALERT = 1,
         CHASE = 2,
-        COMBAT = 3
+        COMBAT = 3,
+        PAUSE = 4
     }
 
 
@@ -43,14 +44,14 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
     // private objects
     private GameObject _player;
-
+    public GameObject[] _enemies;
     //private variables
     private float _distanceToPlayer;
     private float _playerSpeed;
     private Vector3 _previousLocation;
 
 
-    private ENEMYPHASE enemyPhaseCurrent;
+    [HideInInspector] public ENEMYPHASE enemyPhaseCurrent;
     private ENEMYPHASE enemyPhasePrevious;
 
 
@@ -60,6 +61,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
     private void Start()
     {
+        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         _player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -84,13 +86,23 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
                 case ENEMYPHASE.COMBAT:
                     //Necessary value switches
+                    Debug.Log("oh");
                     Player playerStats = _player.GetComponent<Player>();
                     enemy.inCombat = true;
                     playerStats.SetEnemy(gameObject);
                     playerStats.isEnteringCombat = true;
 
-                    chasePlayer.enabled = false;
-                    moveTrail.enabled = false;
+                    foreach (GameObject enemy in _enemies)
+                    {
+                        if (enemy.GetComponent<DetermineEnemyMovePhaseFaweedEditon>())
+                        {
+                            DetermineEnemyMovePhaseFaweedEditon phase = enemy.GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
+                            phase.chasePlayer.enabled = false;
+                            phase.moveTrail.enabled = false;
+                        }
+                        
+                    }
+            
                     break;
 
                 case ENEMYPHASE.CHASE:
@@ -100,9 +112,15 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
                     break;
 
                 case ENEMYPHASE.PATROL:
+                    Debug.Log("HI");
                     chasePlayer.enabled = false;
                     moveTrail.enabled = true;
                     moveTrail.GoToNextWavePoint();
+                    break;
+
+                case ENEMYPHASE.PAUSE:
+                    chasePlayer.enabled = false;
+                    moveTrail.enabled = false;
                     break;
 
             }
@@ -135,23 +153,25 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
     private void determinePhase()
     {
-        if (_distanceToPlayer < detectRadius && _distanceToPlayer > chaseRadius)
-        {
-            enemyPhaseCurrent = ENEMYPHASE.ALERT;
-        }
-        else if (_distanceToPlayer < combatRadius)
-        {
-            enemyPhaseCurrent = ENEMYPHASE.COMBAT;
-        }
-        else if (_distanceToPlayer < chaseRadius)
-        {
-            enemyPhaseCurrent = ENEMYPHASE.CHASE;
-        }
-        else
-        {
-            enemyPhaseCurrent = ENEMYPHASE.PATROL;
-        }
 
 
+            if (_distanceToPlayer < detectRadius && _distanceToPlayer > chaseRadius)
+            {
+                enemyPhaseCurrent = ENEMYPHASE.ALERT;
+            }
+            else if (_distanceToPlayer < combatRadius && !enemy.isDying)
+            {
+                enemyPhaseCurrent = ENEMYPHASE.COMBAT;
+            }
+            else if (_distanceToPlayer < chaseRadius)
+            {
+                enemyPhaseCurrent = ENEMYPHASE.CHASE;
+            }
+            else
+            {
+                enemyPhaseCurrent = ENEMYPHASE.PATROL;
+            }
+        
+        
     }
 }

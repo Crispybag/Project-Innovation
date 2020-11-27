@@ -41,11 +41,13 @@ public class EnemyCombat : MonoBehaviour
     // private variables
     private GameObject _player;
     private Player _playerStats;
+    
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
     private void Start()
     {
+        
         _player = GameObject.FindGameObjectWithTag("Player");
         _playerStats = _player.GetComponent<Player>();
     }

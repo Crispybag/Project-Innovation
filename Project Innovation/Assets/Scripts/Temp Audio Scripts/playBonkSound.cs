@@ -16,7 +16,6 @@ public class playBonkSound : MonoBehaviour
     //=======================================================================================
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("owie");
         if (collision.gameObject.tag == "Wall")
         {
             if (collision.gameObject.GetComponent<WallMaterialSetter>())

@@ -8,7 +8,10 @@ public class Enemy : MonoBehaviour
     [HideInInspector]public bool inCombat = false;
 
     private MonsterCombatSounds sounds;
-    private bool isDying;
+    private GameObject[] enemies;
+    [HideInInspector] public bool isDying;
+
+    //public static bool isPaused = false;
     private void Start()
     {
         sounds = GetComponent<MonsterCombatSounds>();
@@ -18,6 +21,17 @@ public class Enemy : MonoBehaviour
     {
         if (hp <= 0 && !isDying)
         {
+
+            DetermineEnemyMovePhaseFaweedEditon faweed = GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
+            foreach (var obj in faweed._enemies)
+            {
+                if (GetComponent<DetermineEnemyMovePhaseFaweedEditon>())
+                {
+                    DetermineEnemyMovePhaseFaweedEditon phase = obj.GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
+                    phase.moveTrail.enabled = true;
+                }
+            }
+            
             isDying = true;
             sounds.playSound(2);
         }

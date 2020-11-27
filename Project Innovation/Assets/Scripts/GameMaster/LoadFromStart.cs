@@ -20,7 +20,6 @@ public class LoadFromStart : MonoBehaviour
         {
             nTaps++;
             timer = 0;
-            Debug.Log("tappy");
         }
 
         //Too slow with tapping
