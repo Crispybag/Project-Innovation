@@ -81,7 +81,7 @@ public class CombatState : MonoBehaviour
             switch(swipeControls.direction)
             {
                 case SwipeControls.DIRECTION.UP:
-                    attack();
+                    //attack();
                     break;
 
                 case SwipeControls.DIRECTION.DOWN:
