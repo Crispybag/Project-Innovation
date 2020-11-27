@@ -1,0 +1,10 @@
+Multiple Ambience
+
+Tutorial Enemy
+Audio Occlusion
+Boss Enemy
+Ambience Mixing
+Think about pause menu
+Better audio cues for enemies
+Combat music
+Checkpoint breadcrumb reset
