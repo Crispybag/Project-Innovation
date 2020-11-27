@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5891596
 Transform:
   m_ObjectHideFlags: 0
@@ -2132,7 +2132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &702439285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3588,7 +3588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1130623349
 Transform:
   m_ObjectHideFlags: 0
@@ -6842,7 +6842,7 @@ MonoBehaviour:
   eventPath: event:/3D/Guide (Harald)/Guiding sound
   breadcrumbsCollected: 0
   collectRadius: 2
-  soundTimer: 28
+  soundTimer: 0
 --- !u!4 &2017115751
 Transform:
   m_ObjectHideFlags: 0
@@ -6877,7 +6877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2027907788
 MonoBehaviour:
   m_ObjectHideFlags: 0

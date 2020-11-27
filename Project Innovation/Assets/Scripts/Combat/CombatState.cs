@@ -57,22 +57,22 @@ public class CombatState : MonoBehaviour
 
 
             //Quick garbage code
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.T) || Input.GetMouseButtonDown(0))
             {
-                _enemyStats.hp--;
+                attack();
             }
 
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space))
             {
                 dodge();
             }
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 defendLeft();
             }
 
-            if (Input.GetKeyDown(KeyCode.H))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 defendRight();
             }

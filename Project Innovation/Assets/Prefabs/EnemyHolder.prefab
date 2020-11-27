@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 4534899766247141115}
   - component: {fileID: 2012953399326801344}
   - component: {fileID: 1195558575007519671}
+  - component: {fileID: 8223703559886458387}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -762,3 +763,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath: event:/3D/Monster/Monster Movement
   parameterName: Monster movement
+--- !u!114 &8223703559886458387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578289666301206449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830883e9455ebf048af7b74375009491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPath: event:/2D/Monster/Monster attack Mono
+  parameterName: Attack - Monster
