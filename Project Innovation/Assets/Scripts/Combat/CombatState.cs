@@ -15,40 +15,39 @@ public class CombatState : MonoBehaviour
     //=======================================================================================
 
     // public objects
-    //[Header("Components")]
+    [Header("Components")]
     public Player playerStats;
     public SwipeControls swipeControls;
     public TapScreen tapScreen;
-    // public variables
-    //[Header("Variables")]
-    private float timeHoldingDown;
 
     // private objects
     private GameObject _enemy;
     private Enemy _enemyStats;
     private EnemyCombat _enemyCombat;
-    // private variables
-    CombatSounds combatSounds;
+    private CombatSounds _combatSounds;
+
+    //private variables
+    private float timeHoldingDown;
+
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
     private void Start()
     {
-        combatSounds = GetComponent<CombatSounds>();   
+        _combatSounds = GetComponent<CombatSounds>();
     }
+
     private void FixedUpdate()
     {
-        
+
         if (playerStats.isEnteringCombat && !playerStats.canCombat)
         {
             playerStats.isEnteringCombat = false;
             StartCombat();
         }
 
-
         if (playerStats.canCombat)
         {
-            //registerTap();
             if (_enemyStats.hp <= 0)
             {
                 LeaveCombat();
@@ -56,29 +55,8 @@ public class CombatState : MonoBehaviour
             }
 
 
-            //Quick garbage code
-            if (Input.GetKeyDown(KeyCode.T) || Input.GetMouseButtonDown(0))
-            {
-                attack();
-            }
-
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space))
-            {
-                dodge();
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                defendLeft();
-            }
-
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                defendRight();
-            }
-
-
-            switch(swipeControls.direction)
+            keyboardControls();
+            switch (swipeControls.direction)
             {
                 case SwipeControls.DIRECTION.UP:
                     //attack();
@@ -109,71 +87,106 @@ public class CombatState : MonoBehaviour
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================
+    //-----------------------------------Attack-----------------------------------------
+    //Attack enemy
     private void attack()
     {
-            _enemyStats.hp--;
-            combatSounds.playSound(0);
+        _enemyStats.hp--;
+        _combatSounds.playSound(0);
     }
 
+    //---------------------------------DefendLeft---------------------------------------
+    //Defend left when enemy attacks left
     private void defendLeft()
     {
-        
+
         if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHLEFT)
             {
                 Debug.Log("Defending Left");
-                combatSounds.playSound(1);
+                _combatSounds.playSound(1);
                 _enemyCombat.attackFailed = true;
             }
-            
+
             else
             {
                 playerStats.hp--;
-                combatSounds.playSound(4);
+                _combatSounds.playSound(4);
             }
         }
     }
 
+    //---------------------------------DefendRight--------------------------------------
+    //Defend right when the enemy attacks right
     private void defendRight()
     {
-        
+
         if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHRIGHT)
             {
-                combatSounds.playSound(1);
+                _combatSounds.playSound(1);
                 Debug.Log("Defending Right");
                 _enemyCombat.attackFailed = true;
             }
-            
+
             else
             {
                 playerStats.hp--;
-                combatSounds.playSound(4);
+                _combatSounds.playSound(4);
 
             }
         }
     }
 
+    //------------------------------------Dodge-------------------------------------------
+    //Dodge the attack when enemy attacks from the front
     private void dodge()
     {
-        
+
         if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.BASH)
             {
                 Debug.Log("Dodge");
-                combatSounds.playSound(2);
+                _combatSounds.playSound(2);
                 _enemyCombat.attackFailed = true;
             }
             else
             {
                 playerStats.hp--;
-                combatSounds.playSound(4);
+                _combatSounds.playSound(4);
             }
         }
     }
+
+    //-------------------------------KeyboardControls------------------------------------
+    //Keyboard Controls in combat
+    private void keyboardControls()
+    {
+        if (Input.GetKeyDown(KeyCode.T) || Input.GetMouseButtonDown(0))
+        {
+            attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space))
+        {
+            dodge();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            defendLeft();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            defendRight();
+        }
+
+    }
+
     //=======================================================================================
     //                              >  Tool Functions  <
     //=======================================================================================
@@ -187,6 +200,8 @@ public class CombatState : MonoBehaviour
 
     }
 
+    //----------------------------------StartCombat---------------------------------------
+    //Sets the enemy variable to the enemy that the player is fighting
     public void StartCombat()
     {
         setEnemy();
@@ -195,37 +210,13 @@ public class CombatState : MonoBehaviour
 
     }
 
+    //----------------------------------LeaveCombat---------------------------------------
+    //Sets the enemy variable to the enemy that the player is fighting
     public void LeaveCombat()
     {
         Player.canMove = true;
         playerStats.canCombat = false;
         playerStats.isEnteringCombat = false;
     }
-
-
-
-    /*
-    private void registerTap()
-    {
-        
-        isTapping = false;
-        if (Input.touchCount == 0)
-        {
-            timeHoldingDown = 0;
-        }
-
-        else
-        {
-            timeHoldingDown += Time.deltaTime;
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Ended && timeHoldingDown < maxTapTime)
-            {
-                isTapping = true;
-                Debug.Log("Tap Registered");
-                timeHoldingDown = 0;
-            }
-        }
-    }
-    */
 }
 

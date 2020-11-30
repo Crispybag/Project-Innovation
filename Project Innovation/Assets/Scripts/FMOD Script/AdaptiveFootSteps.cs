@@ -18,10 +18,6 @@ public class AdaptiveFootSteps : MonoBehaviour
     public float startRunningTime = 0.3f;
     public string[] materialTypes;
     [HideInInspector] public int defaultMaterial;
-    // public variables
-    //[Header("Variables")]
-
-    // private objects
 
     // private variables
     private float _stepRandom;
@@ -56,6 +52,7 @@ public class AdaptiveFootSteps : MonoBehaviour
             PlayFootStep();
             _stepRandom = Random.Range(0f, 0.5f);
             _distanceTravelled = 0f;
+            _timeSinceStep = 0f;
         }
         _prevPos = transform.position;
     }

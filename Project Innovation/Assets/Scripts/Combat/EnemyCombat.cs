@@ -33,15 +33,15 @@ public class EnemyCombat : MonoBehaviour
 
 
     // private objects
+    private GameObject _player;
+    private Player _playerStats;
+
+    // private variables
     [HideInInspector] public FIGHTACTION currentAction;
     [HideInInspector] public bool attackFailed = false;
     private int _actionIndex = 0;
     private float _timer = 0f;
     private float _currentBuffer = 0f;
-    // private variables
-    private GameObject _player;
-    private Player _playerStats;
-    
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
@@ -72,7 +72,7 @@ public class EnemyCombat : MonoBehaviour
     
 
     //-----------------------------------GoToNextAction-----------------------------------------
-    //GoToNextAction
+    //Goes to the next action of the enemy
     public void goToNextAction()
     {
         attackFailed = false;
@@ -99,8 +99,8 @@ public class EnemyCombat : MonoBehaviour
         }
     }
 
-
-
+    //-----------------------------------PlayAttackSound----------------------------------------
+    //Plays the attacksound the monster makes
     public void playAttackSound(int pAttackIndex)
     {
         FMOD.Studio.EventInstance attack = FMODUnity.RuntimeManager.CreateInstance(enemyAttackEvent);
@@ -110,6 +110,8 @@ public class EnemyCombat : MonoBehaviour
         attack.release();
     }
 
+    //------------------------------------SetPosition-------------------------------------------
+    //Sets the position of the enemy infront of, left or right from the plyer
     public void setPosition(int index)
     {
         if (index == 0)
@@ -128,6 +130,8 @@ public class EnemyCombat : MonoBehaviour
         }
     }
 
+    //-----------------------------------ÇoncludeAction------------------------------------------
+    //Concludes the action of the monster, whether it damages or not
     public void concludeAction()
     {
         _currentBuffer += Time.deltaTime;
@@ -156,12 +160,4 @@ public class EnemyCombat : MonoBehaviour
             goToNextAction();
         }
     }
-
-    //=======================================================================================
-    //                              >  Update Functions <
-    //=======================================================================================
-
-    //=======================================================================================
-    //                              >  Tool Functions  <
-    //=======================================================================================
 }

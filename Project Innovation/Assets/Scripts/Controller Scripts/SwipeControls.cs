@@ -13,7 +13,7 @@ public class SwipeControls : MonoBehaviour
     // public variables
     [Header("Variables")]
     [Tooltip("Amount of frames, before the start position changes, the higher the number, the slower you can swipe")]
-    [Range(0,60)]
+    [Range(0, 60)]
     public int frameTreshold;
 
     public enum DIRECTION
@@ -61,7 +61,7 @@ public class SwipeControls : MonoBehaviour
                 _startPosition = touch.position;
                 _framesHeldDown = 0;
             }
-            
+
             //Detect a swipe
             if ((touch.position - _startPosition).magnitude > minimalDistance && !hasSwiped)
             {
@@ -70,12 +70,12 @@ public class SwipeControls : MonoBehaviour
                 if (Mathf.Abs(x) > Mathf.Abs(y))
                 {
                     if (x > 0) { direction = DIRECTION.RIGHT; hasSwiped = true; }
-                    else       { direction = DIRECTION.LEFT; hasSwiped = true; }
+                    else { direction = DIRECTION.LEFT; hasSwiped = true; }
                 }
                 else
                 {
                     if (y > 0) { direction = DIRECTION.UP; hasSwiped = true; }
-                    else       { direction = DIRECTION.DOWN; hasSwiped = true; }
+                    else { direction = DIRECTION.DOWN; hasSwiped = true; }
                 }
             }
         }
@@ -86,24 +86,4 @@ public class SwipeControls : MonoBehaviour
             _framesHeldDown = 0;
         }
     }
-
-    //=======================================================================================
-    //                              >  Start Functions  <
-    //=======================================================================================
-
-    //-----------------------------------privateFunctionName-----------------------------------------
-    //Description of function 
-    private void verbNoun(int pVarName) { }
-
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun(int pVarName) { }
-
-    //=======================================================================================
-    //                              >  Update Functions <
-    //=======================================================================================
-
-    //=======================================================================================
-    //                              >  Tool Functions  <
-    //=======================================================================================
 }

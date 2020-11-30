@@ -25,8 +25,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     public ChasePlayer chasePlayer;
     public MoveTrail moveTrail;
     public PatrolGroanSound sound;
-    //public AudioSource aSource;
-    //public AudioSource aSourcefs;
+    [HideInInspector] public GameObject[] _enemies;
 
     // public variables
     [Header("Variables")]
@@ -44,7 +43,7 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
     // private objects
     private GameObject _player;
-    public GameObject[] _enemies;
+    
     //private variables
     private float _distanceToPlayer;
     private float _playerSpeed;
@@ -86,7 +85,6 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
                 case ENEMYPHASE.COMBAT:
                     //Necessary value switches
-                    Debug.Log("oh");
                     Player playerStats = _player.GetComponent<Player>();
                     enemy.inCombat = true;
                     playerStats.SetEnemy(gameObject);
@@ -153,6 +151,8 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
 
     }
 
+    //-----------------------------------determinePhase--------------------------------------
+    //Determines the phase the enemy is in at the moment
     private void determinePhase()
     {
 
