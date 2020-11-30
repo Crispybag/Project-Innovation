@@ -12,6 +12,7 @@ public class AdaptiveFootSteps : MonoBehaviour
     [Header("Components")]
     [FMODUnity.EventRef] public string footStepsEventPath;
     public string materialParameter;
+    public string runningParameter;
 
     public float stepDistance = 2.0f;
     public float rayDistance = 1.2f;
@@ -26,6 +27,7 @@ public class AdaptiveFootSteps : MonoBehaviour
     private float _timeSinceStep;
     private RaycastHit hit;
     private int _materialValue;
+    private int _runningValue;
 
     private bool isRunning;
 
@@ -48,7 +50,10 @@ public class AdaptiveFootSteps : MonoBehaviour
         _distanceTravelled += (transform.position - _prevPos).magnitude;
         if (_distanceTravelled >= stepDistance + _stepRandom)
         {
+            
+            _runningValue = 0;
             MaterialCheck();
+            checkRunning();
             PlayFootStep();
             _stepRandom = Random.Range(0f, 0.5f);
             _distanceTravelled = 0f;
@@ -78,10 +83,20 @@ public class AdaptiveFootSteps : MonoBehaviour
     //Description of function 
     public void PlayFootStep()
     {
+        
         FMOD.Studio.EventInstance footstep = FMODUnity.RuntimeManager.CreateInstance(footStepsEventPath);
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(footstep, transform, GetComponent<Rigidbody>());
         footstep.setParameterByName(materialParameter, _materialValue);
+        footstep.setParameterByName(runningParameter, _runningValue);
         footstep.start();
         footstep.release();
+    }
+
+    private void checkRunning()
+    {
+        if (_timeSinceStep < startRunningTime)
+        {
+            _runningValue = 1;
+        }
     }
 }
