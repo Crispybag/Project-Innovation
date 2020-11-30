@@ -181,7 +181,7 @@ public class CombatState : MonoBehaviour
     //Sets the enemy variable to the enemy that the player is fighting
     private void setEnemy()
     {
-        _enemy = playerStats.getEnemy();
+        _enemy = playerStats.GetEnemy();
         _enemyStats = _enemy.GetComponent<Enemy>();
         _enemyCombat = _enemy.GetComponent<EnemyCombat>();
 

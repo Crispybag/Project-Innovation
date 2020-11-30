@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class ResetScene : MonoBehaviour
 {
     public Player playerStats;
     public float respawnTimer = 1f;
 
     private float timePassed;
-
-
 
     private void FixedUpdate()
     {
@@ -22,8 +19,6 @@ public class ResetScene : MonoBehaviour
         {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
-            Player.canMove = true;
-            Player.keys = 0;
         }
     }
 }

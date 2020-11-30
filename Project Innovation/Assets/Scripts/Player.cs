@@ -6,20 +6,23 @@ public class Player : MonoBehaviour
     //                            >  Components & Variables  <
     //=======================================================================================
 
-    // public statics
-    public static bool canMove = true;
-    public static int keys = 0;
-    public static int levers = 0;
-
     // public objects
     //[Header("Components")]
 
     // public variables
     [Header("Variables")]
+    public bool defaultCanMove = true;
+    public int defaultKeys = 0;
+    public int defaultLevers = 0;
     public int hp = 30;
 
     [HideInInspector] public bool canCombat = false;
     [HideInInspector] public bool isEnteringCombat = false;
+
+    // public statics
+    public static bool canMove;
+    public static int keys;
+    public static int levers;
 
     // private objects
     private GameObject _enemy;
@@ -32,7 +35,28 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        transform.position = Checkpoint.GetPosition();  // initialize the player are the checkpoint
+        initializePosition();
+        initializeDefaults();
+    }
+
+    //=======================================================================================
+    //                              >  Start Functions  <
+    //=======================================================================================
+
+    //-----------------------------------initializePosition-----------------------------------------
+    /// <summary> Initializes the player position at the checkpoint. </summary>
+    private void initializePosition()
+    {
+        transform.position = Checkpoint.GetPosition();
+    }
+
+    //-----------------------------------initializeDefaults-----------------------------------------
+    /// <summary> Initializes the default values. </summary>
+    private void initializeDefaults()
+    {
+        canMove = defaultCanMove;
+        keys = defaultKeys;
+        levers = defaultLevers;
     }
 
     //=======================================================================================
@@ -45,7 +69,7 @@ public class Player : MonoBehaviour
         _enemy = pEnemy;
     }
 
-    public GameObject getEnemy()
+    public GameObject GetEnemy()
     {
         return _enemy;
     }

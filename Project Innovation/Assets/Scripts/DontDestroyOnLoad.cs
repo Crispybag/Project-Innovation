@@ -2,7 +2,7 @@
 
 public class DontDestroyOnLoad : MonoBehaviour
 {
-    private GameObject thisObject;  // holds the first door instance (to keep track of game progress)
+    private static GameObject thisObject;  // holds the first door instance (to keep track of game progress)
 
     private void Awake()
     {

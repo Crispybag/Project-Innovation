@@ -74,10 +74,12 @@ public class Door : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Keys: " + Player.keys + "\nLevers: " + Player.levers);
+
             if (Player.keys >= keysNeededToOpen && Player.levers >= leversNeededToOpen) // enough keys and levers
             {
                 Player.keys -= keysNeededToOpen;
-                Player.keys -= leversNeededToOpen;
+                Player.levers -= leversNeededToOpen;
                 ChangeRoom(collision);
             }
             else if (Player.keys < keysNeededToOpen && Player.keys > 0 && Player.levers < leversNeededToOpen && Player.levers > 0) // NOT enough keys and levers
@@ -92,7 +94,7 @@ public class Door : MonoBehaviour
             {
                 Debug.Log("You need at least " + leversNeededToOpen + " lever(s) to open the door"); // can be changed into dialogue sound WIP
             }
-            else if (Player.keys < 0 && Player.levers < 0) // minus keys and levers... somehow
+            else if (Player.keys < 0 || Player.levers < 0) // minus keys or levers... somehow
             {
                 Debug.LogError("You somehow have less than 0 keys, check the code dummy");
             }
