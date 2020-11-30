@@ -6,9 +6,6 @@ public class Player : MonoBehaviour
     //                            >  Components & Variables  <
     //=======================================================================================
 
-    // public objects
-    //[Header("Components")]
-
     // public variables
     [Header("Variables")]
     public bool defaultCanMove = true;
@@ -26,8 +23,6 @@ public class Player : MonoBehaviour
 
     // private objects
     private GameObject _enemy;
-
-    // private variables
 
     //=======================================================================================
     //                              >  Start And Update  <
@@ -62,13 +57,16 @@ public class Player : MonoBehaviour
     //=======================================================================================
     //                              >  Tool Functions  <
     //=======================================================================================
+
     //-----------------------------------SetEnemy-----------------------------------------
-    //Sets the enemy variable to the enemy that the player is fighting
+    /// <summary> Sets the enemy variable to the enemy that the player is fighting. </summary>
     public void SetEnemy(GameObject pEnemy)
     {
         _enemy = pEnemy;
     }
 
+    //-----------------------------------GetEnemy-----------------------------------------
+    /// <summary> Gets the enemy variable. </summary>
     public GameObject GetEnemy()
     {
         return _enemy;
