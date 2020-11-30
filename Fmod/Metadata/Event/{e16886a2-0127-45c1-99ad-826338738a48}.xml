@@ -109,6 +109,9 @@
 		<property name="start">
 			<value>1</value>
 		</property>
+		<property name="name">
+			<value>Slash</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{32daa576-bf20-41a9-a30d-2b687440fb62}</destination>
 			<destination>{bada0620-b557-4eb0-ab4a-a60264bf18a9}</destination>
