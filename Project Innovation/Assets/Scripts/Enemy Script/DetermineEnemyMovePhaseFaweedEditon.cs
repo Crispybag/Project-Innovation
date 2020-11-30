@@ -92,6 +92,8 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
                     playerStats.SetEnemy(gameObject);
                     playerStats.isEnteringCombat = true;
 
+                    chasePlayer.enabled = false;
+                    moveTrail.enabled = false;
                     foreach (GameObject enemy in _enemies)
                     {
                         if (enemy.GetComponent<DetermineEnemyMovePhaseFaweedEditon>())

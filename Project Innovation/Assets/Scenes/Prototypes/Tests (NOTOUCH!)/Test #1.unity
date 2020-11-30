@@ -6166,6 +6166,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 1578289664709252544, guid: bb32a6495d7ba4c44b5fe68b5cec8142,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1578289664709252551, guid: bb32a6495d7ba4c44b5fe68b5cec8142,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6270,6 +6275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578289666301206449, guid: bb32a6495d7ba4c44b5fe68b5cec8142,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4534899766247141115, guid: bb32a6495d7ba4c44b5fe68b5cec8142,
         type: 3}
@@ -6876,6 +6886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHolder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3039430123709259291, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3039430123709259292, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6930,6 +6945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3039430125304681578, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4b1d6237ae2d224b9fa5ad89b03746d, type: 3}
