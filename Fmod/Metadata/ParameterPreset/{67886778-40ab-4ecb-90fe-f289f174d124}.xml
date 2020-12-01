@@ -20,7 +20,7 @@
 		</property>
 		<property name="enumerationLabels">
 			<value>Walking</value>
-			<value>Sneaking</value>
+			<value>Running</value>
 		</property>
 		<property name="isHeld">
 			<value>true</value>
