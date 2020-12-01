@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{a4ac3c4e-0d7f-4530-9d02-d6f0291f17be}">
 		<property name="assetPath">
-			<value>Walkover 3.wav</value>
+			<value>Player/Voice lines/Thoughts/Walkover 3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

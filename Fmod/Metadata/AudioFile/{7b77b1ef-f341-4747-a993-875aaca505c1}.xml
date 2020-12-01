@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{7b77b1ef-f341-4747-a993-875aaca505c1}">
 		<property name="assetPath">
-			<value>LuringSoundLoop.wav</value>
+			<value>Guide/LuringSoundLoop.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

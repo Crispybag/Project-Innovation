@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{a5aed6fa-76fb-447d-8ca0-20b223eb5d07}">
 		<property name="name">
-			<value>Tutorial voice</value>
+			<value>Tutorial voice combat</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
@@ -16,17 +16,14 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>8</value>
+			<value>5</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Welcome</value>
-			<value>Start game</value>
-			<value>Navigation</value>
-			<value>Monster alert</value>
-			<value>Monster encounter</value>
-			<value>Defend</value>
+			<value>Block left</value>
+			<value>Block right</value>
+			<value>Dodge</value>
 			<value>Attack</value>
-			<value>Thanks for playing</value>
+			<value>Advice</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
