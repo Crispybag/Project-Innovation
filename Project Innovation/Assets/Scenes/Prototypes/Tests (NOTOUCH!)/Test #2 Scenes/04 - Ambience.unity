@@ -756,7 +756,6 @@ GameObject:
   - component: {fileID: 433566613}
   - component: {fileID: 433566612}
   - component: {fileID: 433566611}
-  - component: {fileID: 433566615}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -839,19 +838,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &433566615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433566610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62f4e9cc775545f4b8dd0c0187660452, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materialValue: 3
 --- !u!1 &500651892
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +963,7 @@ MonoBehaviour:
   eventPath: event:/3D/Guide (Harald)/Guiding sound
   breadcrumbsCollected: 0
   collectRadius: 2
-  soundTimer: 0
+  soundTimer: 24
 --- !u!4 &517938896
 Transform:
   m_ObjectHideFlags: 0
@@ -1102,11 +1088,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7216733964650243963, guid: 24e875ba1d05af54da2c7460ffd110ab,
-        type: 3}
-      propertyPath: stepDistance
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24e875ba1d05af54da2c7460ffd110ab, type: 3}

@@ -4,7 +4,15 @@ public class Lever : MonoBehaviour
 {
     //=======================================================================================
     //                            >  Components & Variables  <
-    //=======================================================================================7
+    //=======================================================================================
+
+    // public objects
+    //[Header("Components")]
+
+    // public variables
+    //[Header("Variables")]
+
+    // private objects
 
     // private variables
     private float _soundLength;
@@ -18,10 +26,19 @@ public class Lever : MonoBehaviour
         _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
     }
 
+    private void Update()
+    {
+
+    }
+
     private void OnCollisionStay(Collision collision)
     {
         UseLever(collision);
     }
+
+    //=======================================================================================
+    //                              >  Start Functions  <
+    //=======================================================================================
 
     //=======================================================================================
     //                              >  Update Functions <
@@ -40,4 +57,8 @@ public class Lever : MonoBehaviour
             Destroy(this, _soundLength);            // destroys the object after the sound is done playing
         }
     }
+
+    //=======================================================================================
+    //                              >  Tool Functions  <
+    //=======================================================================================
 }
