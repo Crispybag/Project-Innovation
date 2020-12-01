@@ -76,7 +76,7 @@ public class EnemyCombat : MonoBehaviour
             }
             else
             {
-                if (_timer > _tutorialEnemy.timers[_tutorialEnemy.tutorialPhase])
+                if (_timer > _tutorialEnemy.timers[_actionIndex] || playerHasActed)
                 {
                     concludeAction();
                 }
@@ -91,10 +91,26 @@ public class EnemyCombat : MonoBehaviour
 
     //-----------------------------------GoToNextAction-----------------------------------------
     //Goes to the next action of the enemy
-    public void goToNextAction()
+    public void goToNextAction(int jumpToAction = -1)
     {
         attackFailed = false;
-        _actionIndex++;
+
+        if (jumpToAction == -1)
+        {
+            _actionIndex++;
+        }
+        else
+        {
+            _actionIndex = jumpToAction;
+        }
+
+        if (_tutorialEnemy != null)
+        {
+            selectTutorialVoiceLine(_actionIndex);
+        }
+
+
+
         currentAction = fightActions[(_actionIndex % fightActions.Length)];
         _timer = 0;
 
@@ -185,49 +201,14 @@ public class EnemyCombat : MonoBehaviour
         //TUTORIAL ENEMY CONCLUDE ACTION
 
         //Tutorial, tutorial, Left, Tutorial, Right, Tutorial, Slash, Tutorial, Right, Bash, Left, Tutorial, Attack
-        else
+        else if (_currentBuffer > bufferTime + randomBuffer)
         {
-
-            switch (_tutorialEnemy.tutorialPhase)
-            {
-                case 0:
-                    //"Attack from the left"
-                    playTutorialVoiceLine(0);
-                    break;
-
-                case 2:
-                    //"Attack from the right"
-                    playTutorialVoiceLine(1);
-                    break;
-
-                case 4:
-                    //"Attack from both"
-                    playTutorialVoiceLine(2);
-                    break;
-
-                case 6:
-                    //"General Advice"
-                    playTutorialVoiceLine(4);
-                    break;
-
-                case 10:
-                    //"ATTACK!!!"
-                    playTutorialVoiceLine(3);
-                    break;
-                default:
-                    break;
-
-            }
-
-
-            _tutorialEnemy.tutorialPhase++;
             _currentBuffer = 0f;
             playerHasActed = false;
             if (currentAction != FIGHTACTION.NOTHING && currentAction != FIGHTACTION.TUTORIAL)
             {
                 if (!attackFailed)
                 {
-                    _playerStats.hp--;
                     CombatSounds playerSounds = _player.GetComponent<CombatSounds>();
 
                     if (_playerStats.hp <= 0)
@@ -240,8 +221,18 @@ public class EnemyCombat : MonoBehaviour
                     }
                 }
             }
-            goToNextAction();
 
+            if (!attackFailed && (_actionIndex == 2 || _actionIndex == 4 || _actionIndex == 6))
+            {
+                if (_actionIndex == 2) goToNextAction(1);
+                if (_actionIndex == 4) goToNextAction(3);
+                if (_actionIndex == 6) goToNextAction(5);
+            }
+
+            else
+            {
+                goToNextAction();
+            }
         }
 
     }
@@ -250,5 +241,39 @@ public class EnemyCombat : MonoBehaviour
     void playTutorialVoiceLine(int index)
     {
         _tutorialEnemy.playSound(index, _tutorialEnemy.platform);
+    }
+
+    void selectTutorialVoiceLine(int index)
+    {
+        switch (index)
+        {
+            case 1:
+                //"Attack from the left"
+                playTutorialVoiceLine(0);
+                break;
+
+            case 3:
+                //"Attack from the right"
+                playTutorialVoiceLine(1);
+                break;
+
+            case 5:
+                //"Attack from both"
+                playTutorialVoiceLine(2);
+                break;
+
+            case 7:
+                //"General Advice"
+                playTutorialVoiceLine(4);
+                break;
+
+            case 11:
+                //"ATTACK!!!"
+                playTutorialVoiceLine(3);
+                break;
+            default:
+                break;
+
+        }
     }
 }

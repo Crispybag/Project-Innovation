@@ -109,7 +109,7 @@ public class CombatState : MonoBehaviour
     //Defend left when enemy attacks left
     private void defendLeft()
     {
-        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.TUTORIAL)
         {
             if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING && !_enemyCombat.playerHasActed)
             {
@@ -124,7 +124,7 @@ public class CombatState : MonoBehaviour
 
                 else
                 {
-                    _combatSounds.playSound(4);
+                    _combatSounds.playSound(3);
                     _enemyCombat.playerHasActed = true;
                 }
             }
@@ -135,7 +135,7 @@ public class CombatState : MonoBehaviour
     //Defend right when the enemy attacks right
     private void defendRight()
     {
-        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.TUTORIAL)
         {
             if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING && !_enemyCombat.playerHasActed)
             {
@@ -150,7 +150,7 @@ public class CombatState : MonoBehaviour
 
                 else
                 {
-                    _combatSounds.playSound(4);
+                    _combatSounds.playSound(3);
                     _enemyCombat.playerHasActed = true;
 
 
@@ -163,7 +163,7 @@ public class CombatState : MonoBehaviour
     //Dodge the attack when enemy attacks from the front
     private void dodge()
     {
-        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.TUTORIAL)
         {
             if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING && !_enemyCombat.playerHasActed)
             {
@@ -177,7 +177,7 @@ public class CombatState : MonoBehaviour
                 }
                 else
                 {
-                    _combatSounds.playSound(4);
+                    _combatSounds.playSound(3);
                     _enemyCombat.playerHasActed = true;
 
                 }
