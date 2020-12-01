@@ -16,7 +16,8 @@ public class EnemyCombat : MonoBehaviour
         NOTHING = 0,
         SLASHLEFT = 1,
         SLASHRIGHT = 2,
-        BASH = 3
+        BASH = 3,
+        TUTORIAL = 4
     };
 
     [Header("Components")]
@@ -42,6 +43,8 @@ public class EnemyCombat : MonoBehaviour
     private int _actionIndex = 0;
     private float _timer = 0f;
     private float _currentBuffer = 0f;
+
+    private TutorialEnemy _tutorialEnemy;
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
@@ -50,6 +53,11 @@ public class EnemyCombat : MonoBehaviour
         
         _player = GameObject.FindGameObjectWithTag("Player");
         _playerStats = _player.GetComponent<Player>();
+
+        if (gameObject.GetComponent<TutorialEnemy>())
+        {
+            _tutorialEnemy = gameObject.GetComponent<TutorialEnemy>();
+        }
     }
 
 
@@ -59,9 +67,19 @@ public class EnemyCombat : MonoBehaviour
         {
             _timer += Time.deltaTime;
 
-            if (_timer > timeBetweenActions || playerHasActed)
+            if (_tutorialEnemy == null)
             {
-                concludeAction();
+                if (_timer > timeBetweenActions || playerHasActed)
+                {
+                    concludeAction();
+                }
+            }
+            else
+            {
+                if (_timer > _tutorialEnemy.timers[_tutorialEnemy.tutorialPhase])
+                {
+                    concludeAction();
+                }
             }
         }
     }
@@ -136,12 +154,76 @@ public class EnemyCombat : MonoBehaviour
     {
         float randomBuffer = UnityEngine.Random.Range(0f, maxRandomBuffer);
         _currentBuffer += Time.deltaTime;
-        
-        if (_currentBuffer > bufferTime + randomBuffer)
+
+        if (_tutorialEnemy == null)
         {
+            if (_currentBuffer > bufferTime + randomBuffer)
+            {
+                _currentBuffer = 0f;
+                playerHasActed = false;
+                if (currentAction != FIGHTACTION.NOTHING)
+                {
+                    if (!attackFailed)
+                    {
+                        _playerStats.hp--;
+                        CombatSounds playerSounds = _player.GetComponent<CombatSounds>();
+
+                        if (_playerStats.hp <= 0)
+                        {
+                            playerSounds.playSound(4);
+                        }
+                        else
+                        {
+                            playerSounds.playSound(3);
+                        }
+                    }
+                }
+                goToNextAction();
+            }
+        }
+
+        //TUTORIAL ENEMY CONCLUDE ACTION
+
+        //Tutorial, tutorial, Left, Tutorial, Right, Tutorial, Slash, Tutorial, Right, Bash, Left, Tutorial, Attack
+        else
+        {
+
+            switch (_tutorialEnemy.tutorialPhase)
+            {
+                case 0:
+                    //"Attack from the left"
+                    playTutorialVoiceLine(0);
+                    break;
+
+                case 2:
+                    //"Attack from the right"
+                    playTutorialVoiceLine(1);
+                    break;
+
+                case 4:
+                    //"Attack from both"
+                    playTutorialVoiceLine(2);
+                    break;
+
+                case 6:
+                    //"General Advice"
+                    playTutorialVoiceLine(4);
+                    break;
+
+                case 10:
+                    //"ATTACK!!!"
+                    playTutorialVoiceLine(3);
+                    break;
+                default:
+                    break;
+
+            }
+
+
+            _tutorialEnemy.tutorialPhase++;
             _currentBuffer = 0f;
             playerHasActed = false;
-            if (currentAction != FIGHTACTION.NOTHING)
+            if (currentAction != FIGHTACTION.NOTHING && currentAction != FIGHTACTION.TUTORIAL)
             {
                 if (!attackFailed)
                 {
@@ -159,6 +241,14 @@ public class EnemyCombat : MonoBehaviour
                 }
             }
             goToNextAction();
+
         }
+
+    }
+
+
+    void playTutorialVoiceLine(int index)
+    {
+        _tutorialEnemy.playSound(index, _tutorialEnemy.platform);
     }
 }
