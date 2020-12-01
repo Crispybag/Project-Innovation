@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{ab4c895a-8c34-48de-baae-c99cd53b01cc}">
+		<property name="name">
+			<value>Tutorial voice navigation</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{cf276a36-6c21-4130-b5e7-4abbe369d1f6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{cf276a36-6c21-4130-b5e7-4abbe369d1f6}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Movement</value>
+			<value>Look around</value>
+			<value>Sneaking</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

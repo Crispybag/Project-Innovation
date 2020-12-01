@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{244d81fd-04c3-4777-9d2a-e472e9904fa0}">
+		<property name="name">
+			<value>Guide callouts</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a4a3bb25-0683-4a77-ae39-a9486d05548a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a4a3bb25-0683-4a77-ae39-a9486d05548a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Follow my voice</value>
+			<value>Warning</value>
+			<value>Help</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
