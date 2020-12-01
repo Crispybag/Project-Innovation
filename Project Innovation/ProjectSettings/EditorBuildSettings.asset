@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Prototypes/Tests (NOTOUCH!)/Test #1.unity
     guid: d472b669d5bc47b4d92f54d520046c96
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prototypes/Tests (NOTOUCH!)/Test #2 Scenes/Dodge and Block.unity
     guid: 5f46e737e6709e24588dd16ccec8d782
+  - enabled: 1
+    path: Assets/Scenes/Faried.unity
+    guid: 49a7598e9273cef4ca23367f17cd3b8b
   m_configObjects: {}

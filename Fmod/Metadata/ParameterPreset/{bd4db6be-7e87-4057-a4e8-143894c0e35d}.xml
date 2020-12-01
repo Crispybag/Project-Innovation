@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{bd4db6be-7e87-4057-a4e8-143894c0e35d}">
+		<property name="name">
+			<value>Interactables</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{57315e9c-f9ed-4ec5-8ff3-09a0f68cb0b2}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{57315e9c-f9ed-4ec5-8ff3-09a0f68cb0b2}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Key</value>
+			<value>Lever (gears)</value>
+			<value>Door unlock</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
