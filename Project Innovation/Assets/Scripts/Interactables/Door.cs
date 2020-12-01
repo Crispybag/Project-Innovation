@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
 
     // public objects
     [Header("Components")]
+    public Canvas victoryCanvasPrefab;
     public GameObject doorMiddle;
 
     // public variables
@@ -38,6 +39,11 @@ public class Door : MonoBehaviour
         initialize();
     }
 
+    private void Update()
+    {
+
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         OpenDoor(collision);
@@ -61,13 +67,15 @@ public class Door : MonoBehaviour
 
     //-----------------------------------OpenDoor-----------------------------------------
     /// <summary>
-    /// Opens the door if you have enough keys, removes the keys from the counter.
-    /// Plays sound effect of door opening and closing while transitioning through the door.
+    ///  Opens the door if you have enough keys, removes the keys from the counter.
+    ///  Plays sound effect of door opening and closing while transitioning through the door.
     /// </summary>
     private void OpenDoor(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Keys: " + Player.keys + "\nLevers: " + Player.levers);
+
             if (Player.keys >= keysNeededToOpen && Player.levers >= leversNeededToOpen) // enough keys and levers
             {
                 Player.keys -= keysNeededToOpen;
@@ -105,18 +113,20 @@ public class Door : MonoBehaviour
     /// <summary> Changes the game to the new room. </summary>
     private void ChangeRoom(Collision collision)
     {
+        //Instantiate(victoryCanvasPrefab); // WIP, uncomment for simple testing
+
         Player.canMove = false; // stops the player from using controls to move
 
         //Transition the player
-        StartCoroutine(transition(collision));
+        StartCoroutine(Transition(collision));
     }
 
-    //-----------------------------------transition-----------------------------------------
+    //-----------------------------------Transition-----------------------------------------
     /// <summary> Smoothly transitions the player through a door. </summary>
-    private IEnumerator transition(Collision collision)
+    private IEnumerator Transition(Collision collision)
     {
         Destroy(GetComponent<BoxCollider>());   // destroys the collider so that you can move through the door
-        calculateDistances(collision);  // calculates travel distance and direction
+        CalculateDistances(collision);  // calculates travel distance and direction
 
         // moves the player towards the target
         for (int i = 0; i < _soundLengthInFrames; i++)
@@ -126,12 +136,12 @@ public class Door : MonoBehaviour
             yield return null;
         }
 
-        postTransition();
+        PostTransition();
     }
 
-    //-----------------------------------calculateDistances-----------------------------------------
+    //-----------------------------------CalculateDistances-----------------------------------------
     /// <summary> Calculates the distances needed to travel and the direction. </summary>
-    private void calculateDistances(Collision collision)
+    private void CalculateDistances(Collision collision)
     {
         _targetVector = _targetPos - collision.transform.position;  // the vector from the player to the target
         _distanceToTarget = _targetVector.magnitude;                // the total distance from the player to the target (at the beginning of the transition)
@@ -139,13 +149,14 @@ public class Door : MonoBehaviour
         _travelDistance = _distanceToTarget / _soundLengthInFrames; // the distance the player needs to travel each frame (to line up with the soundclip)
     }
 
-    //-----------------------------------postTransition-----------------------------------------
+    //-----------------------------------PostTransition-----------------------------------------
     /// <summary> Everything that needs to happen after the transition is completed. </summary>
-    private void postTransition()
+    private void PostTransition()
     {
         Destroy(GetComponentInChildren<AudioSource>());         // destroys the looping audio clip WIP (might mess up stuff later)
         doorMiddle.GetComponent<BoxCollider>().enabled = true;  // turns the middle of the door into a wall
         Player.canMove = true;                                  // the player can move again after the transition
         Checkpoint.Move(_targetPos);                            // moves the checkpoint to the target
+        Debug.Log("Checkpoint moved to targetPos: " + _targetPos);
     }
 }

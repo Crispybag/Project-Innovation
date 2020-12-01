@@ -6,6 +6,14 @@ public class Key : MonoBehaviour
     //                            >  Components & Variables  <
     //=======================================================================================
 
+    // public objects
+    //[Header("Components")]
+
+    // public variables
+    //[Header("Variables")]
+
+    // private objects
+
     // private variables
     private float _soundLength;
 
@@ -18,10 +26,19 @@ public class Key : MonoBehaviour
         _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
     }
 
+    private void Update()
+    {
+
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         PickUpKey(collision);
     }
+
+    //=======================================================================================
+    //                              >  Start Functions  <
+    //=======================================================================================
 
     //=======================================================================================
     //                              >  Update Functions <
@@ -40,4 +57,8 @@ public class Key : MonoBehaviour
             Destroy(this, _soundLength);            // destroys the object after the sound is done playing
         }
     }
+
+    //=======================================================================================
+    //                              >  Tool Functions  <
+    //=======================================================================================
 }
