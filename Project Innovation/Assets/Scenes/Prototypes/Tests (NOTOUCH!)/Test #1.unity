@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5891596
 Transform:
   m_ObjectHideFlags: 0
@@ -3141,7 +3141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1130623349
 Transform:
   m_ObjectHideFlags: 0
@@ -4216,7 +4216,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506623898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -4323,6 +4323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStepsEventPath: event:/3D/Guide (Harald)/Guide Walking
   materialParameter: Walking types
+  runningParameter: 
   stepDistance: 1
   rayDistance: 1.2
   startRunningTime: 0.3
@@ -6627,6 +6628,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758584420226100255, guid: dad804224a64d3f4ea78f22a42192d40,
+        type: 3}
+      propertyPath: runningParameter
+      value: Footstep speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758584420226100255, guid: dad804224a64d3f4ea78f22a42192d40,
+        type: 3}
+      propertyPath: startRunningTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758584420226100255, guid: dad804224a64d3f4ea78f22a42192d40,
+        type: 3}
+      propertyPath: stepDistance
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6730833782257938954, guid: dad804224a64d3f4ea78f22a42192d40,
         type: 3}
