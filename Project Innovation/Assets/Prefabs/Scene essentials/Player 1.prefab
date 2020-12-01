@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 4483236999547928916}
   swipeControls: {fileID: 4358042849277113190}
-  tapScreen: {fileID: 0}
+  maxTapTime: 0.2
 --- !u!1 &7157851225894484313
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,12 +537,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb7202741c01c14aa1303edd39464e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCanMove: 1
-  defaultKeys: 0
-  defaultLevers: 0
-  hp: 30
   canCombat: 0
   isEnteringCombat: 0
+  hp: 30
 --- !u!114 &3685425988868897505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,7 +599,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStepsEventPath: event:/2D/Player/Player Walking
   materialParameter: Walking Types
-  runningParameter: Footstep speed
   stepDistance: 4
   rayDistance: 1.2
   startRunningTime: 0.3

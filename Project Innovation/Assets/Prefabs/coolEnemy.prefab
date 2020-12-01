@@ -684,11 +684,9 @@ MonoBehaviour:
   chasePlayer: {fileID: 3039430125304681554}
   moveTrail: {fileID: 3039430125304681580}
   sound: {fileID: 3413295026524608620}
-  _enemies: []
   detectRadius: 5
   chaseRadius: 5
   combatRadius: 2
-  enemyPhaseCurrent: 0
 --- !u!114 &3932135963949894781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,7 +701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 50
   inCombat: 0
-  isDying: 0
 --- !u!114 &82820446835975456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +735,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStepsEventPath: event:/3D/Monster/Monster Walking
   materialParameter: Walking types
-  runningParameter: Footstep speed
   stepDistance: 2
   rayDistance: 4
   startRunningTime: 0.3
