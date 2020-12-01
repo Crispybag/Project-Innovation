@@ -19,13 +19,14 @@ public class CombatState : MonoBehaviour
     public Player playerStats;
     public SwipeControls swipeControls;
     public TapScreen tapScreen;
-
+    public float cooldownAttack = 0.5f;
     // private objects
     private GameObject _enemy;
     private Enemy _enemyStats;
     private EnemyCombat _enemyCombat;
     private CombatSounds _combatSounds;
-
+    private float lastAttack;
+    private float timer;
     //private variables
     private float timeHoldingDown;
 
@@ -39,6 +40,7 @@ public class CombatState : MonoBehaviour
 
     private void FixedUpdate()
     {
+        timer += Time.deltaTime;
 
         if (playerStats.isEnteringCombat && !playerStats.canCombat)
         {
@@ -77,7 +79,7 @@ public class CombatState : MonoBehaviour
                 default:
                     break;
             }
-            if (tapScreen.isTapping)
+            if (tapScreen.isTapping && timer - lastAttack > cooldownAttack)
             {
                 attack();
             }
@@ -91,8 +93,16 @@ public class CombatState : MonoBehaviour
     //Attack enemy
     private void attack()
     {
-        _enemyStats.hp--;
-        _combatSounds.playSound(0);
+        if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.NOTHING)
+        {
+            _enemyStats.hp--;
+            _combatSounds.playSound(0);
+            lastAttack = timer;
+        }
+        else
+        {
+
+        }
     }
 
     //---------------------------------DefendLeft---------------------------------------
@@ -100,19 +110,21 @@ public class CombatState : MonoBehaviour
     private void defendLeft()
     {
 
-        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING && !_enemyCombat.playerHasActed)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHLEFT)
             {
                 Debug.Log("Defending Left");
                 _combatSounds.playSound(1);
                 _enemyCombat.attackFailed = true;
+                _enemyCombat.playerHasActed = true;
+
             }
 
             else
             {
-                playerStats.hp--;
                 _combatSounds.playSound(4);
+                _enemyCombat.playerHasActed = true;
             }
         }
     }
@@ -122,19 +134,22 @@ public class CombatState : MonoBehaviour
     private void defendRight()
     {
 
-        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING && !_enemyCombat.playerHasActed)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHRIGHT)
             {
                 _combatSounds.playSound(1);
                 Debug.Log("Defending Right");
                 _enemyCombat.attackFailed = true;
+                _enemyCombat.playerHasActed = true;
+
             }
 
             else
             {
-                playerStats.hp--;
                 _combatSounds.playSound(4);
+                _enemyCombat.playerHasActed = true;
+
 
             }
         }
@@ -145,18 +160,21 @@ public class CombatState : MonoBehaviour
     private void dodge()
     {
 
-        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING)
+        if (_enemyCombat.currentAction != EnemyCombat.FIGHTACTION.NOTHING && !_enemyCombat.playerHasActed)
         {
             if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.BASH)
             {
                 Debug.Log("Dodge");
                 _combatSounds.playSound(2);
                 _enemyCombat.attackFailed = true;
+                _enemyCombat.playerHasActed = true;
+
             }
             else
             {
-                playerStats.hp--;
                 _combatSounds.playSound(4);
+                _enemyCombat.playerHasActed = true;
+
             }
         }
     }
@@ -165,7 +183,7 @@ public class CombatState : MonoBehaviour
     //Keyboard Controls in combat
     private void keyboardControls()
     {
-        if (Input.GetKeyDown(KeyCode.T) || Input.GetMouseButtonDown(0))
+        if ((Input.GetKeyDown(KeyCode.T) || Input.GetMouseButtonDown(0)) && timer - lastAttack > cooldownAttack)
         {
             attack();
         }
