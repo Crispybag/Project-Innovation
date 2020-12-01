@@ -30,8 +30,8 @@ public class EnemyCombat : MonoBehaviour
     [Header("Variables")]
     public float timeBetweenActions = 1f;
     public float bufferTime = 0.2f;
-
-
+    public float maxRandomBuffer = 0.5f;
+    [HideInInspector] public bool playerHasActed = false;
     // private objects
     private GameObject _player;
     private Player _playerStats;
@@ -59,7 +59,7 @@ public class EnemyCombat : MonoBehaviour
         {
             _timer += Time.deltaTime;
 
-            if (_timer > timeBetweenActions)
+            if (_timer > timeBetweenActions || playerHasActed)
             {
                 concludeAction();
             }
@@ -134,12 +134,13 @@ public class EnemyCombat : MonoBehaviour
     //Concludes the action of the monster, whether it damages or not
     public void concludeAction()
     {
+        float randomBuffer = UnityEngine.Random.Range(0f, maxRandomBuffer);
         _currentBuffer += Time.deltaTime;
-
-        if (_currentBuffer > bufferTime)
+        
+        if (_currentBuffer > bufferTime + randomBuffer)
         {
             _currentBuffer = 0f;
-
+            playerHasActed = false;
             if (currentAction != FIGHTACTION.NOTHING)
             {
                 if (!attackFailed)

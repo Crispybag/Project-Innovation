@@ -7,22 +7,18 @@ public class AudioOcclusion : MonoBehaviour
     [FMODUnity.EventRef]
     public string selectAudio;
     FMOD.Studio.EventInstance audio;
-    public string parameterVolume;
-    public string parameterFrequency;
+    public string parameterOcclusion;
     Transform source;
 
     [Range(0f,1f)]
     public float volume = 0.5f;
-    [Range(0f, 22000f)]
-    public float LPFCutoff = 10000f;
     public LayerMask occlusionLayer = 1;
 
     private void Awake()
     {
         source = GameObject.FindObjectOfType<StudioListener>().transform;
         audio = RuntimeManager.CreateInstance(selectAudio);
-        audio.getParameterByName(parameterVolume, out volume);
-        audio.getParameterByName(parameterFrequency, out LPFCutoff);
+        audio.getParameterByName(parameterOcclusion, out volume);
     }
 
     private void Start()
@@ -72,10 +68,10 @@ public class AudioOcclusion : MonoBehaviour
 
     private void notOccluded()
     {
-        audio.setVolume(1f);
+        audio.setParameterByName(parameterOcclusion, 0f);
     }
     private void occluded() 
     {
-        audio.setVolume(volume);
+        audio.setParameterByName(parameterOcclusion, volume);
     }
 }
