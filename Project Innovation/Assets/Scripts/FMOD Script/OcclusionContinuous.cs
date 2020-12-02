@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
-public class AudioOcclusion : MonoBehaviour
+
+public class OcclusionContinuous : MonoBehaviour
 {
     [FMODUnity.EventRef]
     public string selectAudio;
@@ -10,7 +11,7 @@ public class AudioOcclusion : MonoBehaviour
     public string parameterOcclusion;
     Transform source;
 
-    [Range(0f,1f)]
+    [Range(0f, 1f)]
     public float volume = 0.5f;
     public LayerMask occlusionLayer = 1;
 
@@ -19,6 +20,11 @@ public class AudioOcclusion : MonoBehaviour
         source = GameObject.FindObjectOfType<StudioListener>().transform;
         audioPath = RuntimeManager.CreateInstance(selectAudio);
         audioPath.getParameterByName(parameterOcclusion, out volume);
+    }
+
+    private void Start()
+    {
+        audioPath.start();
     }
 
     private void Update()
@@ -38,7 +44,7 @@ public class AudioOcclusion : MonoBehaviour
             Debug.DrawLine(transform.position, source.position, Color.red);
 
         }
-    }   
+    }
     public void playSound(int pIndex)
     {
         //Do this to attach the sound to a gameobject for 3D effect
@@ -55,8 +61,9 @@ public class AudioOcclusion : MonoBehaviour
     {
         audioPath.setParameterByName(parameterOcclusion, 0f);
     }
-    private void occluded() 
+    private void occluded()
     {
         audioPath.setParameterByName(parameterOcclusion, volume);
     }
 }
+
