@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{9cedbb88-99a5-45b4-bf5a-54f431bc53e3}">
+		<property name="name">
+			<value>Ominious music</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c3c94efa-c51f-48e1-a991-3251db609d58}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c3c94efa-c51f-48e1-a991-3251db609d58}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

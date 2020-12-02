@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{e3b0c5dc-e554-4892-996a-bc95bee814f4}">
+		<property name="name">
+			<value>Combat music</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a6cc62d7-912e-40eb-88b0-62c4373b8b00}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a6cc62d7-912e-40eb-88b0-62c4373b8b00}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

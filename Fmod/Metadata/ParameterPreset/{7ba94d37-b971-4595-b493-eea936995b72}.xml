@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{7ba94d37-b971-4595-b493-eea936995b72}">
 		<property name="name">
-			<value>Music</value>
+			<value>Adventure music</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
@@ -12,17 +12,6 @@
 		</relationship>
 	</object>
 	<object class="GameParameter" id="{207e2d84-e66c-40f4-8ae0-fc21902cf1bd}">
-		<property name="parameterType">
-			<value>2</value>
-		</property>
-		<property name="maximum">
-			<value>3</value>
-		</property>
-		<property name="enumerationLabels">
-			<value>Value A</value>
-			<value>Value B</value>
-			<value>Value C</value>
-		</property>
 		<property name="initialValue">
 			<value>0</value>
 		</property>
