@@ -16,12 +16,21 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>12</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Ocean opening scene</value>
 			<value>Getting off boat</value>
-			<value>Value C</value>
+			<value>Sneaking</value>
+			<value>Sneaking completion</value>
+			<value>Not welcome</value>
+			<value>Boy callout</value>
+			<value>Illegal experiment</value>
+			<value>Not so fast</value>
+			<value>Put an end to this</value>
+			<value>We are united again</value>
+			<value>Finally some silence</value>
+			<value>Time to leave</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

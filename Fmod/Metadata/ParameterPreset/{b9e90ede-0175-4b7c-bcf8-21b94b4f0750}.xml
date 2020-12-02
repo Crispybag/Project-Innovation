@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{b9e90ede-0175-4b7c-bcf8-21b94b4f0750}">
 		<property name="name">
-			<value>Player thought</value>
+			<value>Player hint thought</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
@@ -16,15 +16,24 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>12</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Walk assistant</value>
+			<value>Door reminder</value>
 			<value>Perhaps a key</value>
-			<value>Cant see me</value>
+			<value>Two monsters one key</value>
+			<value>Wrong key monster</value>
+			<value>Key reminder</value>
+			<value>Lever indicator</value>
+			<value>Lever discovery</value>
+			<value>Lever reminder</value>
+			<value>Door opening comment</value>
+			<value>Lever level completion</value>
+			<value>One more to go</value>
 		</property>
 		<property name="initialValue">
-			<value>2</value>
+			<value>0</value>
 		</property>
 	</object>
 </objects>

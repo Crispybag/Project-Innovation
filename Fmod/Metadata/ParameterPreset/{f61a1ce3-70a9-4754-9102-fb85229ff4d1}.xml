@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{f61a1ce3-70a9-4754-9102-fb85229ff4d1}">
 		<property name="name">
-			<value>Player random thoughts</value>
+			<value>Player thoughts</value>
 		</property>
 		<relationship name="folder">
 			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
@@ -16,12 +16,13 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>4</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Lost</value>
 			<value>Thoughts</value>
 			<value>Collision</value>
+			<value>Sewers smell comment</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
