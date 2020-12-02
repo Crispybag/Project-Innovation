@@ -10,7 +10,7 @@ public class Breadcrumbs : MonoBehaviour
 
     public string parameterOcclusion;
     [Range(0f, 1f)]
-    public float volume = 0.5f;
+    public float volume = 0.9f;
 
     [HideInInspector]public int breadcrumbsCollected;
     public float collectRadius = 1f;
@@ -28,7 +28,7 @@ public class Breadcrumbs : MonoBehaviour
     private void Start()
     {
         sound = FMODUnity.RuntimeManager.CreateInstance(eventPath);
-        sound.getParameterByName(parameterOcclusion, out volume);
+       // sound.getParameterByName(parameterOcclusion, out volume);
         player = GameObject.FindGameObjectWithTag("Player");
         
         children = new List<GameObject>();

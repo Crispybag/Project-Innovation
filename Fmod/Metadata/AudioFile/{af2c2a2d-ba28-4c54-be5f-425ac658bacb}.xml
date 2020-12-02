@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{af2c2a2d-ba28-4c54-be5f-425ac658bacb}">
 		<property name="assetPath">
-			<value>Introduction 2 - Mobile.wav</value>
+			<value>Menu/Mobile/Introduction 2 - Mobile.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

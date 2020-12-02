@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{74f53c8e-0dd4-4c1b-8e9b-e9dd5db994b0}">
 		<property name="assetPath">
-			<value>Voice volume 1 - Mobile.wav</value>
+			<value>Menu/Mobile/Voice volume 1 - Mobile.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
