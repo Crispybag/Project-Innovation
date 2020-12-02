@@ -27,8 +27,9 @@ public class Enemy : MonoBehaviour
             {
                 if (GetComponent<DetermineEnemyMovePhaseFaweedEditon>())
                 {
+
                     DetermineEnemyMovePhaseFaweedEditon phase = obj.GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
-                    phase.moveTrail.enabled = true;
+                    if (phase != null)phase.moveTrail.enabled = true;
                 }
             }
             

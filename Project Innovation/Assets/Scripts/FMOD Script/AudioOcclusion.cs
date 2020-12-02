@@ -48,16 +48,11 @@ public class AudioOcclusion : MonoBehaviour
             Debug.DrawLine(transform.position, source.position, Color.red);
 
         }
-    }
-
-    public string parameterName;
+    }   
     public void playSound(int pIndex)
     {
         //Do this to attach the sound to a gameobject for 3D effect
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio, transform, GetComponent<Rigidbody>());
-
-        //Do this to set a certain parameter
-        audio.setParameterByName(parameterName, pIndex);
 
         //Start thing
         audio.start();

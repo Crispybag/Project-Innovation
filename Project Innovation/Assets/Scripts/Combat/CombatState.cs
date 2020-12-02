@@ -38,7 +38,7 @@ public class CombatState : MonoBehaviour
         _combatSounds = GetComponent<CombatSounds>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         timer += Time.deltaTime;
 
@@ -115,7 +115,6 @@ public class CombatState : MonoBehaviour
             {
                 if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHLEFT)
                 {
-                    Debug.Log("Defending Left");
                     _combatSounds.playSound(1);
                     _enemyCombat.attackFailed = true;
                     _enemyCombat.playerHasActed = true;
@@ -142,7 +141,6 @@ public class CombatState : MonoBehaviour
                 if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.SLASHRIGHT)
                 {
                     _combatSounds.playSound(1);
-                    Debug.Log("Defending Right");
                     _enemyCombat.attackFailed = true;
                     _enemyCombat.playerHasActed = true;
 
@@ -169,7 +167,6 @@ public class CombatState : MonoBehaviour
             {
                 if (_enemyCombat.currentAction == EnemyCombat.FIGHTACTION.BASH)
                 {
-                    Debug.Log("Dodge");
                     _combatSounds.playSound(2);
                     _enemyCombat.attackFailed = true;
                     _enemyCombat.playerHasActed = true;

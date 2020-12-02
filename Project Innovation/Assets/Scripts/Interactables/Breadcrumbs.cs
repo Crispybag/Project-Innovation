@@ -8,7 +8,11 @@ public class Breadcrumbs : MonoBehaviour
     //Get path to the event
     public string eventPath;
 
-    public int breadcrumbsCollected;
+    public string parameterOcclusion;
+    [Range(0f, 1f)]
+    public float volume = 0.5f;
+
+    [HideInInspector]public int breadcrumbsCollected;
     public float collectRadius = 1f;
     public float soundTimer = 0.2f;
     
@@ -19,10 +23,12 @@ public class Breadcrumbs : MonoBehaviour
     private float _timer;
     private bool hasStarted = false;
 
+    
+    
     private void Start()
     {
         sound = FMODUnity.RuntimeManager.CreateInstance(eventPath);
-       
+        sound.getParameterByName(parameterOcclusion, out volume);
         player = GameObject.FindGameObjectWithTag("Player");
         
         children = new List<GameObject>();
@@ -42,13 +48,28 @@ public class Breadcrumbs : MonoBehaviour
         if (_timer > soundTimer && !hasStarted)
         {
            sound.start();
-           // _timer = 0;
 
            hasStarted = true;
         }
         //Do this to attach the sound to a gameobject for 3D effect
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, children[breadcrumbsCollected].transform, children[breadcrumbsCollected].GetComponent<Rigidbody>());
         checkForPlayerVicinity();
+
+        //Check if there is a wall inbetween the player and breadcrumb
+        RaycastHit hit;
+        Physics.Linecast(children[breadcrumbsCollected].transform.position, player.transform.position, out hit);
+
+        if (hit.collider.tag == "Player")
+        {
+            notOccluded();
+            Debug.DrawLine(children[breadcrumbsCollected].transform.position, player.transform.position, Color.blue);
+        }
+        else
+        {
+            occluded();
+            Debug.DrawLine(children[breadcrumbsCollected].transform.position, player.transform.position, Color.red);
+
+        }
     }
 
 
@@ -58,5 +79,14 @@ public class Breadcrumbs : MonoBehaviour
         {
             if (breadcrumbsCollected < children.Count - 1) breadcrumbsCollected++;
         }
+    }
+
+    private void notOccluded()
+    {
+        sound.setParameterByName(parameterOcclusion, 0f);
+    }
+    private void occluded()
+    {
+        sound.setParameterByName(parameterOcclusion, volume);
     }
 }
