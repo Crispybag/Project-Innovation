@@ -83,7 +83,7 @@ public class Breadcrumbs : MonoBehaviour
 
     private void notOccluded()
     {
-        sound.setParameterByName(parameterOcclusion, 0f);
+        sound.setParameterByName(parameterOcclusion, 1f);
     }
     private void occluded()
     {
