@@ -2173,7 +2173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath: event:/3D/Guide (Harald)/Guiding sound
   parameterOcclusion: Occlusion
-  volume: 0.5
+  volume: 0.7
   breadcrumbsCollected: 0
   collectRadius: 2
   soundTimer: 0
