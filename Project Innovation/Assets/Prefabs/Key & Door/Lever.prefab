@@ -349,3 +349,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9f52019264c174aba65fd04aeedfeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tapScreenScript: {fileID: 0}
