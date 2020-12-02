@@ -40,7 +40,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -4215391054704651874}
+  - {fileID: 7242986862294425122}
   MinDistance: 0
   MaxDistance: 0
   Length: 9700
@@ -204,8 +204,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 4702907788303597587}
-  - {fileID: 417060989349204799}
+  - {fileID: -989027803707208401}
+  - {fileID: -1869639511528666984}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -248,6 +248,26 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 1
+--- !u!114 &-8838588913846083832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Catacombs
+  m_EditorClassIdentifier: 
+  Name: Catacombs
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 551048992
+    data2: 17637082
   Exists: 1
 --- !u!114 &-8835015200713082396
 MonoBehaviour:
@@ -544,7 +564,7 @@ MonoBehaviour:
   Path: ../Fmod/Build/Mobile/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637425176759101011
+  lastModified: 637425180853251809
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -808,6 +828,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-7870040548448858403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guide Voice lines/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7861668239159207058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,6 +948,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-7806929051816263993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player Combat/Combat - Player
+  m_EditorClassIdentifier: 
+  Name: Combat - Player
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7788943797265168205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,7 +988,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 2582035357712260578}
+  - {fileID: -3437125730777865774}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1112,6 +1172,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-7562592544253877967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Weather/Wind
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7528131909878754876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,6 +1252,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-7417604045622437244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster attack Mono/Attack - Monster
+  m_EditorClassIdentifier: 
+  Name: Attack - Monster
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7381844713695206449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,7 +1332,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -2512118440714099207}
+  - {fileID: 2182754652341308113}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1576,6 +1676,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-6897083909708034616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ocean/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6890209214476954752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,6 +1876,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-6571192052745500453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Weather/Thunder
+  m_EditorClassIdentifier: 
+  Name: Thunder
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6566593507549718815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2016,8 +2156,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 5760109125060038498}
-  - {fileID: -79213819151760066}
+  - {fileID: 2364661245447573317}
+  - {fileID: -1520233510206752642}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -2061,8 +2201,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -1012265062416424937}
-  - {fileID: -5764570193642124563}
+  - {fileID: -261818449831522272}
+  - {fileID: 870681092092657289}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -2506,7 +2646,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -6690973285362018832}
+  - {fileID: -7417604045622437244}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -2610,7 +2750,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 5775834192128910365}
+  - {fileID: -3313304865754076929}
   MinDistance: 0
   MaxDistance: 0
   Length: 70393
@@ -2814,8 +2954,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -1906967588820000467}
-  - {fileID: -3721562570901956380}
+  - {fileID: -7870040548448858403}
+  - {fileID: 1469775627378847983}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -3039,6 +3179,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-5121066876432881954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Walking/Walking types
+  m_EditorClassIdentifier: 
+  Name: Walking types
+  Min: 0
+  Max: 6
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5119942499611177697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,8 +3239,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -8370616374547355941}
-  - {fileID: -2350582401167235256}
+  - {fileID: -1184382561833311983}
+  - {fileID: 2017451758532650699}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -3384,6 +3544,26 @@ MonoBehaviour:
     data1: 3400981403
     data2: 301844426
   Exists: 1
+--- !u!114 &-4724653058202595141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player hint thoughts/Player hint thought
+  m_EditorClassIdentifier: 
+  Name: Player hint thought
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4708252986036483336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3463,6 +3643,26 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 1
+--- !u!114 &-4582251709898290297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Crickets
+  m_EditorClassIdentifier: 
+  Name: Crickets
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2457703518
+    data2: 1751747033
   Exists: 1
 --- !u!114 &-4554414094396912184
 MonoBehaviour:
@@ -4004,6 +4204,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-4084524293719920344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Ocean
+  m_EditorClassIdentifier: 
+  Name: Ocean
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2414771167
+    data2: 2862810692
+  Exists: 1
 --- !u!114 &-3985097687464107167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4344,6 +4564,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3437125730777865774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Church/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3417321118322413411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4428,6 +4668,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3313304865754076929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guiding sound/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3298906781692609308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4548,7 +4808,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -7149025171345399007}
+  - {fileID: -7806929051816263993}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -4592,6 +4852,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3147769161557412177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster background fighting/Fight struggles
+  m_EditorClassIdentifier: 
+  Name: Fight struggles
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3125125256434159832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5112,6 +5392,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-2569485879608365798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player collision/Player collision
+  m_EditorClassIdentifier: 
+  Name: Player collision
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2550887161152633606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5272,8 +5572,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 5930684811910770863}
-  - {fileID: -3819121485790143396}
+  - {fileID: 3717451548020484023}
+  - {fileID: -5121066876432881954}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -5437,6 +5737,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-2238337061373978280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player Walking/Walking types
+  m_EditorClassIdentifier: 
+  Name: Walking types
+  Min: 0
+  Max: 6
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2212957038886608293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5557,7 +5877,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 4896372403251973559}
+  - {fileID: -1087175977265899136}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -5761,6 +6081,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-1869639511528666984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Menu/Menu
+  m_EditorClassIdentifier: 
+  Name: Menu
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1828183864598133094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5961,6 +6301,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-1520233510206752642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Tutorial voice Navigation/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1518555163229903395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6081,8 +6441,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8970062309356380939}
-  - {fileID: -2428284815820638645}
+  - {fileID: -544847869508374479}
+  - {fileID: 4367264507966425647}
   MinDistance: 0
   MaxDistance: 0
   Length: 135053
@@ -6206,6 +6566,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-1184382561833311983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Interactables/Interactables
+  m_EditorClassIdentifier: 
+  Name: Interactables
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1109926359316593193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6246,6 +6626,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-1087175977265899136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Catacomb/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1012265062416424937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6259,6 +6659,46 @@ MonoBehaviour:
   m_Name: parameter:/Actions/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-989027803707208401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Menu/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-983375431249339442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Weather/Rain
+  m_EditorClassIdentifier: 
+  Name: Rain
   Min: 0
   Max: 1
   Default: 0
@@ -6446,7 +6886,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 3348072628197324396}
+  - {fileID: 2907229088925437582}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -6530,6 +6970,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-544847869508374479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Forest
+  m_EditorClassIdentifier: 
+  Name: Forest
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-522594541290916015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6770,6 +7230,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-261818449831522272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Actions/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-238729217149548249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6870,9 +7350,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -4982029910553161196}
-  - {fileID: 5216848147564839192}
-  - {fileID: -2129055218727769322}
+  - {fileID: -7562592544253877967}
+  - {fileID: -6571192052745500453}
+  - {fileID: -983375431249339442}
   MinDistance: 0
   MaxDistance: 0
   Length: 48087
@@ -6936,7 +7416,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -4474939294937711315}
+  - {fileID: -4724653058202595141}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -7049,7 +7529,7 @@ MonoBehaviour:
   - {fileID: -8212997558292294978}
   StringsBanks:
   - {fileID: 4691914466863570758}
-  stringsBankWriteTime: 637425176759180795
+  stringsBankWriteTime: 637425050720371845
   cacheVersion: 6
 --- !u!114 &17731297718872037
 MonoBehaviour:
@@ -7211,6 +7691,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &347204458183135049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player Walking/Footstep speed
+  m_EditorClassIdentifier: 
+  Name: Footstep speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &362890556662774010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7531,6 +8031,26 @@ MonoBehaviour:
     data1: 319057857
     data2: 912912882
   Exists: 1
+--- !u!114 &870681092092657289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Actions/Player actions
+  m_EditorClassIdentifier: 
+  Name: Player actions
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &885494958074449182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7551,8 +8071,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 5682749110016818321}
-  - {fileID: 2479906626825290185}
+  - {fileID: 1392707208114179715}
+  - {fileID: 3119151267888610517}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -7676,8 +8196,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 3101006562452068929}
-  - {fileID: 1827355806634173783}
+  - {fileID: -2238337061373978280}
+  - {fileID: 347204458183135049}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -7901,9 +8421,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 2682131763308824615}
-  - {fileID: 886564519625299573}
-  - {fileID: -5724234708506996193}
+  - {fileID: 4579821844531155077}
+  - {fileID: 5178631789086121999}
+  - {fileID: 2887972834248763077}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -7962,6 +8482,26 @@ MonoBehaviour:
   Name: Player collision
   Min: 0
   Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &1348832845908975705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Tutorial voice combat/Platform
+  m_EditorClassIdentifier: 
+  Name: Platform
+  Min: 0
+  Max: 1
   Default: 0
   ID:
     data1: 0
@@ -8047,6 +8587,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &1392707208114179715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guide callout/Guide callouts
+  m_EditorClassIdentifier: 
+  Name: Guide callouts
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &1396967317642730309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8147,6 +8707,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &1469775627378847983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guide Voice lines/Voice script player and guide
+  m_EditorClassIdentifier: 
+  Name: Voice script player and guide
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &1493009618583575536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8427,6 +9007,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2017451758532650699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Interactables/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2148962201544304128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8442,6 +9042,26 @@ MonoBehaviour:
   Name: Catacombs
   Min: 0
   Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2182754652341308113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player Random thoughts/Player thoughts
+  m_EditorClassIdentifier: 
+  Name: Player thoughts
+  Min: 0
+  Max: 3
   Default: 0
   ID:
     data1: 0
@@ -8547,6 +9167,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2364661245447573317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Tutorial voice Navigation/Tutorial voice navigation
+  m_EditorClassIdentifier: 
+  Name: Tutorial voice navigation
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2408750159085292699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8807,6 +9447,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2887972834248763077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guide Walking/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2907229088925437582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Forest/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2937431655167520911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8847,8 +9527,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 916908012361471227}
-  - {fileID: 3613565397890211395}
+  - {fileID: 6062305923616152174}
+  - {fileID: 7580198618114126688}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -8972,6 +9652,66 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3119151267888610517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guide callout/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3122865494405700701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Thunder
+  m_EditorClassIdentifier: 
+  Name: Thunder
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 4140089188
+    data2: 4188548000
+  Exists: 1
+--- !u!114 &3130911895782827357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Beach
+  m_EditorClassIdentifier: 
+  Name: Beach
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2103162317
+    data2: 1529530324
+  Exists: 1
 --- !u!114 &3136325811490994200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8992,13 +9732,13 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 5581292505998955816}
-  - {fileID: -804990442156985401}
-  - {fileID: -6421525907233606727}
-  - {fileID: -5551147265555931987}
-  - {fileID: 288259128115563054}
-  - {fileID: 4809310608687353214}
-  - {fileID: -5790151090368613477}
+  - {fileID: -4084524293719920344}
+  - {fileID: 6620710043387223920}
+  - {fileID: 4733010328094999448}
+  - {fileID: 3130911895782827357}
+  - {fileID: -8838588913846083832}
+  - {fileID: 3122865494405700701}
+  - {fileID: -4582251709898290297}
   MinDistance: 0
   MaxDistance: 0
   Length: 487042
@@ -9302,6 +10042,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &3717451548020484023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Walking/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3729574739994511884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9322,7 +10082,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -4090813174859848436}
+  - {fileID: 6073661002520278296}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -9426,8 +10186,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 7002931184436489945}
-  - {fileID: -6764844027996097495}
+  - {fileID: 7634145762046213236}
+  - {fileID: 1348832845908975705}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -9631,6 +10391,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4299080232574713015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player voice lines/Voice script player and guide
+  m_EditorClassIdentifier: 
+  Name: Voice script player and guide
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4315139857075747711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9671,6 +10451,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &4367264507966425647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Ocean
+  m_EditorClassIdentifier: 
+  Name: Ocean
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4384780684164320216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9871,6 +10671,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &4579821844531155077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guide Walking/Footstep speed
+  m_EditorClassIdentifier: 
+  Name: Footstep speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4622864444996557174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9946,7 +10766,7 @@ MonoBehaviour:
   Path: ../Fmod/Build/Mobile/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637425176759180795
+  lastModified: 637425050720371845
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -10016,6 +10836,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &4733010328094999448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Church
+  m_EditorClassIdentifier: 
+  Name: Church
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2977257263
+    data2: 3424143795
+  Exists: 1
 --- !u!114 &4745799462183966840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10376,6 +11216,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5178631789086121999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Guide Walking/Walking types
+  m_EditorClassIdentifier: 
+  Name: Walking types
+  Min: 0
+  Max: 6
+  Default: 5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5195251554240077237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10736,7 +11596,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 2550930655425533833}
+  - {fileID: 4299080232574713015}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -11060,6 +11920,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &6062305923616152174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Movement/Monster movement
+  m_EditorClassIdentifier: 
+  Name: Monster movement
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6070765225843492461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11075,6 +11955,26 @@ MonoBehaviour:
   Name: Occlusion
   Min: 0
   Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &6073661002520278296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Combat/Monster combat
+  m_EditorClassIdentifier: 
+  Name: Monster combat
+  Min: 0
+  Max: 2
   Default: 0
   ID:
     data1: 0
@@ -11320,8 +12220,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -80686934338690452}
-  - {fileID: -4697900734098663139}
+  - {fileID: 8688872300396173051}
+  - {fileID: -3147769161557412177}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -11385,6 +12285,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &6620710043387223920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Environment/Forest
+  m_EditorClassIdentifier: 
+  Name: Forest
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1039597786
+    data2: 3389294248
+  Exists: 1
 --- !u!114 &6650697584994287713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11565,6 +12485,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7242986862294425122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Coming on shore/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7298330125419445251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11705,6 +12645,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7580198618114126688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster Movement/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7583742446694341318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11745,6 +12705,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &7634145762046213236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Tutorial voice combat/Tutorial voice combat
+  m_EditorClassIdentifier: 
+  Name: Tutorial voice combat
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7670630491262632413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12285,7 +13265,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 1345042041932918387}
+  - {fileID: -2569485879608365798}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -12469,6 +13449,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &8688872300396173051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Monster background fighting/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8735883311541460357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12629,7 +13629,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 4523895332787114254}
+  - {fileID: -6897083909708034616}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
