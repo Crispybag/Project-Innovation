@@ -7,12 +7,8 @@ public class Lever : MonoBehaviour
     //=======================================================================================
 
     // public objects
-    //[Header("Components")]
-
-    // public variables
-    //[Header("Variables")]
-
-    // private objects
+    [Header("Components")]
+    public TapScreen tapScreenScript;
 
     // private variables
     private float _soundLength;
@@ -26,19 +22,10 @@ public class Lever : MonoBehaviour
         _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
     }
 
-    private void Update()
-    {
-
-    }
-
     private void OnCollisionStay(Collision collision)
     {
         UseLever(collision);
     }
-
-    //=======================================================================================
-    //                              >  Start Functions  <
-    //=======================================================================================
 
     //=======================================================================================
     //                              >  Update Functions <
@@ -48,7 +35,7 @@ public class Lever : MonoBehaviour
     /// <summary> Increases the levers count and destroys the lever object after playing the use lever sound. </summary>
     private void UseLever(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (collision.gameObject.tag == "Player" && (Input.GetKeyDown(KeyCode.E) || tapScreenScript.isTapping))
         {
             GetComponent<PlaySound>().Play();       // plays the use sound
             Player.levers++;                        // increases the levers count
@@ -57,8 +44,4 @@ public class Lever : MonoBehaviour
             Destroy(this, _soundLength);            // destroys the object after the sound is done playing
         }
     }
-
-    //=======================================================================================
-    //                              >  Tool Functions  <
-    //=======================================================================================
 }
