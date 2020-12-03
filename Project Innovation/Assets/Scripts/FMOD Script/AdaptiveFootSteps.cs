@@ -12,7 +12,7 @@ public class AdaptiveFootSteps : MonoBehaviour
     [Header("Components")]
     [FMODUnity.EventRef] public string footStepsEventPath;
     public string materialParameter;
-
+    public string parameterOcclusion = "none";
     public float stepDistance = 2.0f;
     public float rayDistance = 1.2f;
     public float startRunningTime = 0.3f;
@@ -29,12 +29,22 @@ public class AdaptiveFootSteps : MonoBehaviour
 
     private bool isRunning;
 
+    //Setting up occlusion
+    private GameObject _player;
+    //Power of occlusion
+    [Range(0f, 1f)]
+    public float volume = 0.7f;
+
+    //Layermask to hide certain objects
+    public LayerMask occlusionLayer = 1;
+
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
 
     private void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player");
         _stepRandom = Random.Range(0f, 0.5f);
         _prevPos = transform.position;
         _materialValue = defaultMaterial;
@@ -42,8 +52,6 @@ public class AdaptiveFootSteps : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(transform.position, Vector3.down * rayDistance, Color.blue);
-
         _timeSinceStep += Time.deltaTime;
         _distanceTravelled += (transform.position - _prevPos).magnitude;
         if (_distanceTravelled >= stepDistance + _stepRandom)
@@ -83,5 +91,24 @@ public class AdaptiveFootSteps : MonoBehaviour
         footstep.setParameterByName(materialParameter, _materialValue);
         footstep.start();
         footstep.release();
+
+
+        if (parameterOcclusion != "none")
+        {
+            //Check for occlusion
+            RaycastHit hit;
+            Physics.Linecast(transform.position, _player.transform.position, out hit, occlusionLayer);
+
+            if (hit.collider.tag == "Player")
+            {
+                footstep.setParameterByName(parameterOcclusion, 1f);
+            }
+
+            else
+            {
+                footstep.setParameterByName(parameterOcclusion, volume);
+
+            }
+        }
     }
 }

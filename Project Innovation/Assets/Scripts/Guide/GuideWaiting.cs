@@ -9,7 +9,7 @@ public class GuideWaiting : MonoBehaviour
     public string eventPath;
 
     public string parameterName;
-    public string parameterOcclusion;
+    public string parameterOcclusion = "none";
     FMOD.Studio.EventInstance audioPath;
     private GameObject _player;
 
