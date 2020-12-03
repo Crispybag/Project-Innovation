@@ -9,15 +9,12 @@ public class Door : MonoBehaviour
 
     // public objects
     [Header("Components")]
-    public Canvas victoryCanvasPrefab;
     public GameObject doorMiddle;
 
     // public variables
     [Header("Variables")]
     public int keysNeededToOpen = 1;
     public int leversNeededToOpen = 0;
-    [Min(0)]
-    public float soundLength = 4.5f;
 
     // private objects
     private Vector3 _targetPos;         // the red bean child (red capsule child object)
@@ -26,9 +23,22 @@ public class Door : MonoBehaviour
 
     // private variables
     private int _soundLengthInFrames;
+    private float soundLength = 3f;
 
     private float _distanceToTarget;
     private float _travelDistance;
+
+    // FMOD Stuff
+    [Header("FMOD Sound")]
+    [FMODUnity.EventRef] //Get path to the event
+    public string doorOpeningSound;
+    public string doorParameterName;
+    private int doorIndex = 3;
+
+    [FMODUnity.EventRef] //Get path to the event
+    public string innerThoughts;
+    public string thoughtParameterName;
+
 
     //=======================================================================================
     //                              >  Start And Update  <
@@ -37,11 +47,6 @@ public class Door : MonoBehaviour
     private void Start()
     {
         initialize();
-    }
-
-    private void Update()
-    {
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -67,15 +72,13 @@ public class Door : MonoBehaviour
 
     //-----------------------------------OpenDoor-----------------------------------------
     /// <summary>
-    ///  Opens the door if you have enough keys, removes the keys from the counter.
-    ///  Plays sound effect of door opening and closing while transitioning through the door.
+    /// Opens the door if you have enough keys, removes the keys from the counter.
+    /// Plays sound effect of door opening and closing while transitioning through the door.
     /// </summary>
     private void OpenDoor(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Keys: " + Player.keys + "\nLevers: " + Player.levers);
-
             if (Player.keys >= keysNeededToOpen && Player.levers >= leversNeededToOpen) // enough keys and levers
             {
                 Player.keys -= keysNeededToOpen;
@@ -85,14 +88,17 @@ public class Door : MonoBehaviour
             else if (Player.keys < keysNeededToOpen && Player.keys > 0 && Player.levers < leversNeededToOpen && Player.levers > 0) // NOT enough keys and levers
             {
                 Debug.Log("You need at least " + keysNeededToOpen + " key(s) and " + leversNeededToOpen + " lever(s) pulled to open the door"); // can be changed into dialogue sound WIP
+                playThoughtSound(5);    // "I require a key" dialogue
             }
             else if (Player.keys < keysNeededToOpen && Player.keys >= 0) // NOT enough keys
             {
                 Debug.Log("You need at least " + keysNeededToOpen + " key(s) to open the door"); // can be changed into dialogue sound WIP
+                playThoughtSound(5);    // "I require a key" dialogue
             }
             else if (Player.levers < leversNeededToOpen && Player.levers >= 0) // NOT enough levers
             {
                 Debug.Log("You need at least " + leversNeededToOpen + " lever(s) to open the door"); // can be changed into dialogue sound WIP
+                playThoughtSound(8);    // "I need to pull down a lever" dialogue
             }
             else if (Player.keys < 0 || Player.levers < 0) // minus keys or levers... somehow
             {
@@ -113,8 +119,6 @@ public class Door : MonoBehaviour
     /// <summary> Changes the game to the new room. </summary>
     private void ChangeRoom(Collision collision)
     {
-        //Instantiate(victoryCanvasPrefab); // WIP, uncomment for simple testing
-
         Player.canMove = false; // stops the player from using controls to move
 
         //Transition the player
@@ -125,8 +129,13 @@ public class Door : MonoBehaviour
     /// <summary> Smoothly transitions the player through a door. </summary>
     private IEnumerator Transition(Collision collision)
     {
+        if (keysNeededToOpen > 0)
+        {
+            doorIndex = 4;
+        }
+        playDoorSound();                        // start playing the sound
         Destroy(GetComponent<BoxCollider>());   // destroys the collider so that you can move through the door
-        CalculateDistances(collision);  // calculates travel distance and direction
+        CalculateDistances(collision);          // calculates travel distance and direction
 
         // moves the player towards the target
         for (int i = 0; i < _soundLengthInFrames; i++)
@@ -153,10 +162,44 @@ public class Door : MonoBehaviour
     /// <summary> Everything that needs to happen after the transition is completed. </summary>
     private void PostTransition()
     {
-        Destroy(GetComponentInChildren<AudioSource>());         // destroys the looping audio clip WIP (might mess up stuff later)
         doorMiddle.GetComponent<BoxCollider>().enabled = true;  // turns the middle of the door into a wall
         Player.canMove = true;                                  // the player can move again after the transition
         Checkpoint.Move(_targetPos);                            // moves the checkpoint to the target
-        Debug.Log("Checkpoint moved to targetPos: " + _targetPos);
+    }
+
+    public void playDoorSound()
+    {
+        //Do this because FMOD sucks
+        FMOD.Studio.EventInstance sound = FMODUnity.RuntimeManager.CreateInstance(doorOpeningSound);
+
+        //Do this to attach the sound to a gameobject for 3D effect
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, transform, GetComponent<Rigidbody>());
+
+        //Do this to set a certain parameter
+        sound.setParameterByName(doorParameterName, doorIndex);
+
+        //Start thing
+        sound.start();
+
+        //Make sure it doesnt loop
+        sound.release();
+    }
+
+    public void playThoughtSound(int thoughtIndex)
+    {
+        //Do this because FMOD sucks
+        FMOD.Studio.EventInstance sound = FMODUnity.RuntimeManager.CreateInstance(innerThoughts);
+
+        //Do this to attach the sound to a gameobject for 3D effect
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, transform, GetComponent<Rigidbody>());
+
+        //Do this to set a certain parameter
+        sound.setParameterByName(thoughtParameterName, thoughtIndex);
+
+        //Start thing
+        sound.start();
+
+        //Make sure it doesnt loop
+        sound.release();
     }
 }

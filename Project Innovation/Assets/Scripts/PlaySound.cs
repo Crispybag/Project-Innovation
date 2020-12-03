@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
 public class PlaySound : MonoBehaviour
 {
@@ -7,57 +6,16 @@ public class PlaySound : MonoBehaviour
     //                            >  Components & Variables  <
     //=======================================================================================
 
-    // public objects
-    [Header("Components")]
-    public AudioSource audioSource;
-    public Transform soundSource;
-
     // public variables
-    //[Header("Variables")]
-    [HideInInspector]
+    [Header("Variables")]
     [Min(0)]
     public float soundLength = 4f;
 
-    // private objects
-
-    // private variables
-
-    //=======================================================================================
-    //                              >  Start And Update  <
-    //=======================================================================================
-
-    private void Start()
-    {
-        if (audioSource.clip != null)
-        {
-            soundLength = audioSource.clip.length;
-        }
-        else
-        {
-            Debug.Log("You're missing an audioclip.");
-        }
-    }
-
-    private void Update()
-    {
-
-    }
-
-    //=======================================================================================
-    //                              >  Start Functions  <
-    //=======================================================================================
-
-    //-----------------------------------privateFunctionName-----------------------------------------
-    //Description of function 
-    private void verbNoun(int pVarName) { }
-
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun(int pVarName) { }
-
-    //=======================================================================================
-    //                              >  Update Functions <
-    //=======================================================================================
+    // FMOD Stuff
+    [FMODUnity.EventRef] //Get path to the event
+    public string soundFile;
+    public string parameterName;
+    public int index;
 
     //=======================================================================================
     //                              >  Tool Functions  <
@@ -65,6 +23,24 @@ public class PlaySound : MonoBehaviour
 
     public void Play()
     {
-        audioSource.Play();
+        playSound();
+    }
+
+    private void playSound()
+    {
+        //Do this because FMOD sucks
+        FMOD.Studio.EventInstance sound = FMODUnity.RuntimeManager.CreateInstance(soundFile);
+
+        //Do this to attach the sound to a gameobject for 3D effect
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, transform, GetComponent<Rigidbody>());
+
+        //Do this to set a certain parameter
+        sound.setParameterByName(parameterName, index);
+
+        //Start thing
+        sound.start();
+
+        //Make sure it doesnt loop
+        sound.release();
     }
 }

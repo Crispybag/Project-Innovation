@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1095479729519227211}
   - component: {fileID: 1594801589}
   - component: {fileID: 83905576629271509}
+  - component: {fileID: 2425524904858186464}
   - component: {fileID: 435843984}
   m_Layer: 0
   m_Name: Key
@@ -206,9 +207,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eead2f7e5ff121f4a8f6c49d58d83379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 400565151106784745}
-  soundSource: {fileID: 694488651610050446}
+  soundLength: 0.8
+  soundFile: event:/3D/Player interactables/Actions
+  parameterName: Player actions
+  index: 1
+--- !u!114 &2425524904858186464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095479729519227252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eead2f7e5ff121f4a8f6c49d58d83379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   soundLength: 4
+  soundFile: 
+  parameterName: 
+  index: 0
 --- !u!114 &435843984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4088b4b9cfbe144987bd582e0e8492d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playSoundScript: {fileID: 83905576629271509}
 --- !u!1 &1372102959524559634
 GameObject:
   m_ObjectHideFlags: 0
