@@ -43,9 +43,8 @@ public class Lever : MonoBehaviour
             attractionNoise.Stop();                 // stops the loops sound
             useSound.Play();                        // plays the use sound
             Player.levers++;                        // increases the levers count
-            Destroy(GetComponent<AudioSource>());   // destroys the looping sound
             Destroy(GetComponent<BoxCollider>());   // destroys the box collider
-            Destroy(this, _soundLength);            // destroys the object after the sound is done playing
+            Destroy(this.gameObject, _soundLength); // destroys the object after the sound is done playing
         }
     }
 }

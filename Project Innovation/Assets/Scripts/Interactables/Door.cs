@@ -102,7 +102,7 @@ public class Door : MonoBehaviour
             }
             else if (Player.keys < 0 || Player.levers < 0) // minus keys or levers... somehow
             {
-                Debug.LogError("You somehow have less than 0 keys, check the code dummy");
+                Debug.LogError("You somehow have less than 0 keys, check the code.");
             }
             else
             {
@@ -129,7 +129,7 @@ public class Door : MonoBehaviour
     /// <summary> Smoothly transitions the player through a door. </summary>
     private IEnumerator Transition(Collision collision)
     {
-        if (keysNeededToOpen > 0)
+        if (keysNeededToOpen > 0) // if it's a key door play the "opening door with a key" sound else just the normal door sound
         {
             doorIndex = 4;
         }
@@ -185,6 +185,7 @@ public class Door : MonoBehaviour
         sound.release();
     }
 
+    // a bit messy to make two very similar functions but it works
     public void playThoughtSound(int thoughtIndex)
     {
         //Do this because FMOD sucks

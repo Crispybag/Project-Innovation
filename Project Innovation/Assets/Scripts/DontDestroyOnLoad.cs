@@ -18,7 +18,7 @@ public class DontDestroyOnLoad : MonoBehaviour
     {
         if (thisObject == null)
         {
-            Debug.Log("Initialize first instance of object.");
+            Debug.Log("Initialize first instance of object: " + this.gameObject);
             thisObject = this.gameObject;
             DontDestroyOnLoad(thisObject);
         }

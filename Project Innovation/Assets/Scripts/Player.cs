@@ -6,9 +6,6 @@ public class Player : MonoBehaviour
     //                            >  Components & Variables  <
     //=======================================================================================
 
-    // public objects
-    //[Header("Components")]
-
     // public variables
     [Header("Variables")]
     public bool defaultCanMove = true;
@@ -18,16 +15,16 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public bool canCombat = false;
     [HideInInspector] public bool isEnteringCombat = false;
-    public static bool isUndetectable = false;
+
     // public statics
+    public static bool isUndetectable = false;
+
     public static bool canMove;
     public static int keys;
     public static int levers;
 
     // private objects
     private GameObject _enemy;
-
-    // private variables
 
     //=======================================================================================
     //                              >  Start And Update  <
@@ -62,13 +59,16 @@ public class Player : MonoBehaviour
     //=======================================================================================
     //                              >  Tool Functions  <
     //=======================================================================================
+
     //-----------------------------------SetEnemy-----------------------------------------
-    //Sets the enemy variable to the enemy that the player is fighting
+    /// <summary> Sets the enemy variable to the enemy that the player is fighting. </summary>
     public void SetEnemy(GameObject pEnemy)
     {
         _enemy = pEnemy;
     }
 
+    //-----------------------------------GetEnemy-----------------------------------------
+    /// <summary> Gets the enemy object. </summary>
     public GameObject GetEnemy()
     {
         return _enemy;

@@ -19,8 +19,6 @@ public class KeyboardMouseMovement : MonoBehaviour
     [Tooltip("How fast the player rotates")]
     public float mouseSensitivity = 100f;
 
-    // private objects
-
     // private variables
     private float _horizontal;
     private float _vertical;
@@ -48,16 +46,8 @@ public class KeyboardMouseMovement : MonoBehaviour
     //                              >  Start Functions  <
     //=======================================================================================
 
-    //-----------------------------------privateFunctionName-----------------------------------------
-    //Description of function 
-    private void verbNoun() { }
-
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun() { }
-
     //-----------------------------------CursorSettings-----------------------------------------
-    //Sets various settings of the cursor 
+    /// <summary> Sets various settings of the cursor. </summary>
     private void CursorSettings(CursorLockMode lockState, bool visible)
     {
         Cursor.lockState = lockState;
@@ -69,7 +59,7 @@ public class KeyboardMouseMovement : MonoBehaviour
     //=======================================================================================
 
     //-----------------------------------keyboardMovement-----------------------------------------
-    //Movement of player in Local Space using keyboard inputs
+    /// <summary> Movement of player in Local Space using keyboard inputs. </summary>
     private void keyboardMovement()
     {
         // get input
@@ -88,7 +78,7 @@ public class KeyboardMouseMovement : MonoBehaviour
     }
 
     //-----------------------------------mouseMovement-----------------------------------------
-    //Rotation of the player using mouse movement
+    /// <summary> Rotation of the player using mouse movement. </summary>
     private void mouseMovement()
     {
         // get input
@@ -100,8 +90,4 @@ public class KeyboardMouseMovement : MonoBehaviour
             player.Rotate(Vector3.up * _mouseX * mouseSensitivity * Time.deltaTime);
         }
     }
-
-    //=======================================================================================
-    //                              >  Tool Functions  <
-    //=======================================================================================
 }
