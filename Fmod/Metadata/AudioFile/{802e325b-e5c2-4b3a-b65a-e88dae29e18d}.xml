@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{802e325b-e5c2-4b3a-b65a-e88dae29e18d}">
 		<property name="assetPath">
-			<value>LureKeys 4.wav</value>
+			<value>Environment/Interactables/LureKeys 4.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

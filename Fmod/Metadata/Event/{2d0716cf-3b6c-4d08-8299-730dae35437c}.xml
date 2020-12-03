@@ -615,6 +615,9 @@
 		<property name="length">
 			<value>97.408435374149661</value>
 		</property>
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -648,6 +651,9 @@
 		</property>
 		<property name="length">
 			<value>97.408435374149633</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
 		</property>
 		<property name="looping">
 			<value>true</value>

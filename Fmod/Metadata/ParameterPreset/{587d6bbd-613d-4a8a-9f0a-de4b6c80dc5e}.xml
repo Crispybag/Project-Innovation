@@ -16,15 +16,17 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>12</value>
+			<value>14</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Ocean opening scene</value>
 			<value>Getting off boat</value>
 			<value>Sneaking</value>
 			<value>Sneaking completion</value>
+			<value>Combat</value>
+			<value>Combat finish</value>
 			<value>Not welcome</value>
-			<value>Boy callout</value>
+			<value>Boy abduction</value>
 			<value>Illegal experiment</value>
 			<value>Not so fast</value>
 			<value>Put an end to this</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{683b5077-306c-4c7b-ab22-fd8f13a184c5}">
 		<property name="assetPath">
-			<value>LureLever 1.wav</value>
+			<value>Environment/Interactables/LureLever 1.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

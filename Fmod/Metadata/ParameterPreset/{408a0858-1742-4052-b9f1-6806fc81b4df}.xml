@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{408a0858-1742-4052-b9f1-6806fc81b4df}">
+		<property name="name">
+			<value>Forest sounds</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1c329d49-6917-49aa-88da-0383348257cf}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1c329d49-6917-49aa-88da-0383348257cf}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Bird chirp</value>
+			<value>Leaves in the wind</value>
+			<value>Value C</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

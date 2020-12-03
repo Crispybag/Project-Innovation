@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{afa61b25-7ed6-4659-b4e5-5e8196d14170}">
+		<property name="name">
+			<value>Church sounds</value>
+		</property>
+		<relationship name="folder">
+			<destination>{cac56065-e193-41f7-afa8-df4e7eff49db}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d6b7e545-8693-4d2f-af12-0f0e6b8b6b80}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d6b7e545-8693-4d2f-af12-0f0e6b8b6b80}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Chandelier swing</value>
+			<value>Candles blow out</value>
+			<value>Value C</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
