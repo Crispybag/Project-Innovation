@@ -1232,6 +1232,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192337457}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &196833722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196833723}
+  - component: {fileID: 196833724}
+  m_Layer: 0
+  m_Name: Resonance room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196833723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196833722}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 133.57, y: 8.57, z: 136.63}
+  m_LocalScale: {x: 47.18834, y: 10.603027, z: 11.74816}
+  m_Children: []
+  m_Father: {fileID: 533665431}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196833724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196833722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0c5e63920ee4f55b7ec5248525af4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWall: 4
+  rightWall: 4
+  floor: 14
+  ceiling: 15
+  backWall: 4
+  frontWall: 4
+  reflectivity: 1
+  reverbGainDb: 0
+  reverbBrightness: 0
+  reverbTime: 1
+  size: {x: 1, y: 1, z: 1}
 --- !u!1 &216097552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,7 +2044,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tapScreenScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 525637451}
     - target: {fileID: 7361266689777240762, guid: 7e66799a5a2f8164a9737abc17d0a6f4,
         type: 3}
       propertyPath: m_Name
@@ -2051,7 +2105,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7361266689106251681, guid: 7e66799a5a2f8164a9737abc17d0a6f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e66799a5a2f8164a9737abc17d0a6f4, type: 3}
 --- !u!4 &278805838 stripped
 Transform:
@@ -2550,7 +2605,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tapScreenScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 525637451}
     - target: {fileID: 7361266689777240762, guid: 7e66799a5a2f8164a9737abc17d0a6f4,
         type: 3}
       propertyPath: m_Name
@@ -3060,6 +3115,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &525637451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5835522542652449549, guid: eb2c11a1198e82c448fea4690b8979b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1997533927}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7318a02a3ede5f4496a1d639eea4c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &533665430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,6 +3158,7 @@ Transform:
   - {fileID: 2090049405}
   - {fileID: 758809651}
   - {fileID: 1576074556}
+  - {fileID: 196833723}
   m_Father: {fileID: 348419137}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4100,7 +4168,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tapScreenScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 525637451}
     - target: {fileID: 7361266689777240762, guid: 7e66799a5a2f8164a9737abc17d0a6f4,
         type: 3}
       propertyPath: m_Name
@@ -4161,7 +4229,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7361266689106251681, guid: 7e66799a5a2f8164a9737abc17d0a6f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e66799a5a2f8164a9737abc17d0a6f4, type: 3}
 --- !u!4 &710328993 stripped
 Transform:
@@ -6180,6 +6249,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925991674}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &926967109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926967110}
+  - component: {fileID: 926967111}
+  m_Layer: 0
+  m_Name: Resonance room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &926967110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926967109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.53, y: 8.57, z: 104.76}
+  m_LocalScale: {x: 21.525976, y: 10.603027, z: 46.19726}
+  m_Children: []
+  m_Father: {fileID: 1925919593}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &926967111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926967109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0c5e63920ee4f55b7ec5248525af4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWall: 4
+  rightWall: 4
+  floor: 14
+  ceiling: 15
+  backWall: 4
+  frontWall: 4
+  reflectivity: 1
+  reverbGainDb: 0
+  reverbBrightness: 0
+  reverbTime: 1
+  size: {x: 1, y: 1, z: 1}
 --- !u!1 &935818472
 GameObject:
   m_ObjectHideFlags: 0
@@ -13219,6 +13342,7 @@ Transform:
   - {fileID: 1713683127}
   - {fileID: 1285861075}
   - {fileID: 2014056408}
+  - {fileID: 926967110}
   m_Father: {fileID: 348419137}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14428,7 +14552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2462053735168730312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: -19.75}
+  m_LocalPosition: {x: -5, y: 0, z: -20.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2462053734593404239}
