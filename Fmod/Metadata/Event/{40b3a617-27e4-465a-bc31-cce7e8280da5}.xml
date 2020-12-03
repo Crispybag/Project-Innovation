@@ -413,6 +413,7 @@
 	<object class="MixerBusEffectChain" id="{a4fcf29c-b454-4e6c-b7ae-d0f51931a571}">
 		<relationship name="effects">
 			<destination>{356347b5-bff7-475a-a89c-7a2790bcbde2}</destination>
+			<destination>{48baa7da-c0ea-42a6-9211-852e7538f8aa}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fe8886e4-9db9-4ea1-b9ad-99242cd6423d}" />
@@ -554,6 +555,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{356347b5-bff7-475a-a89c-7a2790bcbde2}" />
+	<object class="PannerEffect" id="{48baa7da-c0ea-42a6-9211-852e7538f8aa}">
+		<property name="overridingOutputFormat">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{354c66d5-aab5-43b6-afbf-ad5b3b2de05b}" />
 	<object class="Plugin" id="{1ddc3f08-d768-4485-beb6-f16189b955e7}">
 		<property name="identifier">
@@ -649,7 +655,7 @@
 			<value>Directivity</value>
 		</property>
 		<property name="value">
-			<value>9.99999975e-06</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
