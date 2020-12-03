@@ -10,6 +10,7 @@ TagManager:
   - Key
   - Enemy
   - Dialogue
+  - Guide
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - 
   - Don't Collide
-  - 
+  - Player
   - 
   - 
   - 

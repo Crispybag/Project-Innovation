@@ -25,11 +25,13 @@ public class Enemy : MonoBehaviour
             DetermineEnemyMovePhaseFaweedEditon faweed = GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
             foreach (var obj in faweed._enemies)
             {
-                if (GetComponent<DetermineEnemyMovePhaseFaweedEditon>())
+                if (obj != null)
                 {
-
-                    DetermineEnemyMovePhaseFaweedEditon phase = obj.GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
-                    if (phase != null)phase.moveTrail.enabled = true;
+                    if (GetComponent<DetermineEnemyMovePhaseFaweedEditon>())
+                    {
+                        DetermineEnemyMovePhaseFaweedEditon phase = obj.GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
+                        if (phase != null) phase.moveTrail.enabled = true;
+                    }
                 }
             }
             

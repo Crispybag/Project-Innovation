@@ -664,12 +664,12 @@ PrefabInstance:
     - target: {fileID: 82820446835975456, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
         type: 3}
       propertyPath: fightActions.Array.data[1]
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 82820446835975456, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
         type: 3}
       propertyPath: fightActions.Array.data[2]
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 82820446835975456, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
         type: 3}
@@ -694,7 +694,7 @@ PrefabInstance:
     - target: {fileID: 82820446835975456, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
         type: 3}
       propertyPath: fightActions.Array.data[4]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 82820446835975456, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
         type: 3}
@@ -705,6 +705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxRandomBuffer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604907960441009691, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
+        type: 3}
+      propertyPath: footStepsEventPath
+      value: event:/2D/Player/Player Walking
       objectReference: {fileID: 0}
     - target: {fileID: 3039430123709259291, guid: d4b1d6237ae2d224b9fa5ad89b03746d,
         type: 3}

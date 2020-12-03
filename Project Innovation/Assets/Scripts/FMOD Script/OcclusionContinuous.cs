@@ -9,7 +9,7 @@ public class OcclusionContinuous : MonoBehaviour
     public string selectAudio;
     FMOD.Studio.EventInstance audioPath;
     public string parameterOcclusion;
-    Transform source;
+    private GameObject _player;
 
     [Range(0f, 1f)]
     public float volume = 0.5f;
@@ -17,7 +17,7 @@ public class OcclusionContinuous : MonoBehaviour
 
     private void Awake()
     {
-        source = GameObject.FindObjectOfType<StudioListener>().transform;
+        _player = GameObject.FindGameObjectWithTag("Player");
         audioPath = RuntimeManager.CreateInstance(selectAudio);
         audioPath.getParameterByName(parameterOcclusion, out volume);
     }
@@ -31,17 +31,17 @@ public class OcclusionContinuous : MonoBehaviour
     {
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(audioPath, GetComponent<Transform>(), GetComponent<Rigidbody>());
         RaycastHit hit;
-        Physics.Linecast(transform.position, source.position, out hit, occlusionLayer);
+        Physics.Linecast(transform.position, _player.transform.position, out hit, occlusionLayer);
 
-        if (hit.collider.name == "Player")
+        if (hit.collider.tag == "Player")
         {
             notOccluded();
-            Debug.DrawLine(transform.position, source.position, Color.blue);
+            Debug.DrawLine(transform.position, _player.transform.position, Color.blue);
         }
         else
         {
             occluded();
-            Debug.DrawLine(transform.position, source.position, Color.red);
+            Debug.DrawLine(transform.position, _player.transform.position, Color.red);
 
         }
     }
