@@ -23,7 +23,7 @@ public class MenuScreen : MonoBehaviour
         _swipeControls = GetComponent<SwipeControls>();
         _tapScreen = GetComponent<TapScreen>();
         _menuSounds = GetComponent<MenuSounds>();
-        _menuSounds.playSound(0);
+        //_menuSounds.playSound(0);
     }
 
     private void Update()

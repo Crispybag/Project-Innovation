@@ -2047,7 +2047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &702439285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4323,6 +4323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStepsEventPath: event:/3D/Guide (Harald)/Guide Walking
   materialParameter: Walking types
+  parameterOcclusion: none
   stepDistance: 1
   rayDistance: 1.2
   startRunningTime: 0.3
@@ -4335,6 +4336,10 @@ MonoBehaviour:
   - Tiles
   - Gravel
   defaultMaterial: 0
+  volume: 0.7
+  occlusionLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!114 &1506623905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6055,7 +6060,7 @@ PrefabInstance:
     - target: {fileID: 1429356592382504315, guid: 120591dfc209a8d4ab559d17652221f9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1429356592571536664, guid: 120591dfc209a8d4ab559d17652221f9,
         type: 3}
