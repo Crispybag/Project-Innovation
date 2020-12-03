@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     // public objects
     [Header("Components")]
     public GameObject doorMiddle;
+    private GameObject player;
 
     // public variables
     [Header("Variables")]
@@ -47,6 +48,7 @@ public class Door : MonoBehaviour
     private void Start()
     {
         initialize();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -140,8 +142,10 @@ public class Door : MonoBehaviour
         // moves the player towards the target
         for (int i = 0; i < _soundLengthInFrames; i++)
         {
+            Debug.Log("_targetDirection: " + _targetDirection);
+            Debug.Log("_travelDistance: " + _travelDistance);
             //      player.position      += direction (unit vector) * speed (travel distance)
-            collision.transform.position += _targetDirection * _travelDistance;
+            player.transform.position += _targetDirection * _travelDistance;
             yield return null;
         }
 
