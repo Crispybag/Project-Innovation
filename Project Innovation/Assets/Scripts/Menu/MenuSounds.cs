@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 public class MenuSounds : MonoBehaviour
 {
     [FMODUnity.EventRef]
@@ -19,7 +16,7 @@ public class MenuSounds : MonoBehaviour
     public void playSound(int pIndex)
     {
         //Do this because FMOD sucks
-        
+
 
         //Do this to attach the sound to a gameobject for 3D effect
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, transform, GetComponent<Rigidbody>());
@@ -35,5 +32,9 @@ public class MenuSounds : MonoBehaviour
         //sound.release();
     }
 
-    
+    public void stopSound()
+    {
+        sound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
 }

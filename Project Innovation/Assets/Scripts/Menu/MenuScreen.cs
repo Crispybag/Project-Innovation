@@ -39,6 +39,8 @@ public class MenuScreen : MonoBehaviour
             playSwitchSound(menuSelect);
         }
 
+        if (_tapScreen.isTapping || Input.GetMouseButtonDown(0)) onTap(menuSelect);
+
     }
 
     private void selectMenuOption(SwipeControls.DIRECTION direction)
@@ -66,16 +68,17 @@ public class MenuScreen : MonoBehaviour
 
     private void onTap(MENUSELECT menu)
     {
+
         if (menu == MENUSELECT.START)
         {
-            if (_tapScreen.isTapping)
-            {
-                goToGame();
-            }
+            _menuSounds.stopSound();
+            goToGame();
+
         }
 
         else if (menu == MENUSELECT.EXIT)
         {
+            _menuSounds.stopSound();
             exitGame();
         }
     }
