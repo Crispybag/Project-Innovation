@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using FMODUnity;
 
 public class Lever : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Lever : MonoBehaviour
     // public objects
     [Header("Components")]
     public TapScreen tapScreenScript;
+    public StudioEventEmitter attractionNoise;
+    public PlaySound useSound;
 
     // private variables
     private float _soundLength;
@@ -37,7 +40,8 @@ public class Lever : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && (Input.GetKeyDown(KeyCode.E) || tapScreenScript.isTapping))
         {
-            GetComponent<PlaySound>().Play();       // plays the use sound
+            attractionNoise.Stop();                 // stops the loops sound
+            useSound.Play();                        // plays the use sound
             Player.levers++;                        // increases the levers count
             Destroy(GetComponent<AudioSource>());   // destroys the looping sound
             Destroy(GetComponent<BoxCollider>());   // destroys the box collider
