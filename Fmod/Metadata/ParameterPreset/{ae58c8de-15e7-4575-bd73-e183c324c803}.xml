@@ -16,7 +16,7 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>5</value>
+			<value>6</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Attack</value>
@@ -24,6 +24,7 @@
 			<value>Dodge</value>
 			<value>Hurt</value>
 			<value>Death</value>
+			<value>Combat start</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

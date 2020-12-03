@@ -126,6 +126,9 @@
 		<property name="start">
 			<value>1</value>
 		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{62593cf6-b6c5-4a92-94cf-26292bf02a23}</destination>
 			<destination>{8f125d9f-dbd2-4e4a-808b-78e7661e1dbe}</destination>
@@ -366,7 +369,7 @@
 			<value>Max Distance</value>
 		</property>
 		<property name="value">
-			<value>50</value>
+			<value>30</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(2.000000,1.000000)(5.000000,5.000000)(10.000000,10.000000)(15.000000,100.000000)(20.000000,1000.000000)(27.000000,10000.000000)}</value>

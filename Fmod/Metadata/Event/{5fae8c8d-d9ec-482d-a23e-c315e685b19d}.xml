@@ -68,7 +68,6 @@
 			<destination>{fa341338-91e8-4e8c-89ee-40bb668af52f}</destination>
 			<destination>{65e6f32d-ad5c-46e3-b107-59879494ab04}</destination>
 			<destination>{99c8a48f-ff2c-47e7-93bd-f8f36b617057}</destination>
-			<destination>{862a35eb-ace3-428c-87f8-58405818d991}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{702865c1-dd34-4222-b001-ab0dc0e7bf6d}</destination>
@@ -93,7 +92,6 @@
 			<destination>{fa341338-91e8-4e8c-89ee-40bb668af52f}</destination>
 			<destination>{65e6f32d-ad5c-46e3-b107-59879494ab04}</destination>
 			<destination>{99c8a48f-ff2c-47e7-93bd-f8f36b617057}</destination>
-			<destination>{862a35eb-ace3-428c-87f8-58405818d991}</destination>
 			<destination>{c2cc36a1-80e2-4105-95f0-0f6987977670}</destination>
 			<destination>{23e45f99-1ed8-4540-a8e9-951e28aac49a}</destination>
 			<destination>{0f2cc8be-24bc-4a2b-bf4b-7b0fc32c609a}</destination>
@@ -167,11 +165,6 @@
 		<relationship name="playPercentages">
 			<destination>{5c9d6e28-7970-4a97-ba5c-9ba4f59d4b36}</destination>
 		</relationship>
-	</object>
-	<object class="MultiSound" id="{862a35eb-ace3-428c-87f8-58405818d991}">
-		<property name="start">
-			<value>4</value>
-		</property>
 	</object>
 	<object class="EventMixerGroup" id="{702865c1-dd34-4222-b001-ab0dc0e7bf6d}">
 		<property name="name">

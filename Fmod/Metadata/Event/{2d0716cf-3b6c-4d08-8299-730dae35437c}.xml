@@ -222,6 +222,7 @@
 			<destination>{0b5b7e72-3bc6-44ce-8a72-c52a24073948}</destination>
 			<destination>{cdf24c06-fe04-4274-b577-98666bf28e10}</destination>
 			<destination>{346921a2-ef2f-4afa-834a-fe87434dd4f3}</destination>
+			<destination>{73c5333a-b123-41f2-9f57-e919b1e1dbbd}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{3b545655-186c-45f8-9f2c-dcc2624e7054}</destination>
@@ -238,6 +239,7 @@
 			<destination>{c3f49da8-a147-4d5c-baa7-6965558f830d}</destination>
 			<destination>{39d3a7f2-7033-493f-8db7-cd70938bb414}</destination>
 			<destination>{5d275c2b-5032-47e8-8756-6c53f0827d4d}</destination>
+			<destination>{73c5333a-b123-41f2-9f57-e919b1e1dbbd}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{40784770-1476-4828-bae2-2ce91c7b80ea}</destination>
@@ -1471,6 +1473,20 @@
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{fffb1be4-e9b4-4740-98ec-96366874fe57}</destination>
+		</relationship>
+	</object>
+	<object class="SoundScatterer" id="{73c5333a-b123-41f2-9f57-e919b1e1dbbd}">
+		<property name="start">
+			<value>97.408435374149661</value>
+		</property>
+		<property name="length">
+			<value>97.408435374149661</value>
+		</property>
+		<property name="maximumTimeBetweenSounds">
+			<value>5000</value>
+		</property>
+		<relationship name="sound">
+			<destination>{60eaff5a-e62c-4738-88c9-0e5517c95a83}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3b545655-186c-45f8-9f2c-dcc2624e7054}">
@@ -3181,6 +3197,11 @@
 		</relationship>
 		<relationship name="relatedModule">
 			<destination>{cdf24c06-fe04-4274-b577-98666bf28e10}</destination>
+		</relationship>
+	</object>
+	<object class="MultiSound" id="{60eaff5a-e62c-4738-88c9-0e5517c95a83}">
+		<relationship name="sounds">
+			<destination>{c3587f0c-a3cb-4896-8652-1d5f3f70cc37}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{377fd195-aa1e-42a0-92c9-ad230df8226c}">
@@ -5335,6 +5356,11 @@
 		<property name="value">
 			<value>0</value>
 		</property>
+	</object>
+	<object class="SingleSound" id="{c3587f0c-a3cb-4896-8652-1d5f3f70cc37}">
+		<relationship name="audioFile">
+			<destination>{0cfe1332-2ac2-496a-8f72-3823226abbe5}</destination>
+		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{d240b470-55cb-48e6-9273-af7b7f26651a}" />
 	<object class="Plugin" id="{045408a8-5629-4f92-a0dd-24385cedc7d6}">
