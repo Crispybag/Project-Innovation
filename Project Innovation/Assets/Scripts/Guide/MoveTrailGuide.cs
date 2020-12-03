@@ -2,63 +2,67 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveTrail : MonoBehaviour
+public class MoveTrailGuide : MonoBehaviour
 {
     //=======================================================================================
     //                            >  Components & Variables  <
     //=======================================================================================
-
-    // public objects
-    [Header("Components")]
-    public GameObject[] wayPoints;
-    public PatrolGroanSound patrolGroanSound;
-
+    public GameObject guideHolder;
 
     [Header("Variables")]
     [Tooltip("Speed at whwich the enemy moves")]
-    public float speed = 3;
+    public float speed;
+    
 
     // private variables
-    private int _currentWaypoint;
+    public int detectDistance = 3;
 
+    [HideInInspector] public bool isWaiting = false;
+    private GameObject _player;
+
+    private List<GameObject> children;
+    [HideInInspector] public int checkpointsCollected;
     //=======================================================================================
     //                              >  Start And Update  <
     //=======================================================================================
     private void Start()
     {
+        children = new List<GameObject>();
+        _player = GameObject.FindGameObjectWithTag("Player");
         
+        for (int i = 0; i < guideHolder.transform.childCount; i++)
+        {
+            if (guideHolder.transform.GetChild(i).tag != "Guide")
+            {
+                children.Add(guideHolder.transform.GetChild(i).gameObject);
+            }
+        }
+
         GoToNextWavePoint();
+        isWaiting = false;
     }
     private void Update()
     {
-        moveForward();
+        checkpointDist();
+        getDistToPlayer();
+        if (!isWaiting) moveForward();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void checkpointDist()
     {
-        if (other.gameObject.tag == "WaypointMarker")
+        if ((transform.position - children[checkpointsCollected].transform.position).magnitude < 0.2f)
         {
             GoToNextWavePoint();
+            //transform.position = children[checkpointsCollected].transform.position;
         }
     }
-    //=======================================================================================
-    //                              >  Start Functions  <
-    //=======================================================================================
-
-    //-----------------------------------privateFunctionName---------------------------------
-    //Description of function 
-    private void verbNoun(int pVarName) { }
-
-    //-----------------------------------PublicFunctionName-----------------------------------------
-    //Description of function 
-    private void VerbNoun(int pVarName) { }
 
     //=======================================================================================
     //                              >  Update Functions <
     //=======================================================================================
     //------------------------------------moveForward----------------------------------------
     //Move enemy forward with current rotation
-    private void moveForward() 
+    private void moveForward()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
@@ -67,24 +71,28 @@ public class MoveTrail : MonoBehaviour
     //Rotate towards next waypoint
     public void GoToNextWavePoint()
     {
-        patrolGroanSound.playSound(0);
+
         //Get next waypoint
-        if (_currentWaypoint + 1 < wayPoints.Length)
+        if (checkpointsCollected + 1 < children.Count)
         {
-            _currentWaypoint++;
+            checkpointsCollected++;
         }
         else
         {
-            _currentWaypoint = 0;
+            checkpointsCollected = 0;
         }
+        isWaiting = true;
 
         //Change rotation to that waypoint
-        transform.LookAt(wayPoints[_currentWaypoint].transform);
+        transform.LookAt(children[checkpointsCollected].transform);
     }
 
+    private void getDistToPlayer()
+    {
+        if ((_player.transform.position - transform.position).magnitude < detectDistance)
+        {
+            isWaiting = false;
+        }
+    }
 
-
-    //=======================================================================================
-    //                              >  Tool Functions  <
-    //=======================================================================================
 }

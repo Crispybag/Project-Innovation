@@ -19,6 +19,7 @@ public class CombatState : MonoBehaviour
     public Player playerStats;
     public SwipeControls swipeControls;
     public TapScreen tapScreen;
+    public PlayerMusic playerMusic;
     public float cooldownAttack = 0.5f;
     // private objects
     private GameObject _enemy;
@@ -225,6 +226,7 @@ public class CombatState : MonoBehaviour
     //Sets the enemy variable to the enemy that the player is fighting
     public void StartCombat()
     {
+        playerMusic.playSound(3);
         setEnemy();
         Player.canMove = false;
         playerStats.canCombat = true;
@@ -235,6 +237,7 @@ public class CombatState : MonoBehaviour
     //Sets the enemy variable to the enemy that the player is fighting
     public void LeaveCombat()
     {
+        playerMusic.stopSound();
         Player.canMove = true;
         playerStats.canCombat = false;
         playerStats.isEnteringCombat = false;

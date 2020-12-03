@@ -94,11 +94,14 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
                     moveTrail.enabled = false;
                     foreach (GameObject enemy in _enemies)
                     {
-                        if (enemy.GetComponent<DetermineEnemyMovePhaseFaweedEditon>())
+                        if (enemy != null)
                         {
-                            DetermineEnemyMovePhaseFaweedEditon phase = enemy.GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
-                            phase.chasePlayer.enabled = false;
-                            phase.moveTrail.enabled = false;
+                            if (enemy.GetComponent<DetermineEnemyMovePhaseFaweedEditon>())
+                            {
+                                DetermineEnemyMovePhaseFaweedEditon phase = enemy.GetComponent<DetermineEnemyMovePhaseFaweedEditon>();
+                                phase.chasePlayer.enabled = false;
+                                phase.moveTrail.enabled = false;
+                            }
                         }
                         
                     }

@@ -15,7 +15,7 @@ public class Breadcrumbs : MonoBehaviour
     [HideInInspector]public int breadcrumbsCollected;
     public float collectRadius = 1f;
     public float soundTimer = 0.2f;
-    
+    public LayerMask occlusionLayer = 1;
     private List<Vector3> positions;
     private List<GameObject> children;
     private GameObject player;
@@ -57,7 +57,7 @@ public class Breadcrumbs : MonoBehaviour
 
         //Check if there is a wall inbetween the player and breadcrumb
         RaycastHit hit;
-        Physics.Linecast(children[breadcrumbsCollected].transform.position, player.transform.position, out hit);
+        Physics.Linecast(children[breadcrumbsCollected].transform.position, player.transform.position, out hit, occlusionLayer);
 
         if (hit.collider.tag == "Player")
         {
