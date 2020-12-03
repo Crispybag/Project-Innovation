@@ -1320,23 +1320,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 766455577, guid: 6feefa046a3eaa04ca2faae1ff315a01, type: 3}
       propertyPath: keysNeededToOpen
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 766455577, guid: 6feefa046a3eaa04ca2faae1ff315a01, type: 3}
       propertyPath: leversNeededToOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 766455577, guid: 6feefa046a3eaa04ca2faae1ff315a01, type: 3}
       propertyPath: eventPath2
       value: event:/2D/Player/Player hint thoughts
-      objectReference: {fileID: 0}
-    - target: {fileID: 766455577, guid: 6feefa046a3eaa04ca2faae1ff315a01, type: 3}
-      propertyPath: doorOpeningSound
-      value: event:/3D/Player interactables/Actions
-      objectReference: {fileID: 0}
-    - target: {fileID: 766455577, guid: 6feefa046a3eaa04ca2faae1ff315a01, type: 3}
-      propertyPath: doorParameterName
-      value: Player actions
       objectReference: {fileID: 0}
     - target: {fileID: 156720512515168266, guid: 6feefa046a3eaa04ca2faae1ff315a01,
         type: 3}

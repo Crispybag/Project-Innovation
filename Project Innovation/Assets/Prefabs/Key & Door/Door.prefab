@@ -235,7 +235,7 @@ MonoBehaviour:
   doorMiddle: {fileID: 4690502861683751817}
   keysNeededToOpen: 1
   leversNeededToOpen: 0
-  doorOpeningSound: event:/3D/Player interactables/Actions
+  doorOpeningSound: event:/3D/Player interactables/Player actions
   doorParameterName: Player actions
   innerThoughts: event:/2D/Player/Player hint thoughts
   thoughtParameterName: Player hint thought

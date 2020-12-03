@@ -8,7 +8,7 @@ public class Key : MonoBehaviour
 
     // public objects
     [Header("Components")]
-    public PlaySound playSoundScript;
+    public PlaySound keyPickupSound;
 
     // private variables
     private float _soundLength;
@@ -19,7 +19,7 @@ public class Key : MonoBehaviour
 
     private void Start()
     {
-        _soundLength = playSoundScript.soundLength;   // gets the sound length
+        _soundLength = keyPickupSound.soundLength;   // gets the sound length
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -37,7 +37,7 @@ public class Key : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playSoundScript.Play();                 // plays the key pickup sound
+            keyPickupSound.Play();                  // plays the key pickup sound
             Player.keys++;                          // increases the keys count
             Destroy(GetComponent<AudioSource>());   // destroys the looping sound
             Destroy(GetComponent<BoxCollider>());   // destroys the box collider
