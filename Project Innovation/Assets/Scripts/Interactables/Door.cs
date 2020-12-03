@@ -141,7 +141,7 @@ public class Door : MonoBehaviour
         for (int i = 0; i < _soundLengthInFrames; i++)
         {
             //      player.position      += direction (unit vector) * speed (travel distance)
-            collision.transform.position += _targetDirection        * _travelDistance;
+            collision.transform.position += _targetDirection * _travelDistance;
             yield return null;
         }
 
