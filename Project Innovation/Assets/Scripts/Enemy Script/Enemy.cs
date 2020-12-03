@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int hp;
+    public bool hasKey = false;
     [HideInInspector]public bool inCombat = false;
 
     private MonsterCombatSounds sounds;
@@ -34,7 +35,8 @@ public class Enemy : MonoBehaviour
                     }
                 }
             }
-            
+
+            if (hasKey)Player.keys++;
             isDying = true;
             sounds.playSound(2);
         }

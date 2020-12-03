@@ -518,11 +518,11 @@ GameObject:
   - component: {fileID: 3039430125304681554}
   - component: {fileID: 3039430125304681553}
   - component: {fileID: 7151430475049620464}
-  - component: {fileID: 4296642371461703470}
   - component: {fileID: 82820446835975456}
   - component: {fileID: 2604907960441009691}
   - component: {fileID: 3413295026524608620}
   - component: {fileID: 5614151862035957192}
+  - component: {fileID: 3737240756999955219}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3615724618527ed42adb60032254b390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 3737240756999955219}
   enemyHolder: {fileID: 3039430123709259291}
   chasePlayer: {fileID: 3039430125304681554}
   moveTrail: {fileID: 3039430125304681580}
@@ -689,21 +689,6 @@ MonoBehaviour:
   chaseRadius: 5
   combatRadius: 2
   enemyPhaseCurrent: 0
---- !u!114 &4296642371461703470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3039430125304681578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ab8c84ea44e5948ba52aaa49592549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 50
-  inCombat: 0
-  isDying: 0
 --- !u!114 &82820446835975456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footStepsEventPath: event:/3D/Monster/Monster Walking
   materialParameter: Walking types
+  parameterOcclusion: none
   stepDistance: 2
   rayDistance: 4
   startRunningTime: 0.3
@@ -752,6 +738,10 @@ MonoBehaviour:
   - Tiles
   - Gravel
   defaultMaterial: 0
+  volume: 0.7
+  occlusionLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!114 &3413295026524608620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,3 +770,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath: event:/2D/Monster/Monster attack Mono
   parameterName: Attack - Monster
+--- !u!114 &3737240756999955219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3039430125304681578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531c243b90618eb4daa7e957131dcaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
+  hasKey: 1
+  inCombat: 0
+  isDying: 0
