@@ -7,12 +7,8 @@ public class Key : MonoBehaviour
     //=======================================================================================
 
     // public objects
-    //[Header("Components")]
-
-    // public variables
-    //[Header("Variables")]
-
-    // private objects
+    [Header("Components")]
+    public PlaySound playSoundScript;
 
     // private variables
     private float _soundLength;
@@ -23,22 +19,13 @@ public class Key : MonoBehaviour
 
     private void Start()
     {
-        _soundLength = GetComponent<PlaySound>().soundLength; // gets the sound length
-    }
-
-    private void Update()
-    {
-
+        _soundLength = playSoundScript.soundLength;   // gets the sound length
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         PickUpKey(collision);
     }
-
-    //=======================================================================================
-    //                              >  Start Functions  <
-    //=======================================================================================
 
     //=======================================================================================
     //                              >  Update Functions <
@@ -50,15 +37,11 @@ public class Key : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GetComponent<PlaySound>().Play();       // plays the key pickup sound
+            playSoundScript.Play();                 // plays the key pickup sound
             Player.keys++;                          // increases the keys count
             Destroy(GetComponent<AudioSource>());   // destroys the looping sound
             Destroy(GetComponent<BoxCollider>());   // destroys the box collider
-            Destroy(this, _soundLength);            // destroys the object after the sound is done playing
+            Destroy(this.gameObject, _soundLength); // destroys the object after the sound is done playing
         }
     }
-
-    //=======================================================================================
-    //                              >  Tool Functions  <
-    //=======================================================================================
 }
