@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public bool canCombat = false;
     [HideInInspector] public bool isEnteringCombat = false;
-
+    public static bool isUndetectable = false;
     // public statics
     public static bool canMove;
     public static int keys;

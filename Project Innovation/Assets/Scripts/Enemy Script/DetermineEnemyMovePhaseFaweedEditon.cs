@@ -150,7 +150,12 @@ public class DetermineEnemyMovePhaseFaweedEditon : MonoBehaviour
     //Determines distance between enemy and player
     private void determineDistanceToPlayer()
     {
-        _distanceToPlayer = (_player.transform.position - transform.position).magnitude;
+        if (!Player.isUndetectable)
+        {
+            _distanceToPlayer = (_player.transform.position - transform.position).magnitude;
+        }
+        else
+            _distanceToPlayer = 9999999;
 
     }
 

@@ -1,5 +1,112 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6109743112972495337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97209986617490189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a39cef27c4ee034da530aa5be199738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPath: event:/3D/Player interactables/Player collision
+  parameterName: Player collision
+--- !u!114 &9148007274161011428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97209986617490189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/2D/Ambience/Environment
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Ocean
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &9148007274161011431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97209986617490189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3333073d85407a84a901ea366da9f811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPath: event:/2D/Ambience/Music
+--- !u!114 &4881985165450396215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941442954230309999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16dec645f4d1f2439ab7c7ac973faf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPath: event:/2D/Player/Player Combat
+  parameterName: Combat - Player
+--- !u!114 &9148007273186112676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941442954230309999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3db0fb2bd015dd449827643be8bbeaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonkSound: {fileID: 7430424687123389094}
+  sound: {fileID: 6109743112972495337}
+--- !u!114 &4729102046927427169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859746764564447334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16dec645f4d1f2439ab7c7ac973faf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPath: event:/2D/Player/Player Combat
+  parameterName: Combat - Player
+--- !u!114 &627765921802114893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3978097119135943786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308e696ac62b1e74a8c49559a6038677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  child: {fileID: 3978097118412552465}
 --- !u!1 &3978097119894313935
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,100 +263,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
---- !u!114 &4881985165450396215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941442954230309999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16dec645f4d1f2439ab7c7ac973faf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventPath: event:/2D/Player/Player Combat
-  parameterName: Combat - Player
---- !u!114 &9148007273186112676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941442954230309999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3db0fb2bd015dd449827643be8bbeaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bonkSound: {fileID: 7430424687123389094}
-  sound: {fileID: 6109743112972495337}
---- !u!114 &4729102046927427169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3859746764564447334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16dec645f4d1f2439ab7c7ac973faf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventPath: event:/2D/Player/Player Combat
-  parameterName: Combat - Player
---- !u!114 &6109743112972495337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97209986617490189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a39cef27c4ee034da530aa5be199738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventPath: event:/3D/Player interactables/Player collision
-  parameterName: Player collision
---- !u!114 &9148007274161011428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97209986617490189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/2D/Ambience/Environment
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: Ocean
-    Value: 1
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
---- !u!114 &9148007274161011431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97209986617490189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3333073d85407a84a901ea366da9f811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventPath: event:/2D/Ambience/Music
 --- !u!114 &5835522542652449549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,6 +642,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3310320209072304218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3978097119135943786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1929111774961302576, guid: 348d816de6c825e4f8ac99fd6f2e1a78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3310320209072304218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3978097118412552465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1929111775562762571, guid: 348d816de6c825e4f8ac99fd6f2e1a78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3310320209072304218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5178422426717177446 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7651032416993801788, guid: 348d816de6c825e4f8ac99fd6f2e1a78,
@@ -821,15 +846,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8765324085897452349}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &97209986617490189 stripped
+--- !u!1 &3859746764564447334 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8718392902031728688, guid: d4e2a4ec2b14f7644b801fbd48c45797,
-    type: 3}
-  m_PrefabInstance: {fileID: 8765324085897452349}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7430424687123389094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2214227518286692763, guid: d4e2a4ec2b14f7644b801fbd48c45797,
+  m_CorrespondingSourceObject: {fileID: 5491080826924047195, guid: d4e2a4ec2b14f7644b801fbd48c45797,
     type: 3}
   m_PrefabInstance: {fileID: 8765324085897452349}
   m_PrefabAsset: {fileID: 0}
@@ -839,9 +858,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8765324085897452349}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3859746764564447334 stripped
+--- !u!1 &7430424687123389094 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5491080826924047195, guid: d4e2a4ec2b14f7644b801fbd48c45797,
+  m_CorrespondingSourceObject: {fileID: 2214227518286692763, guid: d4e2a4ec2b14f7644b801fbd48c45797,
+    type: 3}
+  m_PrefabInstance: {fileID: 8765324085897452349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &97209986617490189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8718392902031728688, guid: d4e2a4ec2b14f7644b801fbd48c45797,
     type: 3}
   m_PrefabInstance: {fileID: 8765324085897452349}
   m_PrefabAsset: {fileID: 0}
