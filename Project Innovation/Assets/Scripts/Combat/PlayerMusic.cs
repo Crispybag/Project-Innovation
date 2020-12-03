@@ -36,7 +36,7 @@ public class PlayerMusic : MonoBehaviour
         sound = FMODUnity.RuntimeManager.CreateInstance(eventPath);
 
         //Do this to attach the sound to a gameobject for 3D effect
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, transform, GetComponent<Rigidbody>());
+        //FMODUnity.RuntimeManager.AttachInstanceToGameObject(sound, transform, GetComponent<Rigidbody>());
 
         //Do this to set a certain parameter
         //THIS WILL BREAK VERY EASILY MAKE SURE TO COME BACK ON THIS IF SCRIPT DOESN'T WORK
